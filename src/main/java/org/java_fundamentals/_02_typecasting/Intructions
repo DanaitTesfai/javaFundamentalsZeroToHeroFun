@@ -1,0 +1,21 @@
+1. Hotel Billing System (with Casting and String Methods)
+Scenario (Instruction to Student):
+A hotel wants to build a simple program to generate a bill for its guests.
+The system should collect the guest’s name, number of nights, and nightly rate.
+It then calculates the total cost and shows it in uppercase, using string methods
+and basic casting.
+
+
+
+   Output Example:
+
+=== Hotel Billing System ===
+Enter guest name: Marta
+Enter number of nights: 3
+Enter price per night: 49.99
+
+--- BILL SUMMARY ---
+Customer: MARTA
+Nights: 3
+Nightly Rate: $49.99
+Total amount: $149.97
