@@ -19,3 +19,42 @@ Customer: MARTA
 Nights: 3
 Nightly Rate: $49.99
 Total amount: $149.97
+---------------------------------
+
+2. Car Rental – Using Type Casting
+Scenario:
+A car rental company wants a small program that calculates how much a customer should pay based on rental days and daily rate. The company stores the base rate as an int but wants the final result as a double using automatic casting.
+
+
+
+  Output Example:
+
+=== Car Rental Invoice Generator ===
+Enter customer name: Nahom
+Enter number of rental days: 4
+Enter daily rental rate (whole number): 60
+
+----- Invoice -----
+Customer Name: NAHOM
+Days Rented: 4
+Daily Rate: $60
+Total Amount Due: $240.0
+-------------------------
+2. Car Rental – Using Type Casting
+Scenario:
+A car rental company wants a small program that calculates how much a customer should pay based on rental days and daily rate. The company stores the base rate as an int but wants the final result as a double using automatic casting.
+
+
+
+  Output Example:
+
+=== Car Rental Invoice Generator ===
+Enter customer name: Nahom
+Enter number of rental days: 4
+Enter daily rental rate (whole number): 60
+
+----- Invoice -----
+Customer Name: NAHOM
+Days Rented: 4
+Daily Rate: $60
+Total Amount Due: $240.0
