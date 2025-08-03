@@ -1,0 +1,9 @@
+First create a package for operators
+
+Create a class named OperatorsDemo
+
+Declare two variables a and b int type and perform arithmetic operations
+on them and print out the result
+
+Perform some comparison operations and output the result.
+Hint result of comparison or relational operations is always a boolean value.
