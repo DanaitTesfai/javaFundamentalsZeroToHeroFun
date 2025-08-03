@@ -1,4 +1,4 @@
-Area of a Rectangle
+1. Area of a Rectangle
 Question:
 Write a program that asks the user to enter the length and width of a rectangle and then calculates and displays the area.
 
@@ -6,22 +6,25 @@ Expected Output:
 Enter length: 5
 Enter width: 3
 Area of rectangle: 15.0
-----------
-Simple Interest Calculator
+---------------------------------------
+
+
+
+2.Simple Interest Calculator
 Question:
 Create a Java program that calculates simple interest using the formula
 
-
-
 Interest = (Principal × Rate × Time) / 100
-
-
 
 Enter principal amount: 1000
 Enter rate of interest (%): 5
 Enter time in years: 2
 Simple Interest: 100.0
------------Gym Membership Calculator
+-----------------------------------------
+
+
+
+3.Gym Membership Calculator
            Question:
            Create a Java program that asks the user for:
 
@@ -44,8 +47,12 @@ Simple Interest: 100.0
            Enter monthly fee: 50.0
            Total: 150.0
            Thank you for joining, Sara!
- ---------------
- Car Rental System
+ ---------------------------------------------
+
+
+
+
+ 4.  Car Rental System
  Question:
  Ask the user for:
 
@@ -65,8 +72,12 @@ Simple Interest: 100.0
  Enter number of days: 5
  Enter daily price: 40
  Total cost: 200
- -----------
- Hotel Booking Calculator
+ --------------------------------------
+
+
+
+
+ 5.Hotel Booking Calculator
  Question:
  Ask the user for:
 
@@ -85,8 +96,13 @@ Simple Interest: 100.0
  Total breakfast cost
 
  Grand total
- ----------------------------------
- Grocery Billing System
+ ------------------------------------------
+
+
+
+
+
+6. Grocery Billing System
  Question:
  Ask for:
 
