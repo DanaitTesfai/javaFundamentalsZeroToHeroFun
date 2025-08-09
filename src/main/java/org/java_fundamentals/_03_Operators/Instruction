@@ -33,3 +33,45 @@ Enter number of months: 8
 Total before discount: $240
 Discount applied: $20
 Final total: $220
+-----------------------------------------
+
+
+2. Hotel Room Booking
+   Description:
+   A hotel charges $120 per night. If a guest stays more than 3 nights,
+   apply a 15% discount. Use arithmetic, assignment, relational, and shorthand operators.
+
+   Instructions:
+   Ask user for number of nights.
+
+   Multiply by nightly rate.
+
+   If nights > 3, apply 15% discount.
+
+   Concepts: Arithmetic, Relational, Shorthand Assignment (*=)
+   Sample Output:
+
+   Enter number of nights: 4
+   Total before discount: $480.0
+   Discount: 15%
+   Total after discount: $408.0
+   ----------------------------------------
+
+   3. Restaurant Bill Calculator
+      Description:
+      A restaurant adds 10% service charge to total meal cost. Then it checks if the total bill exceeds $200 to suggest card payment.
+
+      Instructions:
+      Use arithmetic to calculate 10% of total.
+
+      Add it to total.
+
+      Compare result using > operator.
+
+      Concepts: Arithmetic, Assignment, Relational
+      Sample Output:
+
+      Meal Cost: $180
+      Service Charge: $18.0
+      Total Bill: $198.0
+      Pay by: Cash
