@@ -76,3 +76,22 @@ Final total: $220
       Service Charge: $18.0
       Total Bill: $198.0
       Pay by: Cash
+      ----------------------
+
+
+      4. Student Result Evaluator
+         Description:
+         A student passes if they score at least 50 in Math and Science.
+         Use logical AND and ternary operator to print pass/fail.
+
+          Instructions:
+         Declare two subject marks.
+
+         Use && and ternary operator.
+
+         Concepts: Logical (&&), Ternary
+         Sample Output:
+
+         Math: 60
+         Science: 48
+         Result: Fail
