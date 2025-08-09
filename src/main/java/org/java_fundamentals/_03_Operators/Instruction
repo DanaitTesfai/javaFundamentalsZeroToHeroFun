@@ -95,3 +95,18 @@ Final total: $220
          Math: 60
          Science: 48
          Result: Fail
+         ----------------------------
+
+         5. Warehouse Stock Update
+            🔹 Description:
+            A warehouse receives new stock. The quantity is increased using the += operator.
+             Instructions:
+            Set initial stock.
+
+            Add received items with +=.
+
+            Concepts: Shorthand Assignment (+=)
+            Sample Output:
+            Initial stock: 100
+            Received: 40
+            Updated stock: 140
