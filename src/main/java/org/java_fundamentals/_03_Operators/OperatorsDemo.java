@@ -19,6 +19,23 @@ public class OperatorsDemo {
         System.out.println("Comparison 1: " + com1);
         System.out.println("Comparison 2: " + com2);
 
+        boolean logicalAnd = a <= 8 && b < 9;
+        System.out.println("Logical And: " + logicalAnd);
+
+        boolean reverseLogicalAnd = ! logicalAnd;
+        System.out.println("Reverse logical And: " + reverseLogicalAnd);
+
+        int x = 6, y = 9;
+        int result = 0;            //x = 6+1=7, y=9-1=8
+        result = x++ + --y;
+        // result = 6 + 8
+        System.out.println("x= " + x + " y= " + y + " Result= " + result);
+
+        result = ++x + y++ + --y;    // x=7+1=8, y=8+1=9-1=8
+        //result = 8 + 8 + 8=24
+        System.out.println("x= " + x + " y= " + y + " Result= " + result);
+
+
 
 
 

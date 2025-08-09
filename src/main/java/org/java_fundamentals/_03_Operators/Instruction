@@ -7,3 +7,29 @@ on them and print out the result
 
 Perform some comparison operations and output the result.
 Hint result of comparison or relational operations is always a boolean value.
+
+Declare two variables x and y which are int
+Declare a third variable to hold the result of various increment/decrement operations
+1. perform x++ + --y and store the result in result variable and discuss over the result
+before your print it and finally print all variables x, y and result
+
+Similar operation: ++x + y++ + --y
+--------------------------------------
+1. Gym Monthly Billing
+Description:
+A gym charges $30 per month. If a member subscribes for more than 6 months,
+they receive a $20 discount. Use arithmetic, assignment, and relational operators.
+
+Instructions:
+Declare variables for months and monthlyFee.
+
+Calculate the total bill.
+
+Apply a discount if months > 6.
+
+Concepts: Arithmetic (*), Assignment (=), Relational (>)
+Sample Output:
+Enter number of months: 8
+Total before discount: $240
+Discount applied: $20
+Final total: $220
