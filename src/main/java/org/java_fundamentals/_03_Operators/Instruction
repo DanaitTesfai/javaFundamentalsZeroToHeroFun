@@ -59,7 +59,8 @@ Final total: $220
 
    3. Restaurant Bill Calculator
       Description:
-      A restaurant adds 10% service charge to total meal cost. Then it checks if the total bill exceeds $200 to suggest card payment.
+      A restaurant adds 10% service charge to total meal cost.
+      Then it checks if the total bill exceeds $200 to suggest card payment.
 
       Instructions:
       Use arithmetic to calculate 10% of total.
