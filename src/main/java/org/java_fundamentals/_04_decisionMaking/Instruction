@@ -1,0 +1,39 @@
+1.  Restaurant Bill Calculator
+Question (Scenario)
+A restaurant named Golden Spoon wants a billing program.
+
+The program should:
+
+Display a menu:
+
+View Food Prices
+
+Order Food
+
+Exit
+
+Prices:
+
+Burger → $8
+
+Pizza → $12
+
+Pasta → $10
+
+If the bill is over $50, apply a 10% discount.
+
+If a service charge is chosen, add $5 to the total.
+
+=== Welcome to Golden Spoon ===
+1. View Food Prices
+2. Order Food
+3. Exit
+Enter your choice: 2
+
+Enter food item (burger, pizza, pasta): pizza
+Enter quantity: 5
+Do you want service charge? (yes/no): yes
+
+Total before discount: $60.0
+Discount applied: $6.0
+Final bill: $59.0
