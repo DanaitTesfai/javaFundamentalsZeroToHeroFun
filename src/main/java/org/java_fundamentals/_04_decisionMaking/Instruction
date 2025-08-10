@@ -37,3 +37,44 @@ Do you want service charge? (yes/no): yes
 Total before discount: $60.0
 Discount applied: $6.0
 Final bill: $59.0
+-----------------------------------
+
+2.Car Rental System
+  Question (Scenario)
+  A company named DriveEasy Rentals wants a simple rental fee calculator.
+
+  The program should:
+
+  Display a menu:
+
+  View Car Prices
+
+  Rent a Car
+
+  Exit
+
+  Daily rental prices:
+
+  Economy → $40/day
+
+  SUV → $70/day
+
+  Luxury → $120/day
+
+  If rented for more than 10 days, give a 20% discount.
+
+  If the customer chooses insurance, add $15/day.
+
+  === Welcome to DriveEasy Rentals ===
+  1. View Car Prices
+  2. Rent a Car
+  3. Exit
+  Enter your choice: 2
+
+  Enter car type (economy, suv, luxury): suv
+  Enter number of days: 12
+  Do you want insurance? (yes/no): yes
+
+  Total before discount: $1020.0
+  Discount applied: $204.0
+  Final price: $816.0
