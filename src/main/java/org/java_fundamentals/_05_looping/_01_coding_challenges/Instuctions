@@ -8,4 +8,22 @@ Use a for loop from i = 1 to i <= N.
 Print i followed by a space (don’t add a newline until the end).
 
 After the loop, print a newline.
+--------------------------
+
+2. Sum 1 to N
+   Goal: Compute the sum 1 + 2 + … + N.
+   Steps:
+
+   Read N.
+
+   Initialize sum = 0.
+
+   Loop i from 1 to N (inclusive).
+
+   Add i to sum each iteration.
+
+   Print sum.
+
+
+
 
