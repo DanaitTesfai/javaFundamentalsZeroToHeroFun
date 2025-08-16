@@ -23,6 +23,17 @@ After the loop, print a newline.
    Add i to sum each iteration.
 
    Print sum.
+----------------------------
+3. Even Numbers Up To N
+   Goal: Print all even numbers from 2 to N.
+   Steps:
+
+   Read N.
+
+   Use a for loop starting at i = 2; step by i += 2 while i <= N.
+
+   Print i each time.
+
 
 
 
