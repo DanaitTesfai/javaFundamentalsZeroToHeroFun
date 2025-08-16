@@ -33,6 +33,16 @@ After the loop, print a newline.
    Use a for loop starting at i = 2; step by i += 2 while i <= N.
 
    Print i each time.
+   -----------------------------
+   4.Multiplication Table of a Number
+     Goal: Print the table of X from X×1 to X×10.
+     Steps:
+
+     Read X.
+
+     Loop i from 1 to 10.
+
+     Print X + " x " + i + " = " + (X * i).
 
 
 
