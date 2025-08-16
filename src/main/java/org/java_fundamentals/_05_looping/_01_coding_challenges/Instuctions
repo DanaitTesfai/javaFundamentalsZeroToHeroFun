@@ -43,6 +43,17 @@ After the loop, print a newline.
      Loop i from 1 to 10.
 
      Print X + " x " + i + " = " + (X * i).
+     ---------------------------------------------
+     5. Goal: Print numbers from N down to 1.
+        Steps:
+
+        Read N.
+
+        Use a while loop with i = N and decrement i-- until i >= 1.
+
+        Print i each iteration.
+
+
 
 
 
