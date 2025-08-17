@@ -1,0 +1,102 @@
+1.Hotel Billing System with Multiple Guests (Loops, Casting, and String Methods)
+
+              Scenario (Instruction to Student):
+              A hotel wants to upgrade its billing program so that it can handle multiple
+              guests in one run. The system should ask the user how many guests they want
+               to process, then use a loop to repeat the billing process for each guest.
+
+              For each guest, collect:
+
+              Guest’s name
+
+              Number of nights
+
+              Nightly rate
+
+              The system will calculate the total cost and display the bill summary
+               in uppercase using string methods. Use casting where needed
+               (e.g., rounding total amount to two decimal places).
+
+              After processing all guests, the program should display the total income
+              for the day.
+
+
+
+              === Hotel Billing System ===
+              How many guests today? 2
+
+              --- Guest #1 ---
+              Enter guest name: Marta
+              Enter number of nights: 3
+              Enter price per night: 49.99
+
+              --- BILL SUMMARY ---
+              Customer: MARTA
+              Nights: 3
+              Nightly Rate: $49.99
+              Total amount: $149.97
+
+              --- Guest #2 ---
+              Enter guest name: Paul
+              Enter number of nights: 2
+              Enter price per night: 60.00
+
+              --- BILL SUMMARY ---
+              Customer: PAUL
+              Nights: 2
+              Nightly Rate: $60.00
+              Total amount: $120.00
+
+              === END OF DAY REPORT ===
+              Total income: $269.97
+      ----------------------------------------------
+      2. Restaurant Ordering Menu
+         Description:
+         A waiter uses a simple console program to take burger orders, calculate the bill,
+         and automatically add a tip based on the bill amount.
+
+         Sample Output (Example Run):
+
+
+
+         === Welcome to Java Dine ===
+         Profile: Waiter Order System
+
+          Case 1: Viewing the Menu
+
+         1. View Menu
+         2. Place an Order
+         3. Exit
+         Enter your choice: 1
+
+         --- Menu ---
+         Burger : $8
+         Pizza  : $15
+         Pasta  : $12
+
+         Case 2: Placing an Order
+
+         1. View Menu
+         2. Place an Order
+         3. Exit
+         Enter your choice: 2
+         Enter item (burger/pizza/pasta): burger
+         Enter quantity: 3
+         You ordered: 3 burger
+         Total price: $24.0
+
+         Case 3: Exiting the Program
+
+         1. View Menu
+         2. Place an Order
+         3. Exit
+         Enter your choice: 3
+         Thank you for visiting Java Dine. Goodbye!
+
+         Case 4: Invalid Option
+
+         1. View Menu
+         2. Place an Order
+         3. Exit
+         Enter your choice: 5
+         Invalid choice!

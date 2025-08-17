@@ -1,8 +1,8 @@
-package org.java_fundamentals._05_looping._01_coding_challenges;
+package org.java_fundamentals._05_looping._02_mini_projects;
 
 import java.util.Scanner;
 
-public class _06_HotelBillingSystem {
+public class _01_HotelBillingSystem {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
