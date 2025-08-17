@@ -107,4 +107,18 @@ Additional task 1- When they choose to exit, the program should display the tota
 from all orders.
                   Total Income from Orders: $31.0
 
+Additional task 2- After exiting, the program should display a summary of the total quantity
+and total price for each item, along with the total income from all orders.
 
+                   Example Scenario:
+
+                   The customer orders 2 Burgers, 2 Pizzas, and 1 Pasta.
+
+                   After exiting, the program displays:
+
+
+                   === Order Summary ===
+                   Burger: 2 x $8.0 = $16.0
+                   Pizza: 2 x $15.0 = $30.0
+                   Pasta: 1 x $12.0 = $12.0
+                   Total Income from Orders: $58.0

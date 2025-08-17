@@ -11,6 +11,8 @@ public class _02_RestaurantOrderingMenu {
 
         int choice = 0;
         double totalIncome = 0;
+        int burgerCount = 0 , pizzaCount = 0, pastaCount = 0;
+        double burgerPrice = 8 , pizzaPrice = 15 , pastaPrice = 13;
 
         while (true){
             System.out.println("1. View Menu");
@@ -23,9 +25,9 @@ public class _02_RestaurantOrderingMenu {
 
             if (choice == 1) {
                 System.out.println("--- Menu ---\n" +
-                        "         Burger : $8\n" +
-                        "         Pizza  : $15\n" +
-                        "         Pasta  : $12");
+                        "         Burger : $"+burgerPrice+"\n" +
+                        "         Pizza  : $"+pizzaPrice+"\n" +
+                        "         Pasta  : $"+pastaPrice);
             } else if (choice == 2) {
                 System.out.print(" Enter item (burger/pizza/pasta): ");
                 String food = scanner.nextLine();
@@ -37,12 +39,15 @@ public class _02_RestaurantOrderingMenu {
                 if (food.equalsIgnoreCase("burger")){
                     total = quantity * 8;
                     totalIncome += total;
+                    burgerCount += quantity;
                 } else if (food.equalsIgnoreCase("pizza")) {
                     total = quantity * 15;
                     totalIncome += total;
+                    pizzaCount += quantity;
                 } else if (food.equalsIgnoreCase("pasta")) {
                     total = quantity *12;
                     totalIncome += total;
+                    pastaCount += quantity;
                 }else {
                     System.out.println("Invalid Input. Please try again!");
                     continue;
@@ -51,6 +56,10 @@ public class _02_RestaurantOrderingMenu {
                 System.out.println("You ordered: " + quantity + " " + food + "/s");
                 System.out.println("Total price: $" + total);
             } else if (choice == 3) {
+                System.out.println("=== Order Summary ===");
+                System.out.println("Burger: " + burgerCount + " x $" + burgerPrice + " = $" + (burgerPrice * burgerCount));
+                System.out.println("Pizza: " + pizzaCount + " x $" + pizzaPrice + " = $" + (pizzaPrice * pizzaCount));
+                System.out.println("Pasta: " + pastaCount + " x $" + pastaPrice + " = $" + (pastaPrice * pastaCount));
                 System.out.println("Total Income from Orders: $" + totalIncome);
                 System.out.println("Thank you for visiting Java Dine. Goodbye!");
                 break;
