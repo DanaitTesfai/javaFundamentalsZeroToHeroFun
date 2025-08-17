@@ -54,8 +54,12 @@ After the loop, print a newline.
         Print i each iteration.
         -----------------------------------
 
-
-
+6. 1. Print numbers 1 to 10
+6. 2. Stop when number is 5 (use break)
+6. 3. Skip number 5 (use continue)
+6. 4. Sum of first 10 numbers
+6. 5. Print even numbers only. Exercise: Use a while loop and continue to print only
+      even numbers from 1 to 20.
 
 
 
