@@ -10,6 +10,8 @@ public class _02_RestaurantOrderingMenu {
         System.out.println("Profile: Waiter Order System");
 
         int choice = 0;
+        double totalIncome = 0;
+
         while (true){
             System.out.println("1. View Menu");
             System.out.println("2. Place an Order");
@@ -34,10 +36,13 @@ public class _02_RestaurantOrderingMenu {
                 double total = 0;
                 if (food.equalsIgnoreCase("burger")){
                     total = quantity * 8;
+                    totalIncome += total;
                 } else if (food.equalsIgnoreCase("pizza")) {
                     total = quantity * 15;
+                    totalIncome += total;
                 } else if (food.equalsIgnoreCase("pasta")) {
                     total = quantity *12;
+                    totalIncome += total;
                 }else {
                     System.out.println("Invalid Input. Please try again!");
                     continue;
@@ -46,6 +51,7 @@ public class _02_RestaurantOrderingMenu {
                 System.out.println("You ordered: " + quantity + " " + food + "/s");
                 System.out.println("Total price: $" + total);
             } else if (choice == 3) {
+                System.out.println("Total Income from Orders: $" + totalIncome);
                 System.out.println("Thank you for visiting Java Dine. Goodbye!");
                 break;
 

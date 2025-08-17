@@ -55,6 +55,8 @@
          A waiter uses a simple console program to take burger orders, calculate the bill,
          and automatically add a tip based on the bill amount.
 
+
+
          Sample Output (Example Run):
 
 
@@ -100,3 +102,9 @@
          3. Exit
          Enter your choice: 5
          Invalid choice!
+
+Additional task 1- When they choose to exit, the program should display the total income
+from all orders.
+                  Total Income from Orders: $31.0
+
+
