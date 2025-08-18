@@ -122,3 +122,86 @@ and total price for each item, along with the total income from all orders.
                    Pizza: 2 x $15.0 = $30.0
                    Pasta: 1 x $12.0 = $12.0
                    Total Income from Orders: $58.0
+  --------------------------------------------------------
+  3. Gym Membership Booking System
+
+     A gym wants to create a Java program to manage membership registrations.
+     The gym offers three membership plans:
+
+     Basic Membership: $30 per month
+
+     Premium Membership: $50 per month
+
+     VIP Membership: $80 per month
+
+     The program should:
+
+     Display a menu with the following options:
+
+     View Membership Prices
+
+     Register for Membership
+
+     Exit
+
+     If the user chooses 1, the program should display all membership prices.
+
+     If the user chooses 2, the program should:
+
+     Ask the user for the membership type (basic, premium, or vip).
+
+     Ask for the number of months they want to register.
+
+     Apply the membership rate accordingly.
+
+     If the user registers for more than 6 months, they get a 10% discount on the total.
+
+     Display the final bill.
+
+     The menu should keep showing again and again (using looping) until the user chooses 3 (Exit).
+
+     When the user exits, display a summary report:
+
+     Total Basic Memberships sold and total income from them.
+
+     Total Premium Memberships sold and total income from them.
+
+     Total VIP Memberships sold and total income from them.
+
+     Overall income from all memberships.
+
+     === Welcome to FitLife Gym ===
+     1. View Membership Prices
+     2. Register for Membership
+     3. Exit
+     Enter your choice: 1
+
+     Basic: $30/month
+     Premium: $50/month
+     VIP: $80/month
+
+     === Welcome to FitLife Gym ===
+     1. View Membership Prices
+     2. Register for Membership
+     3. Exit
+     Enter your choice: 2
+
+     Enter membership type (basic/premium/vip): vip
+     Enter number of months: 8
+     Discount applied: $64.0
+     Final Price: $576.0
+
+     === Welcome to FitLife Gym ===
+     1. View Membership Prices
+     2. Register for Membership
+     3. Exit
+     Enter your choice: 3
+
+     === Membership Summary ===
+     Basic: 0 months, Total = $0.0
+     Premium: 0 Premium: 0 months, Total = $0.0
+     VIP: 8 months, Total = $576.0
+     ----------------------------
+     Total Income = $576.0
+     Thank you for choosing FitLife Gym!
+
