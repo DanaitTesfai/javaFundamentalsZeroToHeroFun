@@ -102,6 +102,8 @@ After the loop, print a newline.
    number /= 10-----> number =number / 10 = 1/10=0
    number = 0, reverseNumber = 321
    -------------------------------------------------
+10. Read two integers and print which one is larger (use if).
+
 
 
 
