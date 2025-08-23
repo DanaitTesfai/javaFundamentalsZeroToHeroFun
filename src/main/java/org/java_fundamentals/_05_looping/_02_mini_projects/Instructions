@@ -49,8 +49,8 @@
 
               === END OF DAY REPORT ===
               Total income: $269.97
-      ----------------------------------------------
-      2. Restaurant Ordering Menu
+----------------------------------------------
+2. Restaurant Ordering Menu
          Description:
          A waiter uses a simple console program to take burger orders, calculate the bill,
          and automatically add a tip based on the bill amount.
@@ -122,8 +122,9 @@ and total price for each item, along with the total income from all orders.
                    Pizza: 2 x $15.0 = $30.0
                    Pasta: 1 x $12.0 = $12.0
                    Total Income from Orders: $58.0
-  --------------------------------------------------------
-  3. Gym Membership Booking System
+
+--------------------------------------------------------
+3. Gym Membership Booking System
 
      A gym wants to create a Java program to manage membership registrations.
      The gym offers three membership plans:
@@ -204,4 +205,79 @@ and total price for each item, along with the total income from all orders.
      ----------------------------
      Total Income = $576.0
      Thank you for choosing FitLife Gym!
+ ----------------------------------------------------------
+
+ 4. Car Rental System Question
+    A company named EasyCar Rentals wants to build a simple console-based car rental system
+    in Java.
+    They want to allow customers to:
+
+    View available cars and their daily rental prices.
+
+    Sedan → $50 per day
+
+    SUV → $80 per day
+
+    Luxury Car → $120 per day
+
+    Rent a car by entering:
+
+    Car type (sedan, suv, or luxury)
+
+    Number of cars
+
+    Number of rental days
+
+    Get the rental cost immediately after each order.
+
+    Sedan → no discount
+
+    SUV → 10% discount if rented for more than 7 days
+
+    Luxury → 15% discount if rented for more than 7 days
+
+    Exit and show summary of all rentals, including:
+
+    Total number of each car rented
+
+    Income from each car type
+
+    Total income from all rentals
+
+    The program should run continuously using while(true) loop until the user chooses Exit.
+
+
+
+    === Welcome to EasyCar Rentals ===
+    1. View Available Cars
+    2. Rent a Car
+    3. Exit and Show Summary
+    Enter choice: 1
+    Sedan: $50 per day
+    SUV: $80 per day
+    Luxury Car: $120 per day
+
+    === Welcome to EasyCar Rentals ===
+    1. View Available Cars
+    2. Rent a Car
+    3. Exit and Show Summary
+    Enter choice: 2
+    Enter car type (sedan/suv/luxury): luxury
+    Enter number of cars: 1
+    Enter rental days: 8
+    Total Rental Cost: $816.0
+
+    === Welcome to EasyCar Rentals ===
+    1. View Available Cars
+    2. Rent a Car
+    3. Exit and Show Summary
+    Enter choice: 3
+
+    === Rental Summary ===
+    Sedans rented: 0, Income: $0.0
+    SUVs rented: 0, Income: $0.0
+    Luxury Cars rented: 1, Income: $816.0
+    Total Income = $816.0
+
+
 

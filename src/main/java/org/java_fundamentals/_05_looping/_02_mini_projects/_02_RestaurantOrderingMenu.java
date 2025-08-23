@@ -12,7 +12,7 @@ public class _02_RestaurantOrderingMenu {
         int choice = 0;
         double totalIncome = 0;
         int burgerCount = 0 , pizzaCount = 0, pastaCount = 0;
-        double burgerPrice = 8 , pizzaPrice = 15 , pastaPrice = 13;
+        double burgerPrice = 8 , pizzaPrice = 15 , pastaPrice = 12;
 
         while (true){
             System.out.println("1. View Menu");
