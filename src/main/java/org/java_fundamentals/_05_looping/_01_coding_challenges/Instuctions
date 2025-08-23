@@ -76,6 +76,32 @@ After the loop, print a newline.
    if n is a number then its factorial is calculated as follows : n * (n-1) * (n-2) * ....(n-n+1)
    Let n = 5 then factorial of 5 is calculated : 5 * 4 * 3 * 2 * 1 = 120
    let n = 7 then calculate its factorial : 7 * 6 * 5 * 4 * 3 * 2 * 1 = 5040
+----------------------------------------------------------------
+
+9. Reverse a number
+
+   Question: Ask the user for a number and print it in reverse
+   number = 123
+   hint: % modulus operator could be used to get the last digit number
+   int reverseNumber = 0;
+
+   int lastDigit = number % 10 ---> 123 % 10 = 3 is the remainder
+   reverseNumber = reverseNumber * 10 + lastDigit ----> reverseNumber = 0 *10 + 3 = 3
+   number /= 10-----> number =number / 10 = 123/10=12
+   number = 12, reverseNumber = 3
+
+
+   int lastDigit = number % 10 ---> 12 % 10 = 2 is the remainder
+   reverseNumber = reverseNumber * 10 + lastDigit ----> reverseNumber = 3*10 + 2= 32
+   number /= 10-----> number =number / 10 = 12/10=1
+   number = 1, reverseNumber = 32
+
+
+   int lastDigit = number % 10 ---> 1 % 10 = 1 is the remainder
+   reverseNumber = reverseNumber * 10 + lastDigit ----> reverseNumber = 32*10 + 1= 321
+   number /= 10-----> number =number / 10 = 1/10=0
+   number = 0, reverseNumber = 321
+   -------------------------------------------------
 
 
 
