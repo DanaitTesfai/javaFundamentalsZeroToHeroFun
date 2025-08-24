@@ -1,0 +1,88 @@
+1. Scenario: Hotel Room Booking System
+   SunnyStay Hotel wants a simple room booking system for managing customer reservations.
+
+   The hotel has 3 types of rooms (available rooms and their prices per night
+   should be stored in an array):
+
+   Standard Room → $40 per night
+
+   Deluxe Room → $70 per night
+
+   Suite → $150 per night
+
+   The program should:
+
+   Show a menu to book a room, view summary, or exit.
+
+   Let the user choose room type, number of rooms, and number of nights.
+
+   Apply discounts:
+
+   Standard → no discount
+
+   Deluxe → 10% off if more than 5 nights
+
+   Suite → 20% off if more than 5 nights
+
+   Keep track of:
+
+   Total rooms booked for each type
+
+   Income for each type
+
+   Display a summary report when the user requests it.
+
+   ==============================
+      Welcome to SunnyStay Hotel
+   ==============================
+   1. Book a Room
+   2. Show Summary Report
+   3. Exit
+   Enter your choice: 1
+
+   Select Room Type:
+   1. Standard ($40/night)
+   2. Deluxe ($70/night)
+   3. Suite   ($150/night)
+   Enter your choice: 2
+
+   Enter number of rooms: 2
+   Enter number of nights: 6
+   Booking successful! Total cost: $756.0
+
+   ==============================
+   1. Book a Room
+   2. Show Summary Report
+   3. Exit
+   Enter your choice: 1
+
+   Select Room Type:
+   1. Standard ($40/night)
+   2. Deluxe ($70/night)
+   3. Suite   ($150/night)
+   Enter your choice: 3
+
+   Enter number of rooms: 1
+   Enter number of nights: 3
+   Booking successful! Total cost: $450.0
+
+   ==============================
+   1. Book a Room
+   2. Show Summary Report
+   3. Exit
+   Enter your choice: 2
+
+   Summary Report:
+   Standard Rooms booked: 0 | Income: $0.0
+   Deluxe Rooms booked: 2 | Income: $756.0
+   Suite Rooms booked: 1 | Income: $450.0
+   ----------------------------------------
+   Total Income: $1206.0
+
+   ==============================
+   1. Book a Room
+   2. Show Summary Report
+   3. Exit
+   Enter your choice: 3
+
+   Exiting... Thank you for choosing SunnyStay Hotel!
