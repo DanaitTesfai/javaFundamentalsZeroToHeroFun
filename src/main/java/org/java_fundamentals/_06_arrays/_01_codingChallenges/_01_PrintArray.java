@@ -1,4 +1,4 @@
-package org.java_fundamentals._06_arrays;
+package org.java_fundamentals._06_arrays._01_codingChallenges;
 
 public class _01_PrintArray {
     public static void main(String[] args) {
