@@ -107,6 +107,9 @@ After the loop, print a newline.
 ------------------------------------------------------------
 11. Largest of Three Numbers
        Read three integers and print the largest one.
+-------------------------------------------------------
+12. Sum of Digits
+   Given a number like 1234, calculate 1+2+3+4 = 10
 
 
 
