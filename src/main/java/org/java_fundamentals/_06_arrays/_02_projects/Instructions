@@ -86,3 +86,241 @@
    Enter your choice: 3
 
    Exiting... Thank you for choosing SunnyStay Hotel!
+-----------------------------------------------------------------------
+2. Car Rental System with Admin Panel
+   The Car Rental Agency wants to have a system with the following functionalities:
+
+   User Management
+
+       Customers can Register with a username and password.
+
+       Customers can Login with a maximum of 3 attempts.
+
+       If customers don’t want to continue, they can Exit from the main menu.
+
+   Car Rental System
+
+       Cars available: Sedan ($50/day), SUV ($80/day), Truck ($100/day).
+
+       Users can rent cars multiple times.
+
+       Each user has their own rental history and spending summary.
+
+   Menus
+
+       Main Menu: Login | Register | Exit
+
+       User Menu: Rent a Car | Show Summary | Logout
+
+       Admin Menu: View All Cars with Prices | Update Car Prices
+                   | View All Users’ Rental Summary | Logout
+
+
+
+   Features:
+   Main Menu (for all users)
+
+       Login
+
+       Register
+
+       Exit
+
+   User Menu (after login as customer)
+
+       Rent a Car
+
+       Show Personal Summary
+
+       Logout
+
+   Admin Menu (when admin logs in)
+
+       View All Cars with Prices
+
+       Update Car Prices
+
+       View All Users’ Rental Summary
+
+       Logout
+
+   Notes:
+       Admin credentials: username = admin, password = 1234
+
+       Customers can only see and manage their own rentals.
+
+       Admin can update car rental prices (affects all users).
+
+       Admin can view all users’ summaries including cars rented and money spent.
+
+
+   ====== Car Rental System ======
+   1. Login
+   2. Register
+   3. Exit
+   Enter your choice: 1
+
+   --- Login ---
+   Enter username: admin
+   Enter password: 1234
+   Admin Login Successful! Welcome, admin.
+
+   ==============================
+           ADMIN PANEL
+   ==============================
+   1. View Car Prices
+   2. Update Car Price
+   3. View All Users' Rental Summary
+   4. Logout
+   Enter your choice: 1
+
+   --- Car Prices ---
+   Sedan: $50.0/day
+   SUV: $80.0/day
+   Truck: $100.0/day
+
+   Enter your choice: 2
+   Which car price do you want to update?
+   1. Sedan
+   2. SUV
+   3. Truck
+   Enter choice: 2
+   Enter new price for SUV: 90
+   Price updated successfully!
+
+   Enter your choice: 3
+   --- All Users' Rental Summary ---
+   User: user1
+   Sedans rented: 0 | Income: $0.0
+   SUVs rented: 1 | Income: $360.0
+   Trucks rented: 0 | Income: $0.0
+   Total Spent: $360.0
+   ----------------------------
+   User: john
+   Sedans rented: 1 | Income: $150.0
+   SUVs rented: 0 | Income: $0.0
+   Trucks rented: 0 | Income: $0.0
+   Total Spent: $150.0
+   ----------------------------
+
+   Enter your choice: 4
+   Admin logged out!
+
+   ----------------------------
+   ====== Car Rental System ======
+   1. Login
+   2. Register
+   3. Exit
+   Enter your choice: 2
+
+   --- User Registration ---
+   Enter new username: john
+   Enter new password: 12345
+   Registration successful! You can now login.
+
+   ====== Car Rental System ======
+   1. Login
+   2. Register
+   3. Exit
+   Enter your choice: 1
+
+   --- Login ---
+   Enter username: john
+   Enter password: 12345
+   Login Successful! Welcome, john.
+
+   ==============================
+     Car Rental Management Menu
+   ==============================
+   1. Rent a Car
+   2. Show Personal Summary
+   3. Logout
+   Enter your choice: 1
+
+   Cars Available:
+   1. Sedan ($50.0/day)
+   2. SUV ($80.0/day)
+   3. Truck ($100.0/day)
+   Choose car type (1-3): 2
+   Enter number of days: 3
+   You rented SUV for 3 days. Total cost: $240.0
+
+   Enter your choice: 1
+   Cars Available:
+   1. Sedan ($50.0/day)
+   2. SUV ($80.0/day)
+   3. Truck ($100.0/day)
+   Choose car type (1-3): 1
+   Enter number of days: 2
+   You rented Sedan for 2 days. Total cost: $100.0
+
+   Enter your choice: 2
+
+   Your Rental Summary:
+   Sedans rented: 1 | Income: $100.0
+   SUVs rented: 1 | Income: $240.0
+   Trucks rented: 0 | Income: $0.0
+   ----------------------------------------
+   Total Spent: $340.0
+
+   Enter your choice: 3
+   Logged out successfully!
+
+   ====== Car Rental System ======
+   1. Login
+   2. Register
+   3. Exit
+   Enter your choice: 1
+
+   --- Login ---
+   Enter username: admin
+   Enter password: 1234
+   Admin Login Successful! Welcome, admin.
+
+   ==============================
+           ADMIN PANEL
+   ==============================
+   1. View Car Prices
+   2. Update Car Price
+   3. View All Users' Rental Summary
+   4. Logout
+   Enter your choice: 1
+
+   --- Car Prices ---
+   Sedan: $50.0/day
+   SUV: $80.0/day
+   Truck: $100.0/day
+
+   Enter your choice: 2
+   Which car price do you want to update?
+   1. Sedan
+   2. SUV
+   3. Truck
+   Enter choice: 2
+   Enter new price for SUV: 90
+   Price updated successfully!
+
+   Enter your choice: 3
+   --- All Users' Rental Summary ---
+   User: user1
+   Sedans rented: 0 | Income: $0.0
+   SUVs rented: 0 | Income: $0.0
+   Trucks rented: 0 | Income: $0.0
+   Total Spent: $0.0
+   ----------------------------
+   User: john
+   Sedans rented: 1 | Income: $100.0
+   SUVs rented: 1 | Income: $240.0
+   Trucks rented: 0 | Income: $0.0
+   Total Spent: $340.0
+   ----------------------------
+
+   Enter your choice: 4
+   Admin logged out!
+
+   ====== Car Rental System ======
+   1. Login
+   2. Register
+   3. Exit
+   Enter your choice: 3
+   Exiting system... Goodbye!
