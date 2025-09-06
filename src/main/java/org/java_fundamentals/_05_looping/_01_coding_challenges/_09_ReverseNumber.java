@@ -8,6 +8,7 @@ public class _09_ReverseNumber {
 
         System.out.print("Enter a number: ");
         int number = scanner.nextInt();
+
         System.out.println("Original number: " + number);
         int reversedNumber = 0 ;
         while (number > 0){

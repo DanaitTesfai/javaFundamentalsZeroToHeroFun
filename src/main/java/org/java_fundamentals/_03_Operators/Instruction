@@ -14,7 +14,10 @@ Declare a third variable to hold the result of various increment/decrement opera
 before your print it and finally print all variables x, y and result
 
 Similar operation: ++x + y++ + --y
---------------------------------------
+-----------------------------------------------------------------------
+
+
+
 1. Gym Monthly Billing
 Description:
 A gym charges $30 per month. If a member subscribes for more than 6 months,
@@ -33,7 +36,7 @@ Enter number of months: 8
 Total before discount: $240
 Discount applied: $20
 Final total: $220
------------------------------------------
+------------------------------------------------------------------------------
 
 
 2. Hotel Room Booking
@@ -55,7 +58,7 @@ Final total: $220
    Total before discount: $480.0
    Discount: 15%
    Total after discount: $408.0
-   ----------------------------------------
+   ---------------------------------------------------------------------------
 
    3. Restaurant Bill Calculator
       Description:
@@ -76,7 +79,7 @@ Final total: $220
       Service Charge: $18.0
       Total Bill: $198.0
       Pay by: Cash
-      ----------------------
+      -----------------------------------------------------------------
 
 
       4. Student Result Evaluator
@@ -95,7 +98,7 @@ Final total: $220
          Math: 60
          Science: 48
          Result: Fail
-         ----------------------------
+         ---------------------------------------------------------------------
 
          5. Warehouse Stock Update
             🔹 Description:

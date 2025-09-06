@@ -13,5 +13,22 @@
    Question:
    Find the average of {2, 4, 6, 8, 10}.
 ---------------------------------------------------
+4. A teacher wants to store the marks of 3 students in 3 subjects
+(Math, Science, English). Use a 2D array to store and display the marks.
+
+   0   1   2
+0  85  90  78
+1  68  97  82
+2  90  61  89
 
 
+marks[0][1]-----> 90
+marks[2][2]-----> 89
+
+int[][] marks = {{85,90,78}, {68,97,82}, {90,61,89}};
+----------------------------------------------------------
+5. Student Marks with Scanner
+
+   Scenario:
+   A teacher wants to store marks of 2 students in 3 subjects using a 2D array.
+   The marks should be entered by the user, and then displayed in a table format.
