@@ -32,3 +32,63 @@ int[][] marks = {{85,90,78}, {68,97,82}, {90,61,89}};
    Scenario:
    A teacher wants to store marks of 2 students in 3 subjects using a 2D array.
    The marks should be entered by the user, and then displayed in a table format.
+
+   Hint:
+   We can declare 2 by 3 2D array as follows
+    int[][] marks = new int[2][3];
+       0  1  2
+    0  0  0  0
+    1  0  0  0
+
+   Enter marks for Student 1:
+   Subject 1: 80
+   Subject 2: 90
+   Subject 3: 85
+   Enter marks for Student 2:
+   Subject 1: 70
+   Subject 2: 75
+   Subject 3: 80
+
+   Student Marks Table:
+   Student 1: 80 90 85
+   Student 2: 70 75 80
+
+------------------------------------------------------------------
+6.Interactive Student Marks System
+  Scenario:
+  A teacher wants to manage student marks in a flexible way. The program should:
+
+  Ask how many students are in the class.
+
+  Ask how many subjects each student has.
+
+  Accept each student’s name and marks for all subjects.
+
+  Calculate the total and average marks for each student.
+
+  Print a tabular report.
+
+  Display the topper (highest average)
+
+  Enter number of students: 2
+  Enter number of subjects: 3
+
+  Enter name for Student 1: Alice
+  Enter marks for Alice:
+  Subject 1: 85
+  Subject 2: 90
+  Subject 3: 80
+
+  Enter name for Student 2: Bob
+  Enter marks for Bob:
+  Subject 1: 70
+  Subject 2: 75
+  Subject 3: 65
+
+  Student Marks Report:
+  Name    Sub1    Sub2    Sub3    Total   Average
+  Alice   85      90      80      255     85.0
+  Bob     70      75      65      210     70.0
+
+  Topper: Alice with average = 85.0
+
