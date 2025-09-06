@@ -92,3 +92,16 @@ int[][] marks = {{85,90,78}, {68,97,82}, {90,61,89}};
 
   Topper: Alice with average = 85.0
 
+
+  Hint:
+   numberOfStudents = 2
+   numberOfSubjects = 3
+   String[] names = new String[numberOfStudents];
+   int[][] marks = new int[numberOfStudents][numberOfSubjects];
+
+   double[] total = new double[numberOfStudents];
+
+   names = [null, null]
+   marks = [{0,0,0}, {0,0,0}]
+   total = {0.0, 0.0}
+
