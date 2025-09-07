@@ -126,6 +126,54 @@ public class _02_CarRentalSystemWithAdminPanel {
                     }
                 }else {
                     System.out.println("Login Successful! Welcome, " + usernames[currentUserIndex] + ".");
+                    while(true){
+                        System.out.println("==============================\n" +
+                                "     Car Rental Management Menu\n" +
+                                "==============================");
+                        System.out.println("1. Rent a Car\n" +
+                                "2. Show Personal Summary\n" +
+                                "3. Logout");
+                        System.out.println("Enter your choice: ");
+                        int choiceUser = scanner.nextInt();
+
+                        if (choiceUser==1){
+                            System.out.println("Rent a car ");
+                            System.out.println("Cars Available:");
+                            for (int i= 0 ; i< cars.length ; i++){
+                                System.out.println((i+1)+"."+cars[i]);
+                            }
+                            System.out.print("Choose car type (1-3): ");
+                            int carToRent = scanner.nextInt();
+
+                            System.out.println("Enter number of days: ");
+                            int daysToRent = scanner.nextInt();
+
+                            double totalOfRentedCar = daysToRent * carPrices[carToRent-1];
+                            rentedQuantity[currentUserIndex][carToRent-1] += 1;
+                            carIncome[currentUserIndex][carToRent-1] +=totalOfRentedCar;
+
+
+                            System.out.println("You rented " + cars[carToRent-1] + " for " + daysToRent +
+                                    " days. Total cost: $" + totalOfRentedCar);
+
+                        } else if (choiceUser==2) {
+                            System.out.println("Your Rental Summary:");
+                            double totalUserSpent = 0;
+                            for (int i = 0 ; i < cars.length ; i++){
+                                System.out.println(cars[i] + " rented: " +  rentedQuantity[currentUserIndex][i] +
+                                        "| Income: $" +carIncome[currentUserIndex][i] );
+                                totalUserSpent += carIncome[currentUserIndex][i];
+                            }
+                            System.out.println("----------------------------------------");
+                            System.out.println("Total Spent: $" + totalUserSpent);
+
+                        } else if (choiceUser==3) {
+                            System.out.println("Logged out successfully!");
+                            break;
+                        }else {
+                            System.out.println("Invalid input.");
+                        }
+                    }
                 }
 
 
