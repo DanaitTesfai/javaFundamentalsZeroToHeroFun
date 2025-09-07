@@ -178,6 +178,41 @@ public class _02_CarRentalSystemWithAdminPanel {
 
 
 
+            } else if (choice==2) {
+                System.out.println("\n--- User Registration ---");
+                String newUser = "";
+                while (true){
+                    System.out.print("Enter new username: ");
+                    newUser = scanner.nextLine().trim();
+
+                    boolean exists = false;
+                    for (int i = 0 ; i < userCount ; i++){
+                        if(usernames[i].equals(newUser)){
+                            exists = true;
+                            break;
+                        }
+                    }
+
+                    if (exists){
+                        System.out.println("Username already exists. Try another username.");
+                    }else {
+                        break;
+                    }
+                }
+                System.out.print("Enter new password: ");
+                String newPassword = scanner.nextLine().trim();
+
+                usernames[userCount]=newUser;
+                passwords[userCount]=newPassword;
+                userCount++;
+
+                System.out.println("Registration successful! You can now login.");
+
+            } else if (choice==3) {
+                System.out.println("Exiting system... Goodbye!");
+                exitProgram =  true;
+            }else {
+                System.out.println("Invalid choice. Please try again.");
             }
         }
 
