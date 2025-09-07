@@ -66,7 +66,7 @@ public class _02_CarRentalSystemWithAdminPanel {
                     }
                 }
                 if (currentUserIndex ==-1){
-                    System.out.println("Too many attempts. Please try again. Return to main menu.");
+                    System.out.println("Too many attempts. Please try again. Return to Main menu.");
                     continue;
                 }
 
