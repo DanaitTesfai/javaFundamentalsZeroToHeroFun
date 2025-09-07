@@ -73,9 +73,41 @@ public class _02_CarRentalSystemWithAdminPanel {
 
                 if (usernames[currentUserIndex].equals("admin")){
                     System.out.println("Admin Login Successful! Welcome, admin.");
+                    while (true){
+                        System.out.println("==============================\n" +
+                                "        ADMIN PANEL\n" +
+                                "==============================");
+                        System.out.println("1. View Car Prices");
+                        System.out.println("2. Update Car Price");
+                        System.out.println("3. View All Users' Rental Summary");
+                        System.out.println("4. Logout");
+                        System.out.print("Enter your choice: ");
+                        int choiceAdmin = scanner.nextInt();
+
+                        if (choiceAdmin==1){
+                            System.out.println("--- Car Prices ---\n" +
+                                    "   Sedan: $50.0/day\n" +
+                                    "   SUV: $80.0/day\n" +
+                                    "   Truck: $100.0/day");
+                        } else if (choiceAdmin==2) {
+                            System.out.println("Which car price do you want to update? ");
+
+                        } else if (choiceAdmin==3) {
+                            System.out.println("--- All Users' Rental Summary ---");
+
+                        } else if (choiceAdmin==4) {
+                            System.out.println("Admin logged out!");
+                            break;
+                        }else {
+                            System.out.println("Invalid input.Please try again.");
+                        }
+
+                    }
                 }else {
                     System.out.println("Login Successful! Welcome, " + usernames[currentUserIndex] + ".");
                 }
+
+
 
             }
         }
