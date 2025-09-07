@@ -85,15 +85,36 @@ public class _02_CarRentalSystemWithAdminPanel {
                         int choiceAdmin = scanner.nextInt();
 
                         if (choiceAdmin==1){
-                            System.out.println("--- Car Prices ---\n" +
-                                    "   Sedan: $50.0/day\n" +
-                                    "   SUV: $80.0/day\n" +
-                                    "   Truck: $100.0/day");
+                            System.out.println("--- Car Prices ---");
+                            for (int i= 0 ; i< cars.length ; i++){
+                                System.out.println(cars[i] + ": $" + carPrices[i] +"/day");
+                            }
                         } else if (choiceAdmin==2) {
                             System.out.println("Which car price do you want to update? ");
+                            for (int i= 0 ; i< cars.length ; i++){
+                                System.out.println((i+1)+"."+cars[i]);
+                            }
+                            System.out.print("Enter choice: ");
+                            int updateChoice = scanner.nextInt();
+
+                            System.out.print("Enter new price for " + cars[updateChoice-1]+": ");
+                            carPrices[updateChoice-1] = scanner.nextDouble();
+                            System.out.println("Price updated successfully!");
 
                         } else if (choiceAdmin==3) {
                             System.out.println("--- All Users' Rental Summary ---");
+                            for (int i = 0 ; i < userCount ; i++){
+                                System.out.println("User: " + usernames[i]);
+                                double totalSpent = 0;
+                                for ( int j = 0 ; j < cars.length ; j++){
+                                    System.out.println(cars[j] +"/s rented: " + rentedQuantity[i][j] +" | Income: $" + carIncome[i][j] );
+                                    totalSpent += carIncome[i][j];
+
+                                }
+                                System.out.println("Total Spent: $" + totalSpent);
+                                System.out.println("----------------------------");
+                            }
+
 
                         } else if (choiceAdmin==4) {
                             System.out.println("Admin logged out!");
