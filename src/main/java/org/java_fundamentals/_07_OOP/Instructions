@@ -1,0 +1,76 @@
+1. Class: Car
+Scenario:
+Create a Car class to represent basic information about a car and its actions.
+
+Requirements:
+
+Properties:
+
+brand (String)
+
+model (String)
+
+year (int)
+
+price (double)
+
+Methods:
+
+startEngine() → prints "<brand> engine started."
+
+stopEngine() → prints "<brand> engine stopped."
+
+accelerate() → prints "<brand> is accelerating."
+
+brake() → prints "<brand> is braking."
+
+displayCarInfo() → prints all details of the car
+
+Sample Output:
+
+Toyota engine started.
+Toyota is accelerating.
+Toyota is braking.
+Toyota engine stopped.
+Car Info:
+Brand: Toyota
+Model: Corolla
+Year: 2022
+Price: $25000.0
+-----------------------------------
+
+2. Class: Book
+Scenario:
+Create a Book class to represent a book in a library.
+
+Requirements:
+
+Properties:
+
+title (String)
+
+author (String)
+
+price (double)
+
+available (boolean)
+
+Methods:
+
+borrowBook() → sets available to false and prints "The book '<title>' has been borrowed."
+
+returnBook() → sets available to true and prints "The book '<title>' has been returned."
+
+displayBookInfo() → prints the book details
+
+Sample Output:
+
+The book 'Java Programming' has been borrowed.
+The book 'Java Programming' has been returned.
+Book Info:
+Title: Java Programming
+Author: John Doe
+Price: $45.5
+Available: true
+
+
