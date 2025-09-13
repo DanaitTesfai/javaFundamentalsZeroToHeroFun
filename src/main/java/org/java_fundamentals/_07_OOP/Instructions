@@ -143,6 +143,45 @@ Account Info:
 Name: John Smith
 Account Number: AC12345
 Balance: $300.0
+-----------------------------------
+
+5. Class: Employee
+Scenario:
+Create an Employee class to represent employee information.
+
+Requirements:
+
+Properties:
+
+name (String)
+
+employeeId (String)
+
+department (String)
+
+salary (double)
+
+Methods:
+
+work() → prints "<name> is working in <department>."
+
+takeBreak() → prints "<name> is taking a break."
+
+increaseSalary(double amount) → increases the salary
+
+displayEmployeeInfo() → prints all employee details
+
+Sample Output:
+
+Alice is working in HR.
+Alice is taking a break.
+Salary increased by $1000.0
+Employee Info:
+Name: Alice
+Employee ID: EMP001
+Department: HR
+Salary: $51000.0
+
 
 
 
