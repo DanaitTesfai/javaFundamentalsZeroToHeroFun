@@ -217,6 +217,43 @@ Title: Inception
 Genre: Sci-Fi
 Duration: 148 minutes
 Rating: 8.8
+-------------------------------------
+7. Class: GymMember
+Scenario:
+Create a GymMember class to manage gym member information.
+
+Requirements:
+
+Properties:
+
+memberName (String)
+
+membershipId (String)
+
+membershipType (String) // e.g., Monthly, Annual
+
+weight (double)
+
+Methods:
+
+workout() → prints "<memberName> is working out."
+
+checkIn() → prints "<memberName> has checked in."
+
+updateWeight(double newWeight) → updates the member's weight
+
+displayMemberInfo() → prints all member details
+
+Sample Output:
+
+John has checked in.
+John is working out.
+Weight updated successfully.
+Member Info:
+Name: John
+Membership ID: GYM123
+Type: Annual
+Weight: 75.5 kg
 
 
 
