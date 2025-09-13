@@ -1,4 +1,4 @@
-package org.java_fundamentals._07_OOP;
+package org.java_fundamentals._07_OOP._04_bankAccount;
 
 public class BankAccount {
     String name;
