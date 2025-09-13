@@ -72,5 +72,79 @@ Title: Java Programming
 Author: John Doe
 Price: $45.5
 Available: true
+--------------------------------------------
+3. Class: Student
+Scenario:
+Create a Student class to store information about a student and their actions.
+
+Requirements:
+
+Properties:
+
+name (String)
+
+studentId (String)
+
+gradeLevel (int)
+
+gpa (double)
+
+Methods:
+
+study() → prints "<name> is studying."
+
+attendClass() → prints "<name> is attending class."
+
+takeExam() → prints "<name> is taking an exam."
+
+displayStudentInfo() → prints all student details
+
+Sample output:
+
+Alice is studying.
+Alice is attending class.
+Alice is taking an exam.
+Student Info:
+Name: Alice
+ID: ST123
+Grade Level: 2
+GPA: 3.5
+------------------------------------------------
+4. Class: BankAccount
+Scenario:
+Create a BankAccount class to manage a customer's account.
+
+Requirements:
+
+Properties:
+
+accountHolderName (String)
+
+accountNumber (String)
+
+balance (double)
+
+Methods:
+
+deposit(double amount) → increases balance
+
+withdraw(double amount) → decreases balance if sufficient funds are available
+
+checkBalance() → prints the current balance
+
+displayAccountInfo() → prints account details
+
+Sample Output:
+
+Deposited $500.0 successfully.
+Withdrawal of $200.0 successful.
+Current balance: $300.0
+Account Info:
+Name: John Smith
+Account Number: AC12345
+Balance: $300.0
+
+
+
 
 
