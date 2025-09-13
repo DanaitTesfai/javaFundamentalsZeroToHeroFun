@@ -181,6 +181,44 @@ Name: Alice
 Employee ID: EMP001
 Department: HR
 Salary: $51000.0
+-----------------------------------------
+6. Class: Movie
+Scenario:
+Create a Movie class to represent movies in a streaming service.
+
+Requirements:
+
+Properties:
+
+title (String)
+
+genre (String)
+
+duration (int) // in minutes
+
+rating (double)
+
+Methods:
+
+playMovie() → prints "Playing movie: <title>"
+
+pauseMovie() → prints "Movie <title> is paused."
+
+stopMovie() → prints "Movie <title> stopped."
+
+displayMovieInfo() → prints all movie details
+
+Sample Output:
+Playing movie: Inception
+Movie Inception is paused.
+Movie Inception stopped.
+Movie Info:
+Title: Inception
+Genre: Sci-Fi
+Duration: 148 minutes
+Rating: 8.8
+
+
 
 
 
