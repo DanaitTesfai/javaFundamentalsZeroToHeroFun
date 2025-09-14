@@ -1,0 +1,7 @@
+ArrayList Exercises
+Create an ArrayList<String> of your 3 favorite foods and print it.
+
+Add 2 more foods, then remove one.
+
+Check if the list contains "Pizza" using contains().
+
