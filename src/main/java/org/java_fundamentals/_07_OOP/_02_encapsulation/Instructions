@@ -62,3 +62,30 @@ Current Balance: $300.0
 4. Exit
 Choose an option: 4
 Exiting... Thank you!
+-----------------------------------
+2. Student Profile Program
+Scenario:
+Create a Student class where:
+
+Name and age are private fields.
+
+Age must be greater than 0.
+
+Program takes user input and displays the student profile.
+
+Sample Console Output:
+ Enter student name: Alice
+Enter student age: 20
+
+--- Student Profile ---
+Student Name: Alice
+Student Age: 20
+
+  With invalid input:
+Enter student name: Bob
+Enter student age: -5
+Age must be positive!
+
+--- Student Profile ---
+Student Name: Bob
+Student Age: 0
