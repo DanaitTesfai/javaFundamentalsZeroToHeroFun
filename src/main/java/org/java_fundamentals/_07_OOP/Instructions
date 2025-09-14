@@ -254,6 +254,43 @@ Name: John
 Membership ID: GYM123
 Type: Annual
 Weight: 75.5 kg
+----------------------------------
+8. Class: RestaurantOrder
+Scenario:
+Create a RestaurantOrder class to manage customer orders.
+
+Requirements:
+
+Properties:
+
+orderId (String)
+
+customerName (String)
+
+foodItem (String)
+
+price (double)
+
+Methods:
+
+placeOrder() → prints "Order <orderId> placed for <customerName>."
+
+cancelOrder() → prints "Order <orderId> has been canceled."
+
+displayOrderInfo() → prints all order details
+
+Sample Output:
+
+Order O123 placed for Alice.
+Order O123 has been canceled.
+Order Info:
+ID: O123
+Customer: Alice
+Food Item: Burger
+Price: $8.5
+
+
+
 
 
 
