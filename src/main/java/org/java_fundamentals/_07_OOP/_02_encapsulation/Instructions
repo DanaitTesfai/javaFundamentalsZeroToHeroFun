@@ -1,0 +1,64 @@
+Q1: Bank Account
+Create a BankAccount class with:
+
+Private fields: accountNumber, balance
+
+Methods:
+
+deposit(amount)
+
+withdraw(amount)
+
+getBalance()
+
+Ensure that:
+
+Deposit amount must be positive
+
+Withdrawal cannot exceed balance
+
+Scenario:
+A bank system where:
+
+Users can deposit money, withdraw money, and check balance.
+
+Deposit amount must be positive.
+
+Withdrawal cannot exceed balance.
+
+Sample Console Output:
+Enter your account number: AC12345
+
+==== Bank Menu ====
+1. Deposit
+2. Withdraw
+3. Check Balance
+4. Exit
+Choose an option: 1
+Enter deposit amount: 500
+Deposited: $500.0
+
+==== Bank Menu ====
+1. Deposit
+2. Withdraw
+3. Check Balance
+4. Exit
+Choose an option: 2
+Enter withdrawal amount: 200
+Withdrawn: $200.0
+
+==== Bank Menu ====
+1. Deposit
+2. Withdraw
+3. Check Balance
+4. Exit
+Choose an option: 3
+Current Balance: $300.0
+
+==== Bank Menu ====
+1. Deposit
+2. Withdraw
+3. Check Balance
+4. Exit
+Choose an option: 4
+Exiting... Thank you!
