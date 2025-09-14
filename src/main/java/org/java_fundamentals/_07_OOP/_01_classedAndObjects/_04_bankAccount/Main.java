@@ -1,4 +1,4 @@
-package org.java_fundamentals._07_OOP._04_bankAccount;
+package org.java_fundamentals._07_OOP._01_classedAndObjects._04_bankAccount;
 
 public class Main {
     public static void main(String[] args) {

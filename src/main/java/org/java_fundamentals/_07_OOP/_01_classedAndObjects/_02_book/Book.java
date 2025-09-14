@@ -1,4 +1,4 @@
-package org.java_fundamentals._07_OOP._02_book;
+package org.java_fundamentals._07_OOP._01_classedAndObjects._02_book;
 
 public class Book {
     String title;

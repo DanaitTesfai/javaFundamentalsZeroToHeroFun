@@ -1,4 +1,4 @@
-package org.java_fundamentals._07_OOP._01_car;
+package org.java_fundamentals._07_OOP._01_classedAndObjects._01_car;
 
 public class Car {
     String brand;

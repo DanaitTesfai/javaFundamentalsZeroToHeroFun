@@ -1,4 +1,4 @@
-package org.java_fundamentals._07_OOP._06_movie;
+package org.java_fundamentals._07_OOP._01_classedAndObjects._06_movie;
 
 public class Main {
     public static void main(String[] args) {

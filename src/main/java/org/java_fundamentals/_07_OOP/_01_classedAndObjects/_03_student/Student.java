@@ -1,4 +1,4 @@
-package org.java_fundamentals._07_OOP._03_student;
+package org.java_fundamentals._07_OOP._01_classedAndObjects._03_student;
 
 public class Student {
     String name;
