@@ -1,4 +1,4 @@
-Product Inventory System
+1.Product Inventory System
 Question:
 Create a Product class with:
 
@@ -15,4 +15,68 @@ Print all product details using an enhanced for loop.
 Ask the user to enter a product name and search for it.
 
 If found, print the product details, else print "Product not found!".
+------------------------------------------------------------------------
+
+2.Problem: Manage a Library of Books
+  Question:
+  Create a Java program to manage a small library system where you can
+  store books, display them, and search for a specific book by its title.
+
+  Requirements:
+
+  Create a Book class with the following:
+
+  bookId (int) – represents the unique ID of the book.
+
+  title (String) – represents the title of the book.
+
+  author (String) – represents the author of the book.
+
+  A constructor to initialize these fields.
+
+  A toString() method to display book details in this format:
+   ID: 101, Title: "Java Basics", Author: "John Smith"
+
+  In the main method (inside a separate class, e.g., LibraryApp):
+
+  Create an ArrayList<Book> to store multiple books.
+
+  Add at least 5 books to the list.
+
+  Display all books:
+
+  First, use a traditional for loop to display all books.
+
+  Then, use an enhanced for loop to display all books again.
+
+
+  Search for a book by title:
+
+  Prompt the user to enter a book title.
+
+  Use an enhanced for loop to search through the list.
+
+  If the book is found, display its details: Book with title "Java Basics" found: ID: 101, Author: John Smith
+
+
+    If the book is not found, display:   Book not found in the library.
+
+    Expected Program Flow Example:
+  All Books (Traditional For Loop):
+  ID: 101, Title: "Java Basics", Author: "John Smith"
+  ID: 102, Title: "Data Structures", Author: "Alice Johnson"
+  ID: 103, Title: "Spring Boot Essentials", Author: "Michael Brown"
+  ID: 104, Title: "Clean Code", Author: "Robert Martin"
+  ID: 105, Title: "Algorithms in Java", Author: "Thomas Cormen"
+
+  All Books (Enhanced For Loop):
+  ID: 101, Title: "Java Basics", Author: "John Smith"
+  ID: 102, Title: "Data Structures", Author: "Alice Johnson"
+  ID: 103, Title: "Spring Boot Essentials", Author: "Michael Brown"
+  ID: 104, Title: "Clean Code", Author: "Robert Martin"
+  ID: 105, Title: "Algorithms in Java", Author: "Thomas Cormen"
+
+  Enter a book title to search: Clean Code
+  Book with title "Clean Code" found: ID: 104, Author: Robert Martin
+
 
