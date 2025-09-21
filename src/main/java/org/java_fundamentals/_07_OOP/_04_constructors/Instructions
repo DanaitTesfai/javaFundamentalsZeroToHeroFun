@@ -1,0 +1,60 @@
+Q1: Car Class
+Create a Car class with:
+
+Fields: brand, model, year
+
+Two constructors:
+
+No-argument → assigns default values.
+
+Parameterized → assigns custom values.
+
+Method displayInfo() to print details.
+
+Homework: In the main method (inside a separate class, e.g., CarApp)
+perform similar operations as the one you did in the Arrylists exercises
+
+Refer _08_arraylists
+---------------------------------------------------
+Q2. Create a LibraryBook class with:
+
+    Fields: title, author, price
+
+    Constructors:
+
+    Default
+
+    Parameterized
+
+    Method displayInfo() to print details.
+ Refer _08_arraylists
+ -------------------------------------------------------------
+
+ Q3: Student Class
+    Create a Student class with:
+
+    Fields: name, age, grade
+
+    Overloaded constructors:
+
+    No-argument → sets "Unknown", 0, "Not Assigned".
+
+    Parameterized → sets custom values.
+
+    Method to display details.
+
+     Refer _08_arraylists
+ ----------------------------------------------------------------
+ Q4: Bank Account
+ Create a BankAccount class with:
+
+ Fields: accountNumber, balance
+
+ No-argument and parameterized constructors.
+
+ deposit() and withdraw() methods
+
+  Refer _08_arraylists
+
+
+
