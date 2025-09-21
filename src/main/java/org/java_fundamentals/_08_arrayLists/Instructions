@@ -1,0 +1,18 @@
+Product Inventory System
+Question:
+Create a Product class with:
+
+productId (int)
+
+productName (String)
+
+price (double)
+
+Create an ArrayList<Product> and add 5 products.
+
+Print all product details using an enhanced for loop.
+
+Ask the user to enter a product name and search for it.
+
+If found, print the product details, else print "Product not found!".
+

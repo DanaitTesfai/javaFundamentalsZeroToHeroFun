@@ -18,6 +18,7 @@ public class _06_StudentMarkSystem {
 
         double[] total = new double[numberOfStudents];
 
+        //input
         for (int i = 0 ; i < numberOfStudents ; i++){
             System.out.print("Enter name for Student " + (i+1) + ": ");
             names[i] = input.nextLine();
