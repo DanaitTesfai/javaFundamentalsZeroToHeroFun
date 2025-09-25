@@ -1,4 +1,4 @@
-package org.java_fundamentals._07_OOP._04_constructors;
+package org.java_fundamentals._07_OOP._04_constructors._02_libraryBook;
 
 public class LibraryBook {
     private String title;

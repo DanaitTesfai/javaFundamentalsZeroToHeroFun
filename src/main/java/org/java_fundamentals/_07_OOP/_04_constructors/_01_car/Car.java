@@ -1,18 +1,18 @@
-package org.java_fundamentals._07_OOP._04_constructors;
+package org.java_fundamentals._07_OOP._04_constructors._01_car;
 
 public class Car {
     private String brand;
     private String model;
     private int year;
 
-    public Car(){
+    public Car() {
         this.brand = "no brand";
         this.model = "no model";
         this.year = 0;
     }
 
-    public Car(String brand,String model,int year){
-        this.brand =  brand;
+    public Car(String brand, String model, int year) {
+        this.brand = brand;
         this.model = model;
         this.year = year;
     }
@@ -40,8 +40,13 @@ public class Car {
     public void setYear(int year) {
         this.year = year;
     }
-    public void displayInfo(){
-        System.out.println("Brand: " + brand +", Model: " + model+ ", Year: "+ year);
+
+    public void displayInfo() {
+        System.out.println("Brand: " + brand + ", Model: " + model + ", Year: " + year);
+    }
+
+    public String toString() {
+        return "Brand: " + brand + ", Model: " + model + ", Year: " + year;
     }
 
 
