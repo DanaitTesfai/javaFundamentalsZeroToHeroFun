@@ -44,4 +44,8 @@ public class LibraryBook {
     public void displayInfo(){
         System.out.println("Title: "+ title +", Author: "+ author + ", Price: "+ price);
     }
+
+    public String toString() {
+        return "Title: " + title + ", Author: " + author + ", Price: "+ price;
+    }
 }
