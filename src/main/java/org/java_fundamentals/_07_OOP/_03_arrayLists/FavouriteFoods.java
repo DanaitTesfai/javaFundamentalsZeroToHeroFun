@@ -9,6 +9,9 @@ public class FavouriteFoods {
         foods.add("pasta");
         foods.add("burger");
 
+        foods.remove("pasta");
+
+
         System.out.println(foods);
         boolean isRemoved = foods.remove("pasta");
         if (isRemoved){
@@ -26,6 +29,16 @@ public class FavouriteFoods {
             System.out.println("Item cant be found.");
         }
         System.out.println(foods);
+
+        System.out.println("----------------------");
+        if (foods.remove("pizza")){
+            System.out.println("Item removed successfully.");
+        }else {
+            System.out.println("Item cant be found.");
+        }
+        System.out.println(foods);
+
+
 
 
 

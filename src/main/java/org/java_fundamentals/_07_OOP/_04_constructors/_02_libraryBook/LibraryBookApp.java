@@ -29,6 +29,19 @@ public class LibraryBookApp {
         System.out.print("Enter a book title to search: ");
         String bookWanted = input.nextLine();
 
+        boolean isFound = false;
+        for (LibraryBook book : books) {
+            if (book.getTitle().equalsIgnoreCase(bookWanted)){
+                book.displayInfo();
+                isFound = true;
+                break;
+            }
+        }
+        if (!isFound){
+            System.out.println("Book not found.");
+        }
+
+
 
     }
 }

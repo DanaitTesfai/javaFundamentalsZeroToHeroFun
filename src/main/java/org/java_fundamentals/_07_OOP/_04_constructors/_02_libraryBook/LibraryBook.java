@@ -6,9 +6,7 @@ public class LibraryBook {
     private double price;
 
     public LibraryBook(){
-        this.title = "no title";
-        this.author = "no author";
-        this.price= 0.0;
+
     }
 
     public LibraryBook(String title,String author,double price){
@@ -42,7 +40,7 @@ public class LibraryBook {
     }
 
     public void displayInfo(){
-        System.out.println("Title: "+ title +", Author: "+ author + ", Price: "+ price);
+        System.out.println(this);
     }
 
     public String toString() {
