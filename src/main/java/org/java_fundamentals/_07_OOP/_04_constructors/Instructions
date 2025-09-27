@@ -55,6 +55,53 @@ Q2. Create a LibraryBook class with:
  deposit() and withdraw() methods
 
   Refer _08_arraylists
+------------------------------------------------------------
+Gym Membership Tracker with Login
+Scenario:
+A gym owner needs to register members into their system.
+
+Owner must log in before managing members.
+
+Each member has:
+
+name
+
+membershipType (Monthly or Annual)
+
+weight
+
+The system should allow the owner to:
+
+Register members using a constructor.
+
+View all members.
+
+Exit.
+
+===== Gym Owner Login =====
+Enter username: owner
+Enter password: gym123
+Login successful!
+
+=== Gym Menu ===
+1. Register Member
+2. View Members
+3. Exit
+Choose an option: 1
+Enter Member Name: Alice
+Enter Membership Type (Monthly/Annual): Annual
+Enter Weight: 68.5
+Member registered successfully!
+
+=== Gym Menu ===
+Choose an option: 2
+
+--- Member List ---
+Name: Alice, Membership: Annual, Weight: 68.5 kg
+
+=== Gym Menu ===
+Choose an option: 3
+Exiting system... Goodbye!
 
 
 

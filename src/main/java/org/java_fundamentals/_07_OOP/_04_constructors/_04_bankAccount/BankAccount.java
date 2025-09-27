@@ -3,15 +3,15 @@ package org.java_fundamentals._07_OOP._04_constructors._04_bankAccount;
 public class BankAccount {
     private int accountNumber;
     private double balance;
+    private String accountHolder;
 
-    public BankAccount(){
-        accountNumber = 0;
-        balance = 0.0;
+    public BankAccount() {
     }
 
-    public BankAccount(int accountNumber, double balance){
+    public BankAccount(int accountNumber, double balance, String accountHolder) {
         this.accountNumber = accountNumber;
         this.balance = balance;
+        this.accountHolder = accountHolder;
     }
 
     public int getAccountNumber() {
@@ -30,11 +30,24 @@ public class BankAccount {
         this.balance = balance;
     }
 
-    public void deposit(double amount){
-        balance += amount;
+    public String getAccountHolder() {
+        return accountHolder;
     }
 
-    public void withdraw(double amount){
-        balance -= amount;
+    public void setAccountHolder(String accountHolder) {
+        this.accountHolder = accountHolder;
+    }
+
+
+
+
+
+    @Override
+    public String toString() {
+        return "BankAccount{" +
+                "accountNumber=" + accountNumber +
+                ", balance=" + balance +
+                ", accountHolder='" + accountHolder + '\'' +
+                '}';
     }
 }
