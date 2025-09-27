@@ -30,6 +30,18 @@ public class CarApp {
         System.out.print("Enter car type to search: ");
         String carWanted = sc.nextLine();
 
+        boolean isFound = false;
+        for (Car c : cars){
+            if (c.getBrand().equals(carWanted)){
+                c.displayInfo();
+                isFound = true;
+                break;
+            }
+        }
+        if (!isFound){
+            System.out.println("Car not found.");
+        }
+
 
     }
 }
