@@ -42,6 +42,9 @@ public class Student {
     }
 
     public void displayInfo() {
-        System.out.println("Name: " + name + ", Age: " + age + ", Grade: " + grade);
+        System.out.println(this);
+    }
+    public String toString(){
+        return "Name: " + name + ", Age: " + age + ", Grade: " + grade;
     }
 }

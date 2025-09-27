@@ -28,8 +28,20 @@ public class StudentApp {
 
         System.out.println();
 
-        System.out.println("Enter a student name to search: ");
+        System.out.print("Enter a student name to search: ");
         String newStudent = input.nextLine();
+
+        boolean isFound = false;
+        for (Student s : students){
+            if (s.getName().equalsIgnoreCase(newStudent)){
+                s.displayInfo();
+                isFound= true;
+                break;
+            }
+        }
+        if (!isFound){
+            System.out.println("Student not found.");
+        }
 
     }
 }
