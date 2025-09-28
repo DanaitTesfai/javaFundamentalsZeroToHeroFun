@@ -48,7 +48,7 @@ Q2. Create a LibraryBook class with:
  Q4: Bank Account
  Create a BankAccount class with:
 
- Fields: accountNumber, balance
+ Fields: accountNumber, balance, accountHolder
 
  No-argument and parameterized constructors.
 

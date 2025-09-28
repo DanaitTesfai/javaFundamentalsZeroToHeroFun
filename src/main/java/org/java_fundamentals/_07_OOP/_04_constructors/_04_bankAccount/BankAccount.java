@@ -38,9 +38,21 @@ public class BankAccount {
         this.accountHolder = accountHolder;
     }
 
+    public void deposit(double amount){
+        if (amount > 0 ){
+            balance += amount;
+        }else {
+            System.out.println("Enter valid amount.");
+        }
+    }
 
-
-
+    public void withdraw(double amount){
+        if (amount < balance){
+            balance -= amount;
+        }else {
+            System.out.println("Insufficient funds.");
+        }
+    }
 
     @Override
     public String toString() {
