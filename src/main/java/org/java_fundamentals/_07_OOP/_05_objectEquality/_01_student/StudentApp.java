@@ -1,4 +1,4 @@
-package org.java_fundamentals._07_OOP._05_objectEquality;
+package org.java_fundamentals._07_OOP._05_objectEquality._01_student;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -91,7 +91,7 @@ public class StudentApp {
                     break;
 
                 case 3:
-                    System.out.println("Enter Student ID to search: ");
+                    System.out.print("Enter Student ID to search: ");
                     int searchId = sc.nextInt();
 
                     boolean isFound = false;

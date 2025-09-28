@@ -1,4 +1,4 @@
- Student Management System
+1. Student Management System
 Scenario:
 A school needs a system to manage student records.
 
@@ -74,3 +74,71 @@ Student found: ID: S001, Name: Alice, Grade: 10th
 
 Choose an option: 4
 Exiting system... Goodbye!
+--------------------------------------------------
+2.Online Store Management System
+  Scenario:
+  An online store wants to manage its product inventory.
+
+  The store manager must log in first.
+
+  Each product has:
+
+  productId
+
+  name
+
+  price
+
+  The system should allow the manager to:
+
+  Add a product.
+
+  View all products.
+
+  Search for a product by name.
+
+  Prevent duplicate products based on productId.
+
+  Exit.
+
+  Instructions for Students:
+  Create a Product class with private fields and a constructor.
+
+  Override .equals() and .hashCode() so that two products are considered equal if they have the same productId.
+
+  Use an ArrayList<Product> to store products.
+
+  Implement a menu using a switch statement to navigate the options.
+
+  ===== Online Store Login =====
+  Enter username: manager
+  Enter password: store123
+  Login successful!
+
+  === Online Store Menu ===
+  1. Add Product
+  2. View Products
+  3. Search Product by Name
+  4. Exit
+  Choose an option: 1
+  Enter Product ID: P001
+  Enter Product Name: Laptop
+  Enter Price: 800
+  Product added successfully!
+
+  Choose an option: 1
+  Enter Product ID: P001
+  Enter Product Name: Laptop
+  Enter Price: 800
+  Duplicate product! Cannot add.
+
+  Choose an option: 2
+  --- Product List ---
+  ID: P001, Name: Laptop, Price: $800.0
+
+  Choose an option: 3
+  Enter product name to search: Laptop
+  Product found: ID: P001, Name: Laptop, Price: $800.0
+
+  Choose an option: 4
+  Exiting system... Goodbye!

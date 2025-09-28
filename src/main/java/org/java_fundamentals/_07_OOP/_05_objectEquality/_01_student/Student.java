@@ -1,4 +1,4 @@
-package org.java_fundamentals._07_OOP._05_objectEquality;
+package org.java_fundamentals._07_OOP._05_objectEquality._01_student;
 
 import java.util.Objects;
 
