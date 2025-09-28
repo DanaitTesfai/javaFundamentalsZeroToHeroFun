@@ -1,0 +1,76 @@
+ Student Management System
+Scenario:
+A school needs a system to manage student records.
+
+The admin must log in before managing students.
+
+Each student has:
+
+studentId
+
+name
+
+grade
+
+The system should allow the admin to:
+
+Register a student.
+
+View all students.
+
+Search for a student by ID.
+
+Prevent duplicate students using .equals() and hashCode().
+
+Exit.
+
+The program must use a switch statement to navigate through the menu options.
+
+Instructions for Students:
+Create a Student class with:
+
+Private fields: studentId, name, grade.
+
+A constructor to initialize the student.
+
+Override .equals() and .hashCode() to consider two students equal if they have the same studentId.
+
+Create a login system with a fixed username and password (admin / 1234).
+
+Use an ArrayList<Student> to store all registered students.
+
+Build a menu-driven program using a switch statement.
+
+
+===== School Admin Login =====
+Enter username: admin
+Enter password: 1234
+Login successful!
+
+=== Student Management Menu ===
+1. Register Student
+2. View Students
+3. Search Student by ID
+4. Exit
+Choose an option: 1
+Enter Student ID: S001
+Enter Name: Alice
+Enter Grade: 10th
+Student registered successfully!
+
+Choose an option: 1
+Enter Student ID: S001
+Enter Name: Alice
+Enter Grade: 10th
+Duplicate student! Registration not allowed.
+
+Choose an option: 2
+--- Student List ---
+ID: S001, Name: Alice, Grade: 10th
+
+Choose an option: 3
+Enter Student ID to search: S001
+Student found: ID: S001, Name: Alice, Grade: 10th
+
+Choose an option: 4
+Exiting system... Goodbye!
