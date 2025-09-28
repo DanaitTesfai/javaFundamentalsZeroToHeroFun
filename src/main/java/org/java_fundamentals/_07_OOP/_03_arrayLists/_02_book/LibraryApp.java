@@ -1,10 +1,6 @@
-package org.java_fundamentals._08_arrayLists._02_book;
-
-import org.java_fundamentals._08_arrayLists._01_product.Product;
+package org.java_fundamentals._07_OOP._03_arrayLists._02_book;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
 
 public class LibraryApp {

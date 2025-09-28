@@ -18,16 +18,16 @@ public class BankAccountApp {
             System.out.println(b);
         }
 
-        System.out.print("Deposit: ");
+        System.out.print("Deposit to account 1: ");
         double amountD = sc.nextDouble();
 
-        account1.deposit(5000);
+        account1.deposit(amountD);
         System.out.println(account1);
 
-        System.out.println("Withdraw: ");
+        System.out.print("Withdraw from account 2: ");
         double amountW = sc.nextDouble();
 
-        account2.withdraw(500);
+        account2.withdraw(amountW);
         System.out.println(account2);
 
 
