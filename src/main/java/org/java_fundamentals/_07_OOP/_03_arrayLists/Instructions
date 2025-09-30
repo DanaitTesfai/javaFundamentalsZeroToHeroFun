@@ -1,11 +1,12 @@
-ArrayList Exercises
+1. ArrayList Exercises
 Create an ArrayList<String> of your 3 favorite foods and print it.
 
 Add 2 more foods, then remove one.
 
 Check if the list contains "Pizza" using contains().
 --------------------------------------------------------------
-1.Product Inventory System
+
+2. Product Inventory System
 Question:
 Create a Product class with:
 
@@ -24,7 +25,7 @@ Ask the user to enter a product name and search for it.
 If found, print the product details, else print "Product not found!".
 ------------------------------------------------------------------------
 
-2.Problem: Manage a Library of Books
+3. Problem: Manage a Library of Books
   Question:
   Create a Java program to manage a small library system where you can
   store books, display them, and search for a specific book by its title.

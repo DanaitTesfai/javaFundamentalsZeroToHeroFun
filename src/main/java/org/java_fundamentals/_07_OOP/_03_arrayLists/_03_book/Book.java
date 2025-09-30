@@ -1,4 +1,4 @@
-package org.java_fundamentals._07_OOP._03_arrayLists._02_book;
+package org.java_fundamentals._07_OOP._03_arrayLists._03_book;
 
 public class Book {
     private int id;

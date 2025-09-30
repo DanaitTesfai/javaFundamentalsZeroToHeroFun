@@ -1,4 +1,4 @@
-package org.java_fundamentals._07_OOP._03_arrayLists._03_favouriteFood;
+package org.java_fundamentals._07_OOP._03_arrayLists._01_favouriteFood;
 
 import java.util.ArrayList;
 

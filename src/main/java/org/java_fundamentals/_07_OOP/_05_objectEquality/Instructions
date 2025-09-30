@@ -142,3 +142,130 @@ Exiting system... Goodbye!
 
   Choose an option: 4
   Exiting system... Goodbye!
+  ------------------------------------------
+3. Gym Membership Tracker with Login
+   Scenario:
+   A gym owner wants to register members and track their details.
+
+   The gym owner must log in before accessing the system.
+
+   Each member has:
+
+   memberId
+
+   name
+
+   membershipType (Monthly or Annual)
+
+   The system should:
+
+   Register a member.
+
+   View all members.
+
+   Search member by ID.
+
+   Prevent duplicate registrations based on memberId.
+
+   Exit.
+
+   ===== Gym Owner Login =====
+   Enter username: owner
+   Enter password: gym123
+   Login successful!
+
+   === Gym Menu ===
+   1. Register Member
+   2. View Members
+   3. Search Member by ID
+   4. Exit
+   Choose an option: 1
+   Enter Member ID: M001
+   Enter Name: Alice
+   Enter Membership Type (Monthly/Annual): Annual
+   Member registered successfully!
+
+   Choose an option: 1
+   Enter Member ID: M001
+   Enter Name: Alice
+   Enter Membership Type (Monthly/Annual): Annual
+   Duplicate member! Cannot register.
+
+   Choose an option: 2
+   --- Member List ---
+   ID: M001, Name: Alice, Membership Type: Annual
+
+   Choose an option: 3
+   Enter Member ID to search: M001
+   Member found: ID: M001, Name: Alice, Membership Type: Annual
+
+   Choose an option: 4
+   Exiting Gym System... Goodbye!
+ --------------------------------------------------
+ 4.Library Management System
+   Scenario:
+   A library wants to keep track of books being added to its collection.
+
+   The librarian must log in to access the system.
+
+   Each book has:
+
+   bookId
+
+   title
+
+   author
+
+   The system must allow:
+
+   Add a new book.
+
+   View all books.
+
+   Search for a book by title.
+
+   Prevent adding duplicate books (same bookId).
+
+   Exit.
+
+   Instructions for Students:
+   Create a Book class with private fields and a constructor.
+
+   Override .equals() and .hashCode() to prevent duplicates based on bookId.
+
+   Use an ArrayList<Book> to store books.
+
+   Build a menu using a switch statement with options for adding, viewing, and searching books.
+
+   ===== Librarian Login =====
+   Enter username: librarian
+   Enter password: lib123
+   Login successful!
+
+   === Library Menu ===
+   1. Add Book
+   2. View Books
+   3. Search Book by Title
+   4. Exit
+   Choose an option: 1
+   Enter Book ID: B001
+   Enter Title: Java Basics
+   Enter Author: John Smith
+   Book added successfully!
+
+   Choose an option: 1
+   Enter Book ID: B001
+   Enter Title: Java Basics
+   Enter Author: John Smith
+   Duplicate book! Cannot add.
+
+   Choose an option: 2
+   --- Library Books ---
+   ID: B001, Title: Java Basics, Author: John Smith
+
+   Choose an option: 3
+   Enter title to search: Java Basics
+   Book found: ID: B001, Title: Java Basics, Author: John Smith
+
+   Choose an option: 4
+   Exiting system... Goodbye!
