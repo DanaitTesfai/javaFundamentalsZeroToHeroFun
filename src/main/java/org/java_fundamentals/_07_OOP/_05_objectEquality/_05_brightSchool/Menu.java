@@ -17,6 +17,7 @@ public class Menu {
                     "    4. Exit");
             System.out.print("Choose an option: ");
             int option = scanner.nextInt();
+            scanner.nextLine();
 
             switch (option){
                 case 1:
@@ -31,6 +32,7 @@ public class Menu {
                 case 4:
                     System.out.println("Exiting system... Goodbye!");
                     running = false;
+                    break;
                 default:
                     System.out.println("Invalid input. Please try again.");
                     break;

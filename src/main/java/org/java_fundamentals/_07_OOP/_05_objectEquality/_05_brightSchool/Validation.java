@@ -9,6 +9,7 @@ public class Validation {
 
     public static boolean login(Scanner input){
 
+        System.out.println("===== School Admin Login =====");
         System.out.print("Enter your username: ");
         String userN = input.nextLine();
 
