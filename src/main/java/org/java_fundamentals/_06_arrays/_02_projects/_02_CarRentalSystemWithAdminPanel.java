@@ -71,6 +71,7 @@ public class _02_CarRentalSystemWithAdminPanel {
                 }
 
 
+                // Admin menu
                 if (usernames[currentUserIndex].equals("admin")){
                     System.out.println("Admin Login Successful! Welcome, admin.");
                     while (true){
@@ -124,6 +125,8 @@ public class _02_CarRentalSystemWithAdminPanel {
                         }
 
                     }
+
+                    //User menu
                 }else {
                     System.out.println("Login Successful! Welcome, " + usernames[currentUserIndex] + ".");
                     while(true){

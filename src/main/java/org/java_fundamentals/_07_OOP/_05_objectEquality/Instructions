@@ -268,4 +268,173 @@ Exiting system... Goodbye!
    Book found: ID: B001, Title: Java Basics, Author: John Smith
 
    Choose an option: 4
-   Exiting system... Goodbye!
+   Exiting system... Goodbye!...
+ -------------------------------------------------------------
+
+ 5. Project Scenario: Student Management System
+    Project Overview
+    The School Administration Department wants to develop a simple console-based Student Management System using Java.
+    This system should allow the school administrator to log in, register students, view student details, and search
+    for students — all while following Object-Oriented Programming (OOP) principles such as Encapsulation,
+     Constructors, and Object Equality.
+
+    The project should be built using multiple classes that demonstrate clean OOP design and modular coding practices
+
+    Learning Objectives
+        By completing this project, students will:
+
+        Understand and apply Encapsulation (private fields, getters, setters).
+
+        Use Constructors to initialize object data.
+
+        Implement login validation using a separate class.
+
+        Manage data dynamically using ArrayList.
+
+        Use a Switch statement for console-based menu navigation.
+
+        Apply Object Equality (equals and hashCode) to prevent duplicates.
+
+        Use search functionality to find specific records.
+
+        Follow class separation and modular design for clarity and reusability.
+
+
+
+    Scenario
+    The Bright Future Academy has recently digitized its operations.
+    The school principal has asked you, as a junior Java developer, to build a simple console program that allows
+    the administrator to:
+
+    Log in to the system securely.
+
+    Register new students (with ID, name, and age).
+
+    Prevent duplicate student entries (based on ID).
+
+    View all registered students.
+
+    Search for a specific student by ID.
+
+    Exit the system safely.
+
+
+    The admin credentials are:
+
+
+
+    Username: admin
+    Password: 1234
+
+
+
+    Detailed Instructions
+    Step 1: Create the Student Class (Domain Class)
+        Define private fields: studentId, name, and age.
+
+        Use getters and setters for controlled access.
+
+        Add validation inside setAge() (age must be greater than 0).
+
+        Create a constructor that initializes all fields.
+
+        Add a displayInfo() method to print student details.
+
+        Override equals() and hashCode() to compare students by their studentId — this prevents duplicates.
+
+    Step 2: Create the Validation Class
+    Create a static login() method that:
+
+    Asks for username and password using Scanner.
+
+    Returns true if login is successful, false otherwise.
+
+    Create helper methods:
+
+    isValidName(String name) → Ensures name is not empty.
+
+    isValidId(String id) → Ensures ID contains letters or numbers only.
+
+    isValidAge(int age) → Ensures age is within a reasonable range (1–120).
+
+    Step 3: Create the Menu Class
+    This class handles the main operations after login.
+
+
+    Maintain an ArrayList of Student objects.
+
+    Display a menu with the following options:
+
+    === Student Management Menu ===
+    1. Register Student
+    2. View All Students
+    3. Search Student by ID
+    4. Exit
+
+
+
+    Use a switch statement to control user actions.
+
+    For registration:
+
+    Ask for studentId, name, and age.
+
+    Validate the input using the Validation class.
+
+    Create a Student object using a constructor.
+
+    Prevent duplicates using .contains() (which uses equals() internally).
+
+    For viewing:
+
+    Print all student records in tabular form.
+
+    For searching:
+
+    Ask for a student ID and display details if found.
+
+    Step 4: Create the Main Class
+
+    Call the Validation.login() method first.
+
+    If login succeeds:
+
+    Create a Menu object and call displayMenu().
+
+    If login fails:
+
+    Display an error and exit the program.
+
+    ===== School Admin Login =====
+    Enter username: admin
+    Enter password: 1234
+    Login successful!
+
+    === Student Management Menu ===
+    1. Register Student
+    2. View All Students
+    3. Search Student by ID
+    4. Exit
+    Choose an option: 1
+    Enter Student ID: S001
+    Enter Name: Alice
+    Enter Age: 20
+    Student registered successfully!
+
+    Choose an option: 1
+    Enter Student ID: S001
+    Enter Name: Alice
+    Enter Age: 20
+    Duplicate student detected! Registration not allowed.
+
+    Choose an option: 2
+    --- Student List ---
+    ID: S001 | Name: Alice | Age: 20
+
+    Choose an option: 3
+    Enter Student ID to search: S001
+    Student found:
+    ID: S001 | Name: Alice | Age: 20
+
+    Choose an option: 4
+    Exiting system... Goodbye!

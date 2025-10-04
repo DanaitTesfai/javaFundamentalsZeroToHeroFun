@@ -14,7 +14,7 @@ Method displayInfo() to print details.
 Homework: In the main method (inside a separate class, e.g., CarApp)
 perform similar operations as the one you did in the Arraylists exercises
 
-Refer _08_arraylists
+Refer _03_arraylists
 ---------------------------------------------------
 Q2. Create a LibraryBook class with:
 
@@ -27,7 +27,7 @@ Q2. Create a LibraryBook class with:
     Parameterized
 
     Method displayInfo() to print details.
- Refer _08_arraylists
+ Refer _03_arraylists
  -------------------------------------------------------------
 
  Q3: Student Class
@@ -43,7 +43,7 @@ Q2. Create a LibraryBook class with:
 
     Method to display details.
 
-     Refer _08_arraylists
+     Refer _03_arraylists
  ----------------------------------------------------------------
  Q4: Bank Account
  Create a BankAccount class with:
@@ -54,7 +54,7 @@ Q2. Create a LibraryBook class with:
 
  deposit() and withdraw() methods
 
-  Refer _08_arraylists
+  Refer _03_arraylists
 ------------------------------------------------------------
 
 5. Gym Membership Tracker with Login
