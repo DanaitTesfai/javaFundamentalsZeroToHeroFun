@@ -343,19 +343,19 @@ Exiting system... Goodbye!
         Override equals() and hashCode() to compare students by their studentId — this prevents duplicates.
 
     Step 2: Create the Validation Class
-    Create a static login() method that:
+        Create a static login() method that:
 
-    Asks for username and password using Scanner.
+        Asks for username and password using Scanner.
 
-    Returns true if login is successful, false otherwise.
+        Returns true if login is successful, false otherwise.
 
-    Create helper methods:
+        Create helper methods:
 
-    isValidName(String name) → Ensures name is not empty.
+        isValidName(String name) → Ensures name is not empty.
 
-    isValidId(String id) → Ensures ID contains letters or numbers only.
+        isValidId(String id) → Ensures ID contains letters or numbers only.
 
-    isValidAge(int age) → Ensures age is within a reasonable range (1–120).
+        isValidAge(int age) → Ensures age is within a reasonable range (1–120).
 
     Step 3: Create the Menu Class
     This class handles the main operations after login.

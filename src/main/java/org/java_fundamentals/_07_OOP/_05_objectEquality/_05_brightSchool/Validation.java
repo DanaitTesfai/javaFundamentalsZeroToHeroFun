@@ -22,5 +22,18 @@ public class Validation {
             System.out.println("Username or password is incorrect. Access denied.");
             return false;
         }
+
+    }
+
+    public static boolean isValidName(String name){
+        return name != null && !name.trim().isEmpty();
+    }
+
+    public static boolean isValidId(String id){
+        return id != null && id.matches("[A-Za-z0-9]+");
+    }
+
+    public static boolean isValidAge(int age){
+        return age > 0 && age <= 120;
     }
 }
