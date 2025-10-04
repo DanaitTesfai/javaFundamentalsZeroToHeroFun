@@ -1,0 +1,7 @@
+Problem 1: Single Inheritance – Basic Relationship
+Task
+Create a Person class with name and age.
+Create a Student class that inherits from Person and adds a studentId.
+Print all details.
+
+Code

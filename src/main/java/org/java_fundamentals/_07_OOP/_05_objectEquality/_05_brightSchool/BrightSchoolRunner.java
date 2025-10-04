@@ -5,13 +5,14 @@ import java.util.Scanner;
 public class BrightSchoolRunner {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        boolean isLogedIn = Validation.login(input);
-        if (isLogedIn){
+        boolean isLoggedIn = Validation.login(input);
+        if (isLoggedIn){
             Menu menu = new Menu();
             menu.dispayMenu(input);
         }else {
-            System.out.println("There is an error. You can not proceed.");
+            System.out.println("There is a log-in error. You can not proceed.");
         }
+        input.close();
 
     }
 }
