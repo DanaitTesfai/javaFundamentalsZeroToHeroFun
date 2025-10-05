@@ -76,11 +76,11 @@ Create GradStudent (extends Student):
 
 Create Validation:
 
-login(Scanner)
+    login(Scanner)
 
-isValidId(String), isValidName(String), isValidAge(int)
+    isValidId(String), isValidName(String), isValidAge(int)
 
-Optional: isNonEmpty(String)
+    Optional: isNonEmpty(String)
 
 Create Menu:
 
