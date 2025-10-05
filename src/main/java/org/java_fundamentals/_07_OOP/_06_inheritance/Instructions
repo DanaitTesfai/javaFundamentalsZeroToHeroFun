@@ -5,3 +5,10 @@ Create a Student class that inherits from Person and adds a studentId.
 Print all details.
 
 Code
+---------------------------------------------------
+Problem 2: Multilevel Inheritance – Animal Hierarchy
+Task
+Create an inheritance chain:
+
+Animal → Mammal → Dog
+Each should have a specific behavior method.
