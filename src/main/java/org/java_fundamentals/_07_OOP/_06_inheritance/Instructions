@@ -48,15 +48,15 @@ Step-by-Step Build Guide
 
 Create Student (extends Person):
 
-Field: studentId (private)
+    Field: studentId (private)
 
-Constructor calls super(name, age)
+    Constructor calls super(name, age)
 
-equals()/hashCode() based on studentId (case-insensitive)
+    equals()/hashCode() based on studentId (case-insensitive)
 
-displayInfo() prints base + ID
+    displayInfo() prints base + ID
 
-Getter for studentId
+    Getter for studentId
 
 Create UndergradStudent (extends Student):
 
