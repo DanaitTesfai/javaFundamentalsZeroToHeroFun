@@ -60,11 +60,11 @@ Create Student (extends Person):
 
 Create UndergradStudent (extends Student):
 
-Field: major
+    Field: major
 
-Constructor calls super(...)
+    Constructor calls super(...)
 
-Override displayInfo() to include major
+    Override displayInfo() to include major
 
 Create GradStudent (extends Student):
 
