@@ -68,11 +68,11 @@ Create UndergradStudent (extends Student):
 
 Create GradStudent (extends Student):
 
-Field: thesisTitle
+    Field: thesisTitle
 
-Constructor calls super(...)
+    Constructor calls super(...)
 
-Override displayInfo() to include thesis title
+    Override displayInfo() to include thesis title
 
 Create Validation:
 
