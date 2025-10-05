@@ -12,3 +12,151 @@ Create an inheritance chain:
 
 Animal → Mammal → Dog
 Each should have a specific behavior method.
+-----------------------------------------------------------
+3. Project: Student Management System — With Inheritance
+Scenario
+Bright Future Academy now has two kinds of students:
+
+Undergraduate students (need a major)
+
+Graduate students (need a thesis title)
+
+The admin logs in, registers students (chooses the type), views all students, searches by ID, and the system
+prevents duplicates based on studentId.
+
+What You’ll Practice
+Inheritance: UndergradStudent and GradStudent extend Student, and Student extends a base Person.
+
+Encapsulation: all fields are private with getters/setters (validated).
+
+Constructors: call super(...) and chain initializations.
+
+ArrayList: store mixed student types in one list (ArrayList<Student>).
+
+Object equality: override equals()/hashCode() in Student (case-insensitive by studentId) to block duplicates.
+
+Login + Switch menu + Search: console-driven UX.
+
+Step-by-Step Build Guide
+    Create Person (base class):
+
+    Fields: name, age (private)
+
+    Getters/Setters with validation (age > 0)
+
+    Constructor for common data
+
+Create Student (extends Person):
+
+Field: studentId (private)
+
+Constructor calls super(name, age)
+
+equals()/hashCode() based on studentId (case-insensitive)
+
+displayInfo() prints base + ID
+
+Getter for studentId
+
+Create UndergradStudent (extends Student):
+
+Field: major
+
+Constructor calls super(...)
+
+Override displayInfo() to include major
+
+Create GradStudent (extends Student):
+
+Field: thesisTitle
+
+Constructor calls super(...)
+
+Override displayInfo() to include thesis title
+
+Create Validation:
+
+login(Scanner)
+
+isValidId(String), isValidName(String), isValidAge(int)
+
+Optional: isNonEmpty(String)
+
+Create Menu:
+
+ArrayList<Student> students = new ArrayList<>();
+
+Switch menu: Register, View All, Search by ID, Exit
+
+On Register → choose type (Undergrad/Grad) → collect inputs → validate → build object → prevent duplicates with contains()
+
+Create Main:
+
+If login ok → show menu; else exit.
+
+   Sample Console Run
+===== School Admin Login =====
+Enter username: admin
+Enter password: 1234
+Login successful!
+
+=== Student Management Menu ===
+1. Register Student
+2. View All Students
+3. Search Student by ID
+4. Exit
+Choose an option: 1
+Select student type:
+1. Undergraduate
+2. Graduate
+Your choice: 1
+Enter Student ID: S001
+Enter Name: Alice Kim
+Enter Age: 19
+Enter Major: Computer Science
+Student registered successfully!
+
+=== Student Management Menu ===
+1. Register Student
+2. View All Students
+3. Search Student by ID
+4. Exit
+Choose an option: 1
+Select student type:
+1. Undergraduate
+2. Graduate
+Your choice: 2
+Enter Student ID: G010
+Enter Name: Bob Lee
+Enter Age: 25
+Enter Thesis Title: Deep Learning for Healthcare
+Student registered successfully!
+
+=== Student Management Menu ===
+Choose an option: 2
+
+--- Student List ---
+UNDERGRAD | ID: S001 | Name: Alice Kim | Age: 19 | Major: Computer Science
+GRAD      | ID: G010 | Name: Bob Lee   | Age: 25 | Thesis: Deep Learning for Healthcare
+
+=== Student Management Menu ===
+Choose an option: 1
+Select student type:
+1. Undergraduate
+2. Graduate
+Your choice: 1
+Enter Student ID: S001
+Enter Name: Alice Kim
+Enter Age: 19
+Enter Major: Computer Science
+Duplicate student detected! Registration not allowed.
+
+=== Student Management Menu ===
+Choose an option: 3
+Enter Student ID to search: G010
+Student found:
+GRAD      | ID: G010 | Name: Bob Lee   | Age: 25 | Thesis: Deep Learning for Healthcare
+
+=== Student Management Menu ===
+Choose an option: 4
+Exiting system... Goodbye!
