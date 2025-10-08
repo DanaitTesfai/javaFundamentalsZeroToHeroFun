@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Menu {
     private ArrayList<Student> students = new ArrayList<>();
 
-    public void dispayMenu(Scanner scanner) {
+    public void displayMenu(Scanner scanner) {
         boolean running = true;
 
         while (running) {

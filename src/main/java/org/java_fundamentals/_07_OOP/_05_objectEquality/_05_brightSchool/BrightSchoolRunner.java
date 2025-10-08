@@ -8,7 +8,7 @@ public class BrightSchoolRunner {
         boolean isLoggedIn = Validation.login(input);
         if (isLoggedIn){
             Menu menu = new Menu();
-            menu.dispayMenu(input);
+            menu.displayMenu(input);
         }else {
             System.out.println("There is a log-in error. You can not proceed.");
         }

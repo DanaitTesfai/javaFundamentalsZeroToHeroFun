@@ -84,15 +84,15 @@ Create Validation:
 
 Create Menu:
 
-ArrayList<Student> students = new ArrayList<>();
+    ArrayList<Student> students = new ArrayList<>();
 
-Switch menu: Register, View All, Search by ID, Exit
+    Switch menu: Register, View All, Search by ID, Exit
 
-On Register → choose type (Undergrad/Grad) → collect inputs → validate → build object → prevent duplicates with contains()
+    On Register → choose type (Undergrad/Grad) → collect inputs → validate → build object → prevent duplicates with contains()
 
 Create Main:
 
-If login ok → show menu; else exit.
+    If login ok → show menu; else exit.
 
    Sample Console Run
 ===== School Admin Login =====
@@ -160,3 +160,313 @@ GRAD      | ID: G010 | Name: Bob Lee   | Age: 25 | Thesis: Deep Learning for Hea
 === Student Management Menu ===
 Choose an option: 4
 Exiting system... Goodbye!
+---------------------------------------------------
+4. Car Rental Management System — With Inheritance
+   Project Overview
+   A car rental company named CityDrive Rentals wants a simple Java console-based
+    management system that allows their admin to:
+
+   Log in securely.
+
+   Register new vehicles (two types: Sedan and SUV).
+
+   Prevent duplicate registrations using car ID.
+
+   View all registered cars.
+
+   Search for a car by ID.
+
+   Exit safely.
+
+   The system should use OOP design with inheritance — Sedan and SUV will both extend a base Car class.
+
+   Concepts Practiced
+   Concept	Description
+   Encapsulation	Keep fields private with getters/setters and validation
+   Inheritance	Base Car class → Sedan and SUV subclasses
+   Constructors	Initialize data using constructors and super()
+   ArrayList	Store mixed objects dynamically
+   Switch Statement	Create a structured menu system
+   Object Equality	Prevent duplicates by overriding equals() and hashCode()
+   Validation	Handle user input and login securely
+   Polymorphism	Each car type prints its own custom info
+
+
+   System Requirements
+   Class	Purpose
+   Vehicle	Base class (common fields: name, brand, price)
+   Car	Extends Vehicle (adds carId and car-specific data)
+   Sedan	Extends Car (adds trunkSize)
+   SUV	Extends Car (adds offRoadCapability)
+   Validation	Handles login and input checking
+   Menu	Displays and controls operations
+   Main	Entry point
+
+   Step-by-Step Instructions
+   1️⃣ Create Vehicle Class (Base Class)
+   Encapsulates common data like name, brand, and price.
+
+   2️⃣ Create Car Class (Inherits Vehicle)
+   Adds a carId (unique identifier).
+   Implements equals() and hashCode() to compare by ID.
+
+   3️⃣ Create Subclasses:
+   Sedan — adds trunk size.
+
+   SUV — adds off-road capability (boolean).
+   Both override displayInfo().
+
+   4️⃣ Create Validation Class
+   Handles:
+
+   Admin login (admin / 1234)
+
+   Name and ID validation
+
+   Price validation
+
+   5️⃣ Create Menu Class
+   Switch-based menu:
+
+   === Car Rental Menu ===
+   1. Register Car
+   2. View All Cars
+   3. Search Car by ID
+   4. Exit
+
+   Stores cars in ArrayList<Car>.
+
+   6️⃣ Create Main Class
+
+   Runs login first → opens menu if valid.
+
+   ===== CityDrive Admin Login =====
+   Enter username: admin
+   Enter password: 1234
+   Login successful!
+
+   === Car Rental Menu ===
+   1. Register Car
+   2. View All Cars
+   3. Search Car by ID
+   4. Exit
+   Enter choice: 1
+   Choose car type:
+   1. Sedan
+   2. SUV
+   1
+   Enter Car ID: C001
+   Enter Brand: Toyota
+   Enter Name: Corolla
+   Enter Price: 25000
+   Enter Trunk Size (in liters): 450
+   Car registered successfully!
+
+   === Car Rental Menu ===
+   1. Register Car
+   2. View All Cars
+   3. Search Car by ID
+   4. Exit
+   Enter choice: 1
+   Choose car type:
+   1. Sedan
+   2. SUV
+   2
+   Enter Car ID: C002
+   Enter Brand: Jeep
+   Enter Name: Compass
+   Enter Price: 32000
+   Has Off-Road Capability? (true/false): true
+   Car registered successfully!
+
+   === Car Rental Menu ===
+   Enter choice: 2
+
+   --- Registered Cars ---
+   SEDAN | ID: C001 | Brand: Toyota | Name: Corolla | Price: $25000.0 | Trunk Size: 450L
+   SUV   | ID: C002 | Brand: Jeep | Name: Compass | Price: $32000.0 | Off-Road: Yes
+
+   === Car Rental Menu ===
+   Enter choice: 3
+   Enter Car ID to search: C002
+   Car found:
+   SUV   | ID: C002 | Brand: Jeep | Name: Compass | Price: $32000.0 | Off-Road: Yes
+
+   === Car Rental Menu ===
+   Enter choice: 4
+   Goodbye!
+
+
+   Learning Takeaways
+
+   Concept	Implementation
+   Inheritance	Sedan & SUV inherit Car, which inherits Vehicle
+   Encapsulation	All fields private + validated setters
+   Constructors	super() used for parent initialization
+   ArrayList	Dynamic storage for car objects
+   Object Equality	Prevents duplicate cars by carId
+   Polymorphism	Different displayInfo() methods for each subclass
+   Switch Menu	Simple text-based UI
+   Login Validation	Restricts unauthorized access
+---------------------------------------------------------------
+5. Hotel Room Booking System — Using Inheritance and Encapsulation
+   Project Overview
+   The GoldenStay Hotel needs a small console-based management program that allows an admin to manage different types of hotel rooms.
+
+   The admin should:
+
+   Log in securely.
+
+   Register rooms of two types: StandardRoom and DeluxeRoom.
+
+   Store all room data in an ArrayList dynamically.
+
+   View all available rooms.
+
+   Search rooms by ID.
+
+   Prevent duplicate room registration.
+
+   Exit safely when done.
+
+   The system should demonstrate Encapsulation, Constructors, Inheritance, Polymorphism, Validation, and Object Equality.
+
+   Concepts Reinforced
+   Concept	Description
+   Encapsulation	Private fields with getters/setters and validation
+   Inheritance	StandardRoom and DeluxeRoom inherit from a base Room class
+   Constructors	Initialize room details easily with super()
+   ArrayList	Dynamic list for all rooms
+   Switch Menu	Structured console interaction
+   Object Equality	Prevent duplicate rooms using equals()/hashCode()
+   Polymorphism	Each room type displays its own info
+    Class Structure
+   Class	Description
+   Room	Base class for shared properties like ID, price, and availability
+   StandardRoom	Inherits Room, adds bed count
+   DeluxeRoom	Inherits Room, adds jacuzzi feature
+   Validation	Handles admin login and input validation
+   Menu	Displays main options and handles logic
+   Main	Entry point of the program
+   Step-by-Step Instructions
+    Step 1: Room Class (Base)
+   Private fields: roomId, pricePerNight, isAvailable
+
+   Getters/setters with validation
+
+   Constructor for easy initialization
+
+   displayInfo() method
+
+    Step 2: StandardRoom Class
+   Extends Room
+
+   Adds field bedCount
+
+   Constructor calls super() and sets bedCount
+
+   Override displayInfo() to include bed count
+
+    Step 3: DeluxeRoom Class
+   Extends Room
+
+   Adds field hasJacuzzi
+
+   Constructor and displayInfo() override
+
+    Step 4: Validation Class
+   Handles:
+
+   Login verification (username: admin, password: 1234)
+
+   Positive price validation
+
+   Room ID validation
+
+   Step 5: Menu Class
+   Displays options:
+
+   === Hotel Room Management ===
+   1. Register Room
+   2. View Rooms
+   3. Search Room by ID
+   4. Exit
+
+   Uses a switch statement
+
+   Uses an ArrayList<Room> to store data
+
+   Uses polymorphism for displaying different room types
+
+   Step 6: Main Class
+
+   Login first
+
+   Launch Menu if successful
+
+
+
+
+   Learning Highlights
+
+   Concept	Description
+   Inheritance	StandardRoom and DeluxeRoom inherit from Room.
+   Encapsulation	Data protection and controlled access.
+   Constructors	Used with super() for initialization.
+   ArrayList	Stores all rooms dynamically.
+   Polymorphism	Each room type prints details differently.
+   Object Equality	Prevents duplicate room IDs.
+   Login System	Restricts unauthorized access.
+   Switch Menu	Allows user to navigate options easily.
+
+   Sample Console Output
+
+   ===== GoldenStay Admin Login =====
+   Username: admin
+   Password: 1234
+   Login successful!
+
+   === Hotel Room Management ===
+   1. Register Room
+   2. View All Rooms
+   3. Search Room by ID
+   4. Exit
+   Choose an option: 1
+   Select room type:
+   1. Standard Room
+   2. Deluxe Room
+   1
+   Enter Room ID: R101
+   Enter Price per Night: 120
+   Is Available? (true/false): true
+   Enter Bed Count: 2
+   Room registered successfully!
+
+   === Hotel Room Management ===
+   Choose an option: 1
+   Select room type:
+   1. Standard Room
+   2. Deluxe Room
+   2
+   Enter Room ID: R202
+   Enter Price per Night: 250
+   Is Available? (true/false): true
+   Has Jacuzzi? (true/false): true
+   Room registered successfully!
+
+   === Hotel Room Management ===
+   Choose an option: 2
+
+   --- Room List ---
+   STANDARD ROOM | ID: R101 | Price: $120.0 | Beds: 2 | Available: true
+   DELUXE ROOM  | ID: R202 | Price: $250.0 | Jacuzzi: Yes | Available: true
+
+   === Hotel Room Management ===
+   Choose an option: 3
+   Enter Room ID to search: R202
+   Room found:
+   DELUXE ROOM  | ID: R202 | Price: $250.0 | Jacuzzi: Yes | Available: true
+
+   === Hotel Room Management ===
+   Choose an option: 4
+   Exiting... Goodbye!

@@ -358,52 +358,52 @@ Exiting system... Goodbye!
         isValidAge(int age) → Ensures age is within a reasonable range (1–120).
 
     Step 3: Create the Menu Class
-    This class handles the main operations after login.
+        This class handles the main operations after login.
 
 
-    Maintain an ArrayList of Student objects.
+        Maintain an ArrayList of Student objects.
 
-    Display a menu with the following options:
+        Display a menu with the following options:
 
-    === Student Management Menu ===
-    1. Register Student
-    2. View All Students
-    3. Search Student by ID
-    4. Exit
+        === Student Management Menu ===
+        1. Register Student
+        2. View All Students
+        3. Search Student by ID
+        4. Exit
 
 
 
-    Use a switch statement to control user actions.
+        Use a switch statement to control user actions.
 
-    For registration:
+        For registration:
 
-    Ask for studentId, name, and age.
+        Ask for studentId, name, and age.
 
-    Validate the input using the Validation class.
+        Validate the input using the Validation class.
 
-    Create a Student object using a constructor.
+        Create a Student object using a constructor.
 
-    Prevent duplicates using .contains() (which uses equals() internally).
+        Prevent duplicates using .contains() (which uses equals() internally).
 
-    For viewing:
+        For viewing:
 
-    Print all student records in tabular form.
+        Print all student records in tabular form.
 
-    For searching:
+        For searching:
 
-    Ask for a student ID and display details if found.
+        Ask for a student ID and display details if found.
 
     Step 4: Create the Main Class
 
-    Call the Validation.login() method first.
+        Call the Validation.login() method first.
 
-    If login succeeds:
+        If login succeeds:
 
-    Create a Menu object and call displayMenu().
+        Create a Menu object and call displayMenu().
 
-    If login fails:
+        If login fails:
 
-    Display an error and exit the program.
+        Display an error and exit the program.
 
     ===== School Admin Login =====
     Enter username: admin
