@@ -311,7 +311,8 @@ Exiting system... Goodbye!
 ---------------------------------------------------------------
 5. Hotel Room Booking System — Using Inheritance and Encapsulation
    Project Overview
-   The GoldenStay Hotel needs a small console-based management program that allows an admin to manage different types of hotel rooms.
+   The GoldenStay Hotel needs a small console-based management program
+   that allows an admin to manage different types of hotel rooms.
 
    The admin should:
 
@@ -329,7 +330,8 @@ Exiting system... Goodbye!
 
    Exit safely when done.
 
-   The system should demonstrate Encapsulation, Constructors, Inheritance, Polymorphism, Validation, and Object Equality.
+   The system should demonstrate Encapsulation, Constructors, Inheritance,
+   Polymorphism, Validation, and Object Equality.
 
    Concepts Reinforced
    Concept	Description
@@ -350,59 +352,59 @@ Exiting system... Goodbye!
    Main	Entry point of the program
    Step-by-Step Instructions
     Step 1: Room Class (Base)
-   Private fields: roomId, pricePerNight, isAvailable
+       Private fields: roomId, pricePerNight, isAvailable
 
-   Getters/setters with validation
+       Getters/setters with validation
 
-   Constructor for easy initialization
+       Constructor for easy initialization
 
-   displayInfo() method
+       displayInfo() method
 
     Step 2: StandardRoom Class
-   Extends Room
+       Extends Room
 
-   Adds field bedCount
+       Adds field bedCount
 
-   Constructor calls super() and sets bedCount
+       Constructor calls super() and sets bedCount
 
-   Override displayInfo() to include bed count
+       Override displayInfo() to include bed count
 
     Step 3: DeluxeRoom Class
-   Extends Room
+       Extends Room
 
-   Adds field hasJacuzzi
+       Adds field hasJacuzzi
 
-   Constructor and displayInfo() override
+       Constructor and displayInfo() override
 
     Step 4: Validation Class
-   Handles:
+       Handles:
 
-   Login verification (username: admin, password: 1234)
+       Login verification (username: admin, password: 1234)
 
-   Positive price validation
+       Positive price validation
 
-   Room ID validation
+       Room ID validation
 
    Step 5: Menu Class
-   Displays options:
+       Displays options:
 
-   === Hotel Room Management ===
-   1. Register Room
-   2. View Rooms
-   3. Search Room by ID
-   4. Exit
+       === Hotel Room Management ===
+       1. Register Room
+       2. View Rooms
+       3. Search Room by ID
+       4. Exit
 
-   Uses a switch statement
+       Uses a switch statement
 
-   Uses an ArrayList<Room> to store data
+       Uses an ArrayList<Room> to store data
 
-   Uses polymorphism for displaying different room types
+       Uses polymorphism for displaying different room types
 
    Step 6: Main Class
 
-   Login first
+       Login first
 
-   Launch Menu if successful
+       Launch Menu if successful
 
 
 
