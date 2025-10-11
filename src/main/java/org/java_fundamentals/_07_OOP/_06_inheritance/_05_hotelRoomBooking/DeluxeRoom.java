@@ -18,6 +18,6 @@ public class DeluxeRoom extends Room{
 
     @Override
     public void displayInfo() {
-        System.out.println("DELUXE ROOM  | ID: " + getRoomId() + " | Price: $" + getPricePerNight() +" | Jacuzzi: " + hasJacuzzi  +  " | Available: " + isAvailable());
+        System.out.println("DELUXE ROOM  | ID: " + getRoomId() + " | Price: $" + getPricePerNight() +" | Jacuzzi: " + (hasJacuzzi ? "Yes" : "No")   +  " | Available: " + isAvailable() );
     }
 }

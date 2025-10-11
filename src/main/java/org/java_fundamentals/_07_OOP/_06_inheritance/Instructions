@@ -472,3 +472,176 @@ Exiting system... Goodbye!
    === Hotel Room Management ===
    Choose an option: 4
    Exiting... Goodbye!
+-------------------------------------------------------------------------------
+
+6. Gym Membership Management System (with Inheritance)
+   Project Overview
+   A local fitness center, PowerFit Gym, wants a simple Java console-based management
+   system to help the administrator manage gym members.
+   The program should allow the admin to:
+
+   Log in securely.
+
+   Register members (either RegularMember or PremiumMember).
+
+   Store all members dynamically in an ArrayList.
+
+   View all members with details.
+
+   Search for a member by their Member ID.
+
+   Prevent duplicate registration using .equals() and .hashCode().
+
+   Exit the system safely.
+
+   Concepts Reinforced
+   Concept	Description
+   Encapsulation	Private fields with getters/setters and validation
+   Constructors	Used to initialize objects easily
+   Inheritance	RegularMember and PremiumMember extend base class Member
+   ArrayList	Store member objects dynamically
+   Polymorphism	Each member type displays details differently
+   Switch Statement	Menu-driven console system
+   Login Validation	Only admin can access the system
+   Object Equality	Prevents duplicate members
+
+   Scenario
+   You are hired by PowerFit Gym to design a Membership Management Console App.
+   The gym offers two types of memberships:
+
+   Regular Member → monthly subscription
+
+   Premium Member → monthly subscription + access to special classes and personal training sessions.
+
+   Admin credentials:
+
+   Username: admin
+   Password: 1234
+
+
+
+   System Requirements
+   Class	Description
+   Member	Base class for all members (fields: id, name, age, membershipFee)
+   RegularMember	Inherits Member, adds membership duration (months)
+   PremiumMember	Inherits Member, adds special class access
+   Validation	Handles login and input validation
+   Menu	Displays options and handles logic
+   Main	Entry point for program execution
+    Step-by-Step Implementation
+    Step 1: Member (Base Class)
+       Common fields: memberId, name, age, membershipFee
+
+       Encapsulated with getters and setters
+
+       Constructor for initialization
+
+       displayInfo() method (overridable)
+
+       Override equals() and hashCode() for ID comparison
+
+    Step 2: RegularMember (Subclass)
+       Adds: membershipMonths
+
+       Overrides displayInfo()
+
+       Calculates total fee = monthly fee × months
+
+    Step 3: PremiumMember (Subclass)
+       Adds: hasTrainer and hasClasses
+
+       Overrides displayInfo()
+
+       May have a 20% higher membership fee
+       Let value of membershipfee is x
+       x=x+20%x
+       x=x+0.2x=x(1+0.2)=1.2x
+
+    Step 4: Validation
+       Login authentication (admin / 1234)
+
+       Checks for valid ID, name,age>18 and <=120 and positive fee
+
+   Step 5: Menu
+
+       Menu options:
+
+       === Gym Membership Menu ===
+       1. Register Member
+       2. View All Members
+       3. Search Member by ID
+       4. Exit
+
+
+
+   Step 6: Main
+
+       Controls login and runs the menu system.
+
+
+   ===== PowerFit Admin Login =====
+   Username: admin
+   Password: 1234
+   Login successful!
+
+   === Gym Membership Menu ===
+   1. Register Member
+   2. View All Members
+   3. Search Member by ID
+   4. Exit
+   Choose an option: 1
+   Select membership type:
+   1. Regular Member
+   2. Premium Member
+   1
+   Enter Member ID: M001
+   Enter Name: Daniel
+   Enter Age: 25
+   Enter Monthly Fee: 50
+   Enter Duration (in months): 6
+   Member registered successfully!
+
+   === Gym Membership Menu ===
+   Choose an option: 1
+   Select membership type:
+   1. Regular Member
+   2. Premium Member
+   2
+   Enter Member ID: M002
+   Enter Name: Sara
+   Enter Age: 29
+   Enter Monthly Fee: 70
+   Has Personal Trainer? (true/false): true
+   Has Special Classes? (true/false): true
+   Member registered successfully!
+
+   === Gym Membership Menu ===
+   Choose an option: 2
+
+   --- Member List ---
+   REGULAR | ID: M001 | Name: Daniel | Age: 25 | Months: 6 | Total Fee: $300.0
+   PREMIUM | ID: M002 | Name: Sara | Age: 29 | Personal Trainer: Yes | Classes: Yes | Monthly Fee: $84.0
+
+   === Gym Membership Menu ===
+   Choose an option: 3
+   Enter Member ID to search: M002
+   Member found:
+   PREMIUM | ID: M002 | Name: Sara | Age: 29 | Personal Trainer: Yes | Classes: Yes | Monthly Fee: $84.0
+
+   === Gym Membership Menu ===
+   Choose an option: 4
+   Exiting system... Goodbye!
+
+
+
+   Learning Outcomes
+
+   Concept	Description
+   Encapsulation	Private data with getters/setters
+   Inheritance	RegularMember and PremiumMember inherit from Member
+   Constructors	Initialize data using super()
+   Polymorphism	Each class has unique displayInfo()
+   ArrayList	Stores members dynamically
+   Switch Menu	Clean and interactive console
+   Object Equality	Prevents duplicate members
+   Validation	Safe and structured input control

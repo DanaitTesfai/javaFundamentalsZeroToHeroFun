@@ -42,8 +42,8 @@ public class _02_CarRentalSystemWithAdminPanel {
             int currentUserIndex = -1;
 
 
+            //Login
             if (choice == 1) {
-                //Login
 
                 for (int attempts = 0; attempts < 3; attempts++) {
                     System.out.println("--- Login ---");
@@ -181,6 +181,7 @@ public class _02_CarRentalSystemWithAdminPanel {
 
 
 
+                // register
             } else if (choice==2) {
                 System.out.println("\n--- User Registration ---");
                 String newUser = "";
@@ -211,6 +212,7 @@ public class _02_CarRentalSystemWithAdminPanel {
 
                 System.out.println("Registration successful! You can now login.");
 
+                //exit
             } else if (choice==3) {
                 System.out.println("Exiting system... Goodbye!");
                 exitProgram =  true;

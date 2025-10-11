@@ -18,6 +18,6 @@ public class SUV extends Car{
 
     @Override
     public void displayInfo() {
-        System.out.println("SUV   | ID: " + getCarId() + " | Brand: " + getBrand() + " | Name: " + getName() + " | Price: $" + getPrice() + " | Off-Road: " + offRoad);
+        System.out.println("SUV   | ID: " + getCarId() + " | Brand: " + getBrand() + " | Name: " + getName() + " | Price: $" + getPrice() + " | Off-Road: " + (offRoad ? "Yes" : "No"));
     }
 }
