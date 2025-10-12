@@ -118,3 +118,25 @@ and print them
       2
       Paid 300.0 via Credit Card
 
+
+  8.1  Enter amount to pay: 500
+       Select Payment Method:
+       1️⃣ UPI
+       2️⃣ Debit/Credit Card
+       3️⃣ Mobile Wallet
+       4️⃣ Net Banking
+       Enter choice: 1
+       Paid 500.0 via UPI
+
+       Enter amount to pay: 1200
+       Select Payment Method:
+       1️⃣ UPI
+       2️⃣ Debit/Credit Card
+       3️⃣ Mobile Wallet
+       4️⃣ Net Banking
+       Enter choice: 2
+       Paid 1200.0 via Credit/Debit Card
+
+       Enter amount to pay: -100
+       ❌ Invalid amount. Please enter a positive amount.
+

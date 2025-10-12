@@ -8,9 +8,17 @@ public class Main {
 
         System.out.print("Enter amount: ");
         double amount = scanner.nextDouble();
+        if (amount <= 0){
+            System.out.println("❌ Invalid amount. Please enter a positive amount.");
+            return;
+        }
 
-        System.out.println("1. UPI 2. Card");
-        System.out.print("Create Payment payment: ");
+        System.out.println("Select Payment Method:");
+        System.out.println("1\uFE0F⃣ UPI\n" +
+                "2\uFE0F⃣ Debit/Credit Card\n" +
+                "3\uFE0F⃣ Mobile Wallet\n" +
+                "4\uFE0F⃣ Net Banking");
+        System.out.print("Enter choice: ");
         int option = scanner.nextInt();
 
         Payment payment;
@@ -18,12 +26,18 @@ public class Main {
             payment = new UpiPayment();
         } else if (option == 2) {
             payment = new CardPayment();
-        }else {
-            System.out.println("Invalid input.");
+        } else if (option ==3 ) {
+            payment = new MobileWallet();
+        } else if (option == 4) {
+            payment = new NetBanking();
+        } else {
+            System.out.println("❌ Invalid input.");
             return;
         }
 
         payment.pay(amount);
+
+        scanner.close();
 
 
     }
