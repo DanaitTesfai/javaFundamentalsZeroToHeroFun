@@ -49,4 +49,19 @@ Create Duck class that implements both.
 
 Duck flying
 Duck swimming
+-------------------------------------------------------------------
+
+Q5: Interface Reference, Different Classes
+Goal: Show polymorphism using an interface reference.
+
+Instructions:
+
+Create interface Playable with play().
+
+Create Football and Piano classes.
+
+Call both using Playable reference.
+
+Playing Football
+Playing Piano
 
