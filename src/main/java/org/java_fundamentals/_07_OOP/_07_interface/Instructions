@@ -75,4 +75,16 @@ Create Circle and Rectangle classes.
 
 Create an array of Shapes with different implementations
 and print them
+-------------------------------------------------------------
+
+7. Calculator Using Interface & User Input
+   Goal: Let the user choose an operation (Add/Subtract) using interface.
+
+   Instructions:
+
+   Create Operation interface with calculate(int a, int b).
+
+   Create AddOperation and SubtractOperation.
+
+   Ask user using Scanner which operation to perform.
 
