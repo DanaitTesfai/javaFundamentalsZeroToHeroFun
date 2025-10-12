@@ -18,4 +18,22 @@ Instructions:
 Create interface Bank with constant RATE = 5.0.
 
 Create class SBI that prints the rate.
+-----------------------------------------------------------------
+
+Q3: Default Method in Interface
+Goal: Understand default methods (introduced in Java 8).
+
+Instructions:
+
+Create interface Vehicle with:
+
+void start();
+
+default void stop();
+
+Implement in class Car.
+
+output:
+Car started.
+Vehicle stopped.
 
