@@ -36,4 +36,17 @@ Implement in class Car.
 output:
 Car started.
 Vehicle stopped.
+--------------------------------------------------------------------
+
+Q4: Multiple Interfaces
+Goal: Learn multiple inheritance through interfaces.
+
+Instructions:
+
+Create Flyable and Swimmable interfaces.
+
+Create Duck class that implements both.
+
+Duck flying
+Duck swimming
 
