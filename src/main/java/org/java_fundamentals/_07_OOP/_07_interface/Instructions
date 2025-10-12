@@ -1,0 +1,10 @@
+1. Create a simple interface
+  Question:
+  Create an interface called Animal with a method makeSound().
+  Create two classes Dog and Cat that implement Animal and print
+  different sounds.
+
+  Expected Output:
+
+  Dog barks
+  Cat meows
