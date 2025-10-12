@@ -8,3 +8,14 @@
 
   Dog barks
   Cat meows
+-------------------------------------------------------------------
+
+Q2: Interface with Constant Variable
+Goal: Learn how constants work in interfaces.
+
+Instructions:
+
+Create interface Bank with constant RATE = 5.0.
+
+Create class SBI that prints the rate.
+
