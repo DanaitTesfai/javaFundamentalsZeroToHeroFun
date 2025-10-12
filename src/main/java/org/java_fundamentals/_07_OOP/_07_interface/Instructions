@@ -87,4 +87,34 @@ and print them
    Create AddOperation and SubtractOperation.
 
    Ask user using Scanner which operation to perform.
+---------------------------------------------------------------------
+
+8.Payment System (Interface + Amount Input)
+  Goal
+  Use an interface to represent payment behavior and let the user choose UPI or Card at runtime.
+
+  What You’ll Build
+  Payment interface → void pay(double amount)
+
+  UpiPayment and CardPayment implement Payment
+
+  Ask user for amount + payment type → print confirmation
+
+  Step-by-Step
+      Create Payment interface with void pay(double amount);
+
+      Class UpiPayment implements Payment and prints "Paid X via UPI".
+
+      Class CardPayment implements Payment and prints "Paid X via Credit Card".
+
+      In main, ask for double amount.
+
+      Ask for method: 1. UPI 2. Card
+
+      Create Payment payment based on choice, then call payment.pay(amount).
+
+      Enter amount: 300
+      Choose payment method: 1. UPI  2. Card
+      2
+      Paid 300.0 via Credit Card
 
