@@ -64,4 +64,15 @@ Call both using Playable reference.
 
 Playing Football
 Playing Piano
+--------------------------------------------------------------
+
+Q6: Interface Array (Polymorphic Behavior)
+Goal: Use interface objects inside an array.
+
+Create interface shape with draw().
+
+Create Circle and Rectangle classes.
+
+Create an array of Shapes with different implementations
+and print them
 
