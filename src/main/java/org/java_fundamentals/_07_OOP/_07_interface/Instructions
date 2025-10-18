@@ -140,5 +140,10 @@ and print them
        Enter amount to pay: -100
        ❌ Invalid amount. Please enter a positive amount.
 
+
+  8.2 Loop it
+
+  8.3 Refactor the code using different methods
+
 ---------------------------------------------------------------
 
