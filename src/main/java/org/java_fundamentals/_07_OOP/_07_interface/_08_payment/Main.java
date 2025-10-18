@@ -7,13 +7,15 @@ import java.util.Scanner;
 public class Main {
     static ArrayList<String> menu =
             new ArrayList<>(Arrays.asList("1\uFE0F⃣ UPI","2\uFE0F⃣ Debit/Credit Card","3\uFE0F⃣ Mobile Wallet","4\uFE0F⃣ Net Banking"));
+
+    static ArrayList<String> mainMenu = new ArrayList<>(Arrays.asList("1.Pay","2.Exit."));
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         
         while (true){
-            System.out.println("1.Pay");
-            System.out.println("2.Exit.");
+            displayMenu(mainMenu);
             System.out.print("Choose: ");
             int choice = scanner.nextInt();
 
@@ -63,4 +65,6 @@ public class Main {
             System.out.println(m);
         }
     }
+
+
 }
