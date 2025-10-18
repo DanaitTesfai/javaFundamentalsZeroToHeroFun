@@ -147,3 +147,91 @@ and print them
 
 ---------------------------------------------------------------
 
+9.MegaMart, a retail store, wants a console-based system to manage inventory and basic billing.
+
+      The store sells two types of products:
+
+      Electronic Products – mobile, laptop, TV etc.
+
+      Grocery Products – food, vegetables, dairy etc.
+
+  The system must:
+
+      Require admin login to access.
+
+      Allow product registration using constructors.
+
+      Store products using ArrayList<Product>.
+
+      Implement interfaces for displayInfo() and calculateBill().
+
+      Avoid duplicate products using Product ID comparison.
+
+      Allow searching a product by ID.
+
+      Display bill price with tax/discount logic via interface implementation.
+
+  Scenario Overview
+  MegaMart Store wants a basic inventory and billing system.
+  Admin should be able to:
+
+  Login using admin credentials
+
+      Add products (Two types):
+      1️⃣ ElectronicProduct — has warranty years
+      2️⃣ GroceryProduct — has expiry date
+
+      Prevent duplicate products using ID
+
+      Calculate bill using interface method
+
+      View and search for products
+
+      Exit safely
+
+  🧩 Key Concepts Introduced
+      Concept	Purpose
+      Interface	Force billing and display rules
+      Polymorphism	Call calculateBill() or displayInfo() through interface
+      Encapsulation	Secure product fields
+      No Abstract Classes	Interfaces only
+      Real-World Design	Intro to contract-based OOP
+
+  OOP CLASS DESIGN
+      Component	Purpose
+      Displayable (Interface)	Must implement displayInfo()
+      Billable (Interface)	Must implement calculateBill()
+
+      Product (Super Class)	Encapsulation of productId, name, basePrice
+      ElectronicProduct	Adds warrantyYears, 15% tax
+      GroceryProduct	Adds expiryDays, 10% discount if near expiry
+
+      Validation	Login and input checking
+      Menu	Switch-based console system
+      Main	Program entry
+
+  Example Console Flow
+      ===== MegaMart Admin Login =====
+      Username: admin
+      Password: 1234
+      Login successful!
+
+      === Product Management Menu ===
+      1. Add Product
+      2. View Products
+      3. Search Product by ID
+      4. Exit
+      Choose option: 1
+      Enter Product Type: 1.Electronic 2.Grocery
+      1
+      Enter Product ID: P101
+      Enter Name: Laptop
+      Enter Base Price: 50000
+      Enter Warranty (years): 2
+      Product added successfully!
+
+      === Product Management Menu ===
+      Choose option: 2
+
+      --- Product List ---
+      [Electronic] ID: P101 | Name: Laptop | Base: 50000.0 | Warranty: 2 years | Final Price: 57500.0

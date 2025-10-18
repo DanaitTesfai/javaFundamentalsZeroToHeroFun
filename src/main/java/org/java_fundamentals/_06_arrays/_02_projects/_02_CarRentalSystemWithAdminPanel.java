@@ -21,7 +21,7 @@ public class _02_CarRentalSystemWithAdminPanel {
         userCount++;            // = 2
 
         //available cars with prices
-        String[] cars = {"Sedan", "SUV", "Truck" };
+        String[] cars = {"Sedan", "SUV", "Truck"};
         double[] carPrices = {50, 80, 100};
 
         //multi user car rental tracking [user][car]
@@ -61,20 +61,20 @@ public class _02_CarRentalSystemWithAdminPanel {
 
                     if (currentUserIndex == -1) {
                         System.out.println("Wrong username or password. Please try again.");
-                    }else {
+                    } else {
                         break;
                     }
                 }
-                if (currentUserIndex ==-1){
+                if (currentUserIndex == -1) {
                     System.out.println("Too many attempts. Please try again. Return to Main menu.");
                     continue;
                 }
 
 
                 // Admin menu
-                if (usernames[currentUserIndex].equals("admin")){
+                if (usernames[currentUserIndex].equals("admin")) {
                     System.out.println("Admin Login Successful! Welcome, admin.");
-                    while (true){
+                    while (true) {
                         System.out.println("==============================\n" +
                                 "        ADMIN PANEL\n" +
                                 "==============================");
@@ -85,30 +85,30 @@ public class _02_CarRentalSystemWithAdminPanel {
                         System.out.print("Enter your choice: ");
                         int choiceAdmin = scanner.nextInt();
 
-                        if (choiceAdmin==1){
+                        if (choiceAdmin == 1) {
                             System.out.println("--- Car Prices ---");
-                            for (int i= 0 ; i< cars.length ; i++){
-                                System.out.println(cars[i] + ": $" + carPrices[i] +"/day");
+                            for (int i = 0; i < cars.length; i++) {
+                                System.out.println(cars[i] + ": $" + carPrices[i] + "/day");
                             }
-                        } else if (choiceAdmin==2) {
+                        } else if (choiceAdmin == 2) {
                             System.out.println("Which car price do you want to update? ");
-                            for (int i= 0 ; i< cars.length ; i++){
-                                System.out.println((i+1)+"."+cars[i]);
+                            for (int i = 0; i < cars.length; i++) {
+                                System.out.println((i + 1) + "." + cars[i]);
                             }
                             System.out.print("Enter choice: ");
                             int updateChoice = scanner.nextInt();
 
-                            System.out.print("Enter new price for " + cars[updateChoice-1]+": ");
-                            carPrices[updateChoice-1] = scanner.nextDouble();
+                            System.out.print("Enter new price for " + cars[updateChoice - 1] + ": ");
+                            carPrices[updateChoice - 1] = scanner.nextDouble();
                             System.out.println("Price updated successfully!");
 
-                        } else if (choiceAdmin==3) {
+                        } else if (choiceAdmin == 3) {
                             System.out.println("--- All Users' Rental Summary ---");
-                            for (int i = 0 ; i < userCount ; i++){
+                            for (int i = 0; i < userCount; i++) {
                                 System.out.println("User: " + usernames[i]);
                                 double totalSpent = 0;
-                                for ( int j = 0 ; j < cars.length ; j++){
-                                    System.out.println(cars[j] +"/s rented: " + rentedQuantity[i][j] +" | Income: $" + carIncome[i][j] );
+                                for (int j = 0; j < cars.length; j++) {
+                                    System.out.println(cars[j] + "/s rented: " + rentedQuantity[i][j] + " | Income: $" + carIncome[i][j]);
                                     totalSpent += carIncome[i][j];
 
                                 }
@@ -117,19 +117,19 @@ public class _02_CarRentalSystemWithAdminPanel {
                             }
 
 
-                        } else if (choiceAdmin==4) {
+                        } else if (choiceAdmin == 4) {
                             System.out.println("Admin logged out!");
                             break;
-                        }else {
+                        } else {
                             System.out.println("Invalid input.Please try again.");
                         }
 
                     }
 
                     //User menu
-                }else {
+                } else {
                     System.out.println("Login Successful! Welcome, " + usernames[currentUserIndex] + ".");
-                    while(true){
+                    while (true) {
                         System.out.println("==============================\n" +
                                 "     Car Rental Management Menu\n" +
                                 "==============================");
@@ -139,11 +139,11 @@ public class _02_CarRentalSystemWithAdminPanel {
                         System.out.println("Enter your choice: ");
                         int choiceUser = scanner.nextInt();
 
-                        if (choiceUser==1){
+                        if (choiceUser == 1) {
                             System.out.println("Rent a car ");
                             System.out.println("Cars Available:");
-                            for (int i= 0 ; i< cars.length ; i++){
-                                System.out.println((i+1)+"."+cars[i]);
+                            for (int i = 0; i < cars.length; i++) {
+                                System.out.println((i + 1) + "." + cars[i]);
                             }
                             System.out.print("Choose car type (1-3): ");
                             int carToRent = scanner.nextInt();
@@ -151,72 +151,73 @@ public class _02_CarRentalSystemWithAdminPanel {
                             System.out.println("Enter number of days: ");
                             int daysToRent = scanner.nextInt();
 
-                            double totalOfRentedCar = daysToRent * carPrices[carToRent-1];
-                            rentedQuantity[currentUserIndex][carToRent-1] += 1;
-                            carIncome[currentUserIndex][carToRent-1] +=totalOfRentedCar;
+                            double totalOfRentedCar = daysToRent * carPrices[carToRent - 1];
+                            rentedQuantity[currentUserIndex][carToRent - 1] += 1;
+                            carIncome[currentUserIndex][carToRent - 1] += totalOfRentedCar;
 
 
-                            System.out.println("You rented " + cars[carToRent-1] + " for " + daysToRent +
+                            System.out.println("You rented " + cars[carToRent - 1] + " for " + daysToRent +
                                     " days. Total cost: $" + totalOfRentedCar);
 
-                        } else if (choiceUser==2) {
+                        } else if (choiceUser == 2) {
                             System.out.println("Your Rental Summary:");
                             double totalUserSpent = 0;
-                            for (int i = 0 ; i < cars.length ; i++){
-                                System.out.println(cars[i] + " rented: " +  rentedQuantity[currentUserIndex][i] +
-                                        "| Income: $" +carIncome[currentUserIndex][i] );
+                            for (int i = 0; i < cars.length; i++) {
+                                System.out.println(cars[i] + " rented: " + rentedQuantity[currentUserIndex][i] +
+                                        "| Income: $" + carIncome[currentUserIndex][i]);
                                 totalUserSpent += carIncome[currentUserIndex][i];
                             }
                             System.out.println("----------------------------------------");
                             System.out.println("Total Spent: $" + totalUserSpent);
 
-                        } else if (choiceUser==3) {
+                        } else if (choiceUser == 3) {
                             System.out.println("Logged out successfully!");
                             break;
-                        }else {
+                        } else {
                             System.out.println("Invalid input.");
                         }
                     }
+
                 }
 
 
 
                 // register
-            } else if (choice==2) {
+            } else if (choice == 2) {
                 System.out.println("\n--- User Registration ---");
                 String newUser = "";
-                while (true){
+                while (true) {
                     System.out.print("Enter new username: ");
                     newUser = scanner.nextLine().trim();
 
                     boolean exists = false;
-                    for (int i = 0 ; i < userCount ; i++){
-                        if(usernames[i].equals(newUser)){
+                    for (int i = 0; i < userCount; i++) {
+                        if (usernames[i].equals(newUser)) {
                             exists = true;
                             break;
                         }
                     }
 
-                    if (exists){
+                    if (exists) {
                         System.out.println("Username already exists. Try another username.");
-                    }else {
+                    } else {
                         break;
                     }
                 }
                 System.out.print("Enter new password: ");
                 String newPassword = scanner.nextLine().trim();
 
-                usernames[userCount]=newUser;
-                passwords[userCount]=newPassword;
+                usernames[userCount] = newUser;
+                passwords[userCount] = newPassword;
                 userCount++;
 
                 System.out.println("Registration successful! You can now login.");
 
                 //exit
-            } else if (choice==3) {
+            } else if (choice == 3) {
                 System.out.println("Exiting system... Goodbye!");
-                exitProgram =  true;
-            }else {
+                exitProgram = true;
+            } else {
                 System.out.println("Invalid choice. Please try again.");
             }
         }
