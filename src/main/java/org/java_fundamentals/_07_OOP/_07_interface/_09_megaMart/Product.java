@@ -42,11 +42,12 @@ public class Product implements Displayable, Billable{
 
     @Override
     public double calculateBill() {
-        return 0;
+        return basePrice;
     }
 
     @Override
     public void displayInfo() {
+        System.out.println(this);
 
     }
 
@@ -66,4 +67,6 @@ public class Product implements Displayable, Billable{
     public String toString() {
         return "ID: " + productId + " | Name: " + name + "  | Base: $" + basePrice;
     }
+
+
 }

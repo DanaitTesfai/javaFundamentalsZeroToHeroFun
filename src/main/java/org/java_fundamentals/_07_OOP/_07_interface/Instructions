@@ -204,7 +204,7 @@ and print them
 
       Product (Super Class)	Encapsulation of productId, name, basePrice
       ElectronicProduct	Adds warrantyYears, 15% tax
-      GroceryProduct	Adds expiryDays, 10% discount if near expiry
+      GroceryProduct	Adds expiryDays, 10% discount if near expiry(10 days)
 
       Validation	Login and input checking
       Menu	Switch-based console system

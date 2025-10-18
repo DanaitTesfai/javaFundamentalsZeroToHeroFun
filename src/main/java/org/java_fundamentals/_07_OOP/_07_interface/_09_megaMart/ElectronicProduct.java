@@ -15,4 +15,17 @@ public class ElectronicProduct extends Product{
     public void setWarrantyYears(int warrantyYears) {
         this.warrantyYears = warrantyYears;
     }
+
+
+
+    @Override
+    public double calculateBill() {
+        return super.getBasePrice()*1.15;
+    }
+
+    @Override
+    public void displayInfo() {
+        System.out.println("[Electronic] ID: " + getProductId() + " | Name: " + getName() +
+                "  | Base: $" + getBasePrice() + " | Warranty: " + warrantyYears + " years " + " | Final Price: " + calculateBill());
+    }
 }

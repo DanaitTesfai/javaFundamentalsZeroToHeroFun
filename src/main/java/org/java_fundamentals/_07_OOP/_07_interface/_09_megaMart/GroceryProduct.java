@@ -15,4 +15,17 @@ public class GroceryProduct extends Product{
     public void setExpiryDays(int expiryDays) {
         this.expiryDays = expiryDays;
     }
+
+    @Override
+    public double calculateBill() {
+        if (expiryDays <= 10)
+            return getBasePrice()*0.9;
+        return getBasePrice();
+    }
+
+    @Override
+    public void displayInfo() {
+        System.out.println("[Grocery] ID: " + getProductId() + " | Name: " + getName() +
+                "  | Base: $" + getBasePrice() + " | Expiry days: " + expiryDays + " years " + " | Final Price: " + calculateBill());
+    }
 }
