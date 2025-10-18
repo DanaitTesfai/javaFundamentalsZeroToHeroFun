@@ -26,6 +26,6 @@ public class GroceryProduct extends Product{
     @Override
     public void displayInfo() {
         System.out.println("[Grocery] ID: " + getProductId() + " | Name: " + getName() +
-                "  | Base: $" + getBasePrice() + " | Expiry days: " + expiryDays + " years " + " | Final Price: " + calculateBill());
+                "  | Base: $" + getBasePrice() + " | Expiry days: " + expiryDays + " days " + " | Final Price: " + calculateBill());
     }
 }
