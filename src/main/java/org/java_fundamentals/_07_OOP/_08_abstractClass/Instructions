@@ -124,22 +124,23 @@
   Interface	Method
       Displayable	void displayInfo();
       Billable	double calculateBill();
-  🟨 SUBCLASS: RegularGuest
-  Field: double costPerNight
 
-  calculateBill() = costPerNight * nights
+  🟨 SUBCLASS: RegularGuest
+      Field: double costPerNight
+
+      calculateBill() = costPerNight * nights
 
   🟥 SUBCLASS: VIPGuest
   Fields:
 
-  double costPerNight
+      double costPerNight
 
-  double serviceCharge
+      double serviceCharge
 
-  calculateBill() = (costPerNight * nights) + serviceCharge
+      calculateBill() = (costPerNight * nights) + serviceCharge
 
   🛂 Login Validation Class → Validation.java
-  boolean login(Scanner sc)
+      boolean login(Scanner sc)
 
   🧭 Menu Class → Menu.java
   ArrayList<Guest>
