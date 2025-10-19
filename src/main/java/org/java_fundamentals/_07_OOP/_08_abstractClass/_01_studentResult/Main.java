@@ -19,7 +19,7 @@ public class Main {
         System.out.print("Student Type(School or College: ");
         String studentType = input.nextLine();
 
-        Printable student ;
+        Student student ;
         if (studentType.equalsIgnoreCase("School")){
             student = new SchoolStudent(name, rollNo, marks);
 

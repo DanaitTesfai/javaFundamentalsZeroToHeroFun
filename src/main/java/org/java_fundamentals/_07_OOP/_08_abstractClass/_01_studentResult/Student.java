@@ -1,6 +1,6 @@
 package org.java_fundamentals._07_OOP._08_abstractClass._01_studentResult;
 
-abstract class Student {
+abstract class Student implements Printable{
     protected String name;
     protected int rollNo;
     protected double marks;

@@ -1,6 +1,6 @@
 package org.java_fundamentals._07_OOP._08_abstractClass._01_studentResult;
 
-public class SchoolStudent extends Student implements Printable{
+public class SchoolStudent extends Student {
     public SchoolStudent(String name, int rollNo, double marks) {
         super(name, rollNo, marks);
     }
