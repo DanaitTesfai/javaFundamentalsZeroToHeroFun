@@ -1,0 +1,35 @@
+1.Student Result System (Abstract + Interface)
+  Concepts: Abstract Class, Interface, Method Overriding, Scanner
+
+  🧾 Problem Description:
+  Create a system to evaluate students based on marks.
+
+  🧱 Instructions:
+  Create an abstract class Student:
+
+  Fields: name, rollNo
+
+  Abstract method: getResult()
+
+  Create an interface Printable:
+
+  Method: printDetails()
+
+  Create two student types:
+
+  SchoolStudent → PASS if marks ≥ 50
+
+  CollegeStudent → PASS if marks ≥ 60
+
+  Use Scanner to input student details.
+
+  Display result using polymorphism.
+
+  Output Example:
+  Enter Name: Lidya
+  Enter Roll No: 101
+  Enter Marks: 75
+  Student Type: College
+  Name: Lidya
+  Roll No: 101
+  Result: PASS
