@@ -33,3 +33,149 @@
   Name: Lidya
   Roll No: 101
   Result: PASS
+--------------------------------------------------------
+2.New Project Scenario (Advanced OOP)
+  Hotel Booking & Guest Management System
+  (Using Encapsulation, Inheritance, Interfaces, Abstract Classes, Polymorphism,
+  Constructors, ArrayList, Login, Search & Menu System)
+  This will include:
+
+  ✅ Encapsulation
+  ✅ Inheritance & Polymorphism
+  ✅ Interfaces (Displayable, Billable)
+  ✅ Abstract Class (Guest)
+  ✅ Constructors
+  ✅ ArrayList
+  ✅ Menu & Search
+  ✅ Login System
+  ✅ Object Equality
+
+  🧩 SCENARIO OVERVIEW (For Students)
+  RoyalStay Hotel wants a console-based management system to handle guest bookings.
+  They accommodate two types of guests:
+
+  1️⃣ RegularGuest → Standard stay, pay per night
+  2️⃣ VIPGuest → Premium service, pay per night + additional service charges
+
+  The Reception Desk Operator (Admin) must:
+
+  Log in to the system
+
+  Add guests (Regular or VIP)
+
+  View all guests
+
+  Search guest by Guest ID
+
+  Calculate total bill for each guest using abstract methods
+
+  Prevent duplicate guests using Guest ID
+
+  🔒 Admin Login Credentials
+  Username	Password
+  admin	1234
+  🚫 If login fails, system must terminate.
+
+  🎛 REQUIRED MENU
+  ===== RoyalStay Admin Login =====
+  Username: admin
+  Password: ****
+
+  === Guest Management Menu ===
+  1. Register Guest
+  2. View All Guests
+  3. Search Guest by ID
+  4. Exit
+
+  🛠 CORE CONCEPT REQUIREMENTS
+      Concept	Must Be Used
+      Abstract Class	Guest with abstract method calculateBill()
+      Interfaces	Displayable, Billable
+      Inheritance	RegularGuest, VIPGuest extend Guest
+      Encapsulation	Private fields + getters/setters
+      Constructors	Used in all classes
+      ArrayList	To store guests
+      equals & hashCode	In Guest class to prevent duplicates
+      Scanner Input	For all data
+      switch-case	Menu control
+  💼 CLASS & FEATURE REQUIREMENTS
+  🔷 ABSTRACT CLASS: Guest (Super Class)
+  Private Fields:
+
+      String guestId
+
+      String name
+
+      int nights
+
+  Methods:
+
+      Constructor (id, name, nights)
+
+      Getter & Setter with validation
+
+      equals() & hashCode() to prevent duplicate guests
+
+      displayInfo() (Concrete template method)
+
+      abstract double calculateBill();
+
+  🟦 INTERFACES
+  Interface	Method
+      Displayable	void displayInfo();
+      Billable	double calculateBill();
+  🟨 SUBCLASS: RegularGuest
+  Field: double costPerNight
+
+  calculateBill() = costPerNight * nights
+
+  🟥 SUBCLASS: VIPGuest
+  Fields:
+
+  double costPerNight
+
+  double serviceCharge
+
+  calculateBill() = (costPerNight * nights) + serviceCharge
+
+  🛂 Login Validation Class → Validation.java
+  boolean login(Scanner sc)
+
+  🧭 Menu Class → Menu.java
+  ArrayList<Guest>
+
+  Methods:
+
+  addGuest()
+
+  viewGuests()
+
+  searchGuest()
+
+  exit()
+
+
+  ===== RoyalStay Admin Login =====
+  Username: admin
+  Password: 1234
+  Login successful!
+
+  === Guest Management Menu ===
+  1. Register Guest
+  2. View All Guests
+  3. Search Guest by ID
+  4. Exit
+  Choose: 1
+  Select Guest Type: 1. Regular Guest  2. VIP Guest
+  1
+  Enter Guest ID: G101
+  Enter Name: David Miller
+  Enter Nights of Stay: 3
+  Enter Cost Per Night: 120
+  Guest Registered Successfully!
+
+  === Guest Management Menu ===
+  Choose: 2
+
+  --- Guest List ---
+  REGULAR | ID: G101 | Name: David Miller | Nights: 3 | Total Bill: $360.0
