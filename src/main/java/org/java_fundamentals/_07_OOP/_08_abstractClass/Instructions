@@ -143,17 +143,17 @@
       boolean login(Scanner sc)
 
   🧭 Menu Class → Menu.java
-  ArrayList<Guest>
+      ArrayList<Guest>
 
-  Methods:
+      Methods:
 
-  addGuest()
+      addGuest()
 
-  viewGuests()
+      viewGuests()
 
-  searchGuest()
+      searchGuest()
 
-  exit()
+      exit()
 
 
   ===== RoyalStay Admin Login =====
@@ -177,6 +177,7 @@
 
   === Guest Management Menu ===
   Choose: 2
+
 
   --- Guest List ---
   REGULAR | ID: G101 | Name: David Miller | Nights: 3 | Total Bill: $360.0

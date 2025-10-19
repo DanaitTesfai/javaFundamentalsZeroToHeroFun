@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Validation {
     private static final String USERNAME = "admin";
-    private static final String PASSWORD = "admin";
+    private static final String PASSWORD = "1234";
 
     public static boolean login(Scanner sc){
         System.out.println("===== RoyalStay Admin Login =====");
