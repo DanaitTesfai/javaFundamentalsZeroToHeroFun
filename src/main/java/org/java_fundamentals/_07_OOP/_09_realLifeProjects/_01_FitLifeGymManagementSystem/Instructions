@@ -1,0 +1,35 @@
+1. FitLife Gym Management System
+    ●  Admin Users – Manage staff and gym members
+    ●  Staff Users – Register members and manage memberships
+    ●  Members – People who join the gym (Basic or Premium plans)
+
+This is the heart of the project. Everything you build will connect to this menu:
+    === ADMIN MENU - FitLife Gym ===
+    1. User Management
+    1. Register New Staff User
+    2. View All Users
+    3. Deactivate User
+    2. Member Management
+    1. Register Member
+    2. View All Members
+    3. Search Member by ID
+    4. Generate Bill / Check-Out
+    3. Exit
+
+    === STAFF MENU - FitLife Gym ===
+    1. Register Member
+    2. View All Members
+    3. Search Member by ID
+    4. Generate Bill
+    5. Exit
+
+
+Step by step
+    Step 1–  Design the Abstract Class Member
+    Step 2 – Create BasicMember (SimpleMembership)
+    Step 3 – Create PremiumMember (VIPMembership)
+    Step 4 – Build the User Class
+    Step 5 – Create UserManager class
+    Step 6 - Create of MemberManager Class
+    steo 7 - Final Menu Design
+    Step 8 - Final Step – Create Main.java
