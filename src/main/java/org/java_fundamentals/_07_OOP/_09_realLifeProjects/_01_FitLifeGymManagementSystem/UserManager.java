@@ -3,7 +3,7 @@ package org.java_fundamentals._07_OOP._09_realLifeProjects._01_FitLifeGymManagem
 import java.util.ArrayList;
 
 public class UserManager {
-    ArrayList<User> users = new ArrayList<>();
+    ArrayList<UserOne> users = new ArrayList<>();
 
     public void userManager(){
 

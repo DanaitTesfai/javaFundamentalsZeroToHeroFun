@@ -105,7 +105,7 @@ public class _02_CarRentalSystemWithAdminPanel {
                         } else if (choiceAdmin == 3) {
                             System.out.println("--- All Users' Rental Summary ---");
                             for (int i = 0; i < userCount; i++) {
-                                System.out.println("User: " + usernames[i]);
+                                System.out.println("UserOne: " + usernames[i]);
                                 double totalSpent = 0;
                                 for (int j = 0; j < cars.length; j++) {
                                     System.out.println(cars[j] + "/s rented: " + rentedQuantity[i][j] + " | Income: $" + carIncome[i][j]);
@@ -126,7 +126,7 @@ public class _02_CarRentalSystemWithAdminPanel {
 
                     }
 
-                    //User menu
+                    //UserOne menu
                 } else {
                     System.out.println("Login Successful! Welcome, " + usernames[currentUserIndex] + ".");
                     while (true) {
@@ -184,7 +184,7 @@ public class _02_CarRentalSystemWithAdminPanel {
 
                 // register
             } else if (choice == 2) {
-                System.out.println("\n--- User Registration ---");
+                System.out.println("\n--- UserOne Registration ---");
                 String newUser = "";
                 while (true) {
                     System.out.print("Enter new username: ");

@@ -2,34 +2,33 @@ package org.java_fundamentals._07_OOP._09_realLifeProjects._01_FitLifeGymManagem
 
 import java.util.Objects;
 
-public class User {
-    private String userName;
-    private String passWord;
+public class User implements Displayable{
+    private String username;
+    private String password;
     private String role;
-    private boolean isActive;
+    private boolean active;
 
-    public User(String userName, String passWord, String role, boolean isActive) {
-        setUserName(userName);
-        setPassWord(passWord);
+    public User(String username, String password, String role, boolean active) {
+        setUsername(username);
+        setPassword(password);
         setRole(role);
-        this.isActive = isActive;
+        this.active = active;
     }
 
-
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName != null && !userName.trim().isEmpty() ? userName : "user" ;
+    public void setUsername(String username) {
+        this.username = username != null && username.matches("[A-Za-z0-9]+") ? username : "Unknown";;
     }
 
-    public String getPassWord() {
-        return passWord;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPassWord(String passWord) {
-        this.passWord = passWord != null && !passWord.trim().isEmpty() ? passWord : "pass";
+    public void setPassword(String password) {
+        this.password = password != null && !password.trim().isEmpty() ? password : "Unknown";;
     }
 
     public String getRole() {
@@ -37,21 +36,16 @@ public class User {
     }
 
     public void setRole(String role) {
-        if (role.equalsIgnoreCase("admin") || role.equalsIgnoreCase("staff")){
-            this.role = role;
-        }else {
-            this.role = "Staff";
-        }
+        this.role = role.equalsIgnoreCase("admin") || role.equalsIgnoreCase("staff") ? role : "User";
     }
 
     public boolean isActive() {
-        return isActive;
+        return active;
     }
 
     public void setActive(boolean active) {
-        isActive = active;
+        this.active = active;
     }
-
 
     public boolean isAdmin(){
         return role.equalsIgnoreCase("admin");
@@ -61,15 +55,16 @@ public class User {
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return Objects.equals(userName, user.userName);
+        return Objects.equals(username, user.username);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(userName);
+        return Objects.hashCode(username);
     }
 
-    public void displayInfo(){
-        System.out.println("Username: "+ userName + "Role: " + role +"Active status: " + isActive);
+    @Override
+    public void displayInfo() {
+        System.out.println("Username: " + username + ", Role: " + role + "Active status: " + active);
     }
 }
