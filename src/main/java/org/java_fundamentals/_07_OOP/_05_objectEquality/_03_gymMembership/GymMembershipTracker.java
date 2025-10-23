@@ -38,7 +38,7 @@ public class GymMembershipTracker {
 
         while (true) {
             System.out.println("1. Register Member\n" +
-                    "2. View Members\n" +
+                    "2. View Member\n" +
                     "3. Search Member by ID\n" +
                     "4. Exit");
             System.out.print("Choose an option: ");

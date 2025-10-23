@@ -10,7 +10,7 @@ public class Menu {
         while (true){
             System.out.println("=== Gym Membership Menu ===\n" +
                     "1. Register Member\n" +
-                    "2. View All Members\n" +
+                    "2. View All Member\n" +
                     "3. Search Member by ID\n" +
                     "4. Exit");
             System.out.print("Choose an option: ");

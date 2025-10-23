@@ -41,7 +41,7 @@ public class GymMembershipTracker {
         while (true){
             System.out.println("=== Gym Menu ===\n" +
                     "1. Register Member\n" +
-                    "2. View Members\n" +
+                    "2. View Member\n" +
                     "3. Exit");
             System.out.print("Choose an option: ");
             int option = sc.nextInt();
