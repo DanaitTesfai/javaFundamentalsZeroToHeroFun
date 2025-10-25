@@ -5,8 +5,8 @@ public class PremiumMember extends Member{
     private double trainerFee;
     private double dietPlanFee;
 
-    public PremiumMember(String memberId, String name, int age, int monthsSubscribed, double monthlyFee, double trainerFee, double dietPlanFee) {
-        super(memberId, name, age, monthsSubscribed);
+    public PremiumMember(String memberId, String name, int age, int monthsSubscribed, String membershipStatus, double monthlyFee, double trainerFee, double dietPlanFee) {
+        super(memberId, name, age, monthsSubscribed, membershipStatus );
         setMonthlyFee(monthlyFee);
         setTrainerFee(trainerFee);
         setDietPlanFee(dietPlanFee);
@@ -43,7 +43,7 @@ public class PremiumMember extends Member{
 
     @Override
     public void displayInfo() {
-        System.out.println("Id: "+ getMemberId() + ", Name: " + getName() + ", Age: " + getAge() +
-                ", Months subscribed: " + getMonthsSubscribed() + ", Monthly Fee: +" + monthlyFee + ", Bill: " + calculateBill());
+        System.out.println("Premium  |  Id: "+ getMemberId() + ", Name: " + getName() + ", Age: " + getAge() +
+                ", Months subscribed: " + getMonthsSubscribed() + ", Membership Status: " + getMembershipStatus() + ", Monthly Fee: +" + monthlyFee + ", Bill: " + calculateBill());
     }
 }

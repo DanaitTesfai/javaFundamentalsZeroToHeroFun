@@ -3,8 +3,8 @@ package org.java_fundamentals._07_OOP._09_realLifeProjects._01_FitLifeGymManagem
 public class BasicMember extends Member{
     private double monthlyFee;
 
-    public BasicMember(String memberId, String name, int age, int monthsSubscribed, double monthlyFee) {
-        super(memberId, name, age, monthsSubscribed);
+    public BasicMember(String memberId, String name, int age, int monthsSubscribed, String membershipStatus, double monthlyFee) {
+        super(memberId, name, age, monthsSubscribed, membershipStatus);
         setMonthlyFee(monthlyFee);
     }
 
@@ -23,7 +23,7 @@ public class BasicMember extends Member{
 
     @Override
     public void displayInfo() {
-        System.out.println("Id: "+ getMemberId() + ", Name: " + getName() + ", Age: " + getAge() +
-                ", Months subscribed: " + getMonthsSubscribed() + ", Monthly Fee: +" + monthlyFee + ", Bill: " + calculateBill());
+        System.out.println("Basic  |  Id: "+ getMemberId() + ", Name: " + getName() + ", Age: " + getAge() +
+                ", Months subscribed: " + getMonthsSubscribed() + ", Membership Status: " + getMembershipStatus() + ", Monthly Fee: +" + monthlyFee + ", Bill: " + calculateBill());
     }
 }

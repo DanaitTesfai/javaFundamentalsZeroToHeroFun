@@ -4,25 +4,94 @@
     ●  Members – People who join the gym (Basic or Premium plans)
 
 This is the heart of the project. Everything you build will connect to this menu:
+
+    ===== FitLife Gym Login =====
+    Username: admin
+    Password: 1234
+    Welcome ADMIN: admin
+
+
     === ADMIN MENU - FitLife Gym ===
     1. User Management
+    2. Member Management
+    3. Exit
+    Choice: 1
+
+    -- User Management --
     1. Register New Staff User
     2. View All Users
     3. Deactivate User
-    2. Member Management
+    4. Back
+    Choice: 1
+
+    Enter username: coach1
+    Enter password: fit2024
+    Staff user registered.
+
+    -- User Management --
+    2
+    User: admin | Role: ADMIN | Active: true
+    User: staff1 | Role: STAFF | Active: true
+    User: coach1 | Role: STAFF | Active: true
+
+    -- User Management --
+    3
+    Enter username to deactivate: staff1
+    User deactivated.
+
+    -- User Management --
+    2
+    User: admin | Role: ADMIN | Active: true
+    User: staff1 | Role: STAFF | Active: false
+    User: coach1 | Role: STAFF | Active: true
+
+    ===== FitLife Gym Login =====
+    Username: staff1
+    Password: pass
+    Invalid credentials or inactive account. Exiting...
+
+    -- Member Management --
     1. Register Member
     2. View All Members
     3. Search Member by ID
     4. Generate Bill / Check-Out
-    3. Exit
+    5. Back
+    Choice: 1
+    Select Member Type: 1. Basic  2. Premium
+    1
+    Enter Member ID: M101
+    Enter Name: Sarah Johnson
+    Enter Age: 28
+    Enter Months Subscribed: 6
+    Enter Monthly Fee: 50
+    Member registered successfully!
 
-    === STAFF MENU - FitLife Gym ===
+    -- Member Management --
+    2
+    BASIC  | ID: M101 | Name: Sarah Johnson | Months: 6 | Monthly Fee: $50.00 | Status: Active | Bill: $300.00
+
+    -- Member Management --
     1. Register Member
     2. View All Members
     3. Search Member by ID
-    4. Generate Bill
-    5. Exit
+    4. Generate Bill / Check-Out
+    5. Back
+    Choice: 1
 
+    Select Member Type: 1. Basic  2. Premium
+    2
+    Enter Member ID: M202
+    Enter Name: Daniel Kim
+    Enter Age: 31
+    Enter Months Subscribed: 4
+    Enter Monthly Fee: 80
+    Enter Trainer Fee: 100
+    Enter Diet Plan Fee: 50
+    Member registered successfully!
+
+    -- Member Management --
+    2
+    PREMIUM | ID: M202 | Name: Daniel Kim | Months: 4 | Monthly: $80.00 | Trainer: $100.00 | Diet: $50.00 | Status: Active | Bill: $470.00
 
 Step by step
     Step 1–  Design the Abstract Class Member
@@ -33,3 +102,72 @@ Step by step
     Step 6 - Create of MemberManager Class
     step 7 - Final Menu Design
     Step 8 - Final Step – Create Main.java
+
+
+    === ADMIN MENU - FitLife Gym ===
+    1. User Management
+        1. Register New Staff User
+        2. View All Users
+        3. Deactivate User
+        4. Back
+    2. Member Management
+        1. Register Member
+        2. View All Members
+        3. Search Member by ID
+        4. Generate Bill / Check-Out
+        5. Back
+
+    3. Exit
+
+    === STAFF MENU - FitLife Gym ===
+    1. Register Member
+    2. View All Members
+    3. Search Member by ID
+    4. Generate Bill
+    5. Exit
+
+
+    ===== FitLife Gym Login =====
+    Username: coach1
+    Password: fit2024
+    Welcome STAFF: coach1
+
+    === STAFF MENU - FitLife Gym ===
+    1. Register Member
+    2. View All Members
+    3. Search Member by ID
+    4. Generate Bill
+    5. Exit
+    Choice: 1
+
+    Select Member Type: 1. Basic  2. Premium
+    1
+    Enter Member ID: M303
+    Enter Name: Emily Roberts
+    Enter Age: 26
+    Enter Months Subscribed: 3
+    Enter Monthly Fee: 45
+    Member registered successfully!
+
+    -- STAFF MENU --
+    2
+    BASIC | ID: M303 | Name: Emily Roberts | Months: 3 | Monthly Fee: $45.00 | Status: Active | Bill: $135.00
+
+    -- Member Management --
+    1. Register Member
+    Select Member Type: 1. Basic  2. Premium
+    1
+    Enter Member ID: M101
+    Enter Name: Sarah Johnson
+    Enter Age: 28
+    Enter Months Subscribed: 6
+    Enter Monthly Fee: 50
+    Duplicate member ID. Registration failed.
+
+    Enter Age: twenty
+    Enter a valid integer: 20
+    Enter Months Subscribed: 0
+    Months must be > 0. Using 1.
+    Enter Monthly Fee: -30
+    Enter a valid number: 50
+    Member registered successfully!

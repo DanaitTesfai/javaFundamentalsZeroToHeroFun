@@ -7,12 +7,14 @@ abstract public class Member implements Displayable,Billable{
     private String name;
     private int age;
     private int monthsSubscribed;
+    private String membershipStatus;
 
-    public Member(String memberId, String name, int age, int monthsSubscribed) {
+    public Member(String memberId, String name, int age, int monthsSubscribed, String membershipStatus) {
         setMemberId(memberId);
         setName(name);
         setAge(age);
         setMonthsSubscribed(monthsSubscribed);
+        setMembershipStatus(membershipStatus);
     }
 
     public String getMemberId() {
@@ -47,6 +49,15 @@ abstract public class Member implements Displayable,Billable{
         this.monthsSubscribed = monthsSubscribed > 0 ? monthsSubscribed : 1;
     }
 
+
+    public String getMembershipStatus() {
+        return membershipStatus;
+    }
+
+    public void setMembershipStatus(String membershipStatus) {
+        this.membershipStatus = membershipStatus == null || membershipStatus.isEmpty() ? "Active" : membershipStatus;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
@@ -69,6 +80,6 @@ abstract public class Member implements Displayable,Billable{
 
     @Override
     public String toString() {
-        return "Id: "+ memberId + ", Name: " + name + ", Age: " + age + ", Months subscribed: " + monthsSubscribed;
+        return "Id: "+ memberId + ", Name: " + name + ", Age: " + age + ", Months subscribed: " + monthsSubscribed + ", Membership Status: " + membershipStatus;
     }
 }

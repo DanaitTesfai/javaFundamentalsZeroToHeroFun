@@ -3,10 +3,11 @@ package org.java_fundamentals._07_OOP._09_realLifeProjects._01_FitLifeGymManagem
 import java.util.ArrayList;
 
 public class MemberManager {
-    ArrayList<Member> members = new ArrayList<>();
+    ArrayList<Member> members;
 
     public MemberManager() {
-    // TODO: initialize ArrayList
+        members = new ArrayList<>();
+
     }
 
 
@@ -23,15 +24,13 @@ public class MemberManager {
 
 
 
-    public boolean listMembers(){
+    public void listMembers(){
         if (members.isEmpty()){
             System.out.println("There are no members.");
-            return false;
         }else {
             for (Member m: members){
                 m.displayInfo();
             }
-            return true;
         }
     }
 
@@ -46,8 +45,23 @@ public class MemberManager {
 
 
 
-    public void checkout(String memberId){
-        System.out.println("check out");
+    public boolean checkout(String memberId){
+        Member m = findById(memberId);
+        if (m == null){
+            return false;
+        }
+
+        if (m.getMembershipStatus().equalsIgnoreCase("Active")){
+            double bill = m.calculateBill();
+            m.setMembershipStatus("Inactive");
+            System.out.println("Final bill for " + m.getName() + ": $" + bill);
+            System.out.println("Membership closed.");
+            return true;
+        }
+
+        System.out.println("Membership is already inactive.");
+        return true;
+
 
     }
 }

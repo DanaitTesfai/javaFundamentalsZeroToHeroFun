@@ -28,7 +28,7 @@ public class User implements Displayable{
     }
 
     public void setPassword(String password) {
-        this.password = password != null && !password.trim().isEmpty() ? password : "Unknown";;
+        this.password = password != null && !password.trim().isEmpty() ? password : "1234";;
     }
 
     public String getRole() {
@@ -36,7 +36,7 @@ public class User implements Displayable{
     }
 
     public void setRole(String role) {
-        this.role = role.equalsIgnoreCase("admin") || role.equalsIgnoreCase("staff") ? role : "User";
+        this.role = role.equalsIgnoreCase("admin") || role.equalsIgnoreCase("staff") ? role : "Staff";
     }
 
     public boolean isActive() {
