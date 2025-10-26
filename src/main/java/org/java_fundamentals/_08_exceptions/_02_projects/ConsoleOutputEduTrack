@@ -1,0 +1,33 @@
+Console Output Demonstrations
+  🧑‍💼 Use Case 1: Successful Admin Login and Registering a Regular Student
+===== EduTrack Login =====
+Username: admin
+Password: 1234
+Welcome ADMIN: admin
+
+=== ADMIN MENU - EduTrack ===
+1. User Management
+2. Student Management
+3. Exit
+Choice: 2
+
+-- Student Management --
+1. Register Student
+2. View All Students
+3. Search Student by ID
+4. Calculate Fee / Complete Course
+5. Back
+Choice: 1
+
+Select Student Type: 1. Regular  2. Scholarship
+1
+Enter Student ID: S101
+Enter Name: Alice Green
+Enter Age: 20
+Enter Course Duration (months): 6
+Enter Monthly Fee: 150
+Student registered successfully!
+
+-- Student Management --
+2
+REGULAR | ID: S101 | Name: Alice Green | Duration: 6 | Monthly: $150.00 | Status: Active | Fee: $900.00

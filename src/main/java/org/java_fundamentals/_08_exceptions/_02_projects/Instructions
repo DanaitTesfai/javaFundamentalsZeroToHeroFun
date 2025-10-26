@@ -1,0 +1,92 @@
+Chapter 1 – Introduction & Real-World Scenario
+    🎯 Welcome to EduTrack
+
+    In this project, you will build a Student Management System using Java.
+    It follows the same modular, object-oriented structure as your FitLife Gym project, but now includes custom exception handling to make your code safer and more realistic.
+
+    By the end, you will apply:
+
+    Encapsulation • Inheritance • Interfaces • Abstract Classes • Polymorphism •
+    Role-Based Menus • ArrayLists • Exception Handling (Checked & Unchecked)
+
+    What Is EduTrack?
+    EduTrack is a small educational institute that wants to digitize student management.
+    Currently, they keep everything on paper: student records, course registration, fee payments, and staff management.
+
+    They want a Java console application that handles:
+
+    👩‍💼 Admin Users – Manage staff and student data
+
+    🧑‍🏫 Staff Users – Register and manage student details
+
+    👨‍🎓 Students – Enrolled learners (Regular or Scholarship type)
+
+    🧠 Mapping Real Life to Code
+    Real-World Role	Java Representation	Description
+    School Principal	Admin User	Full control (staff & students)
+    Teachers/Clerks	Staff User	Manage students only
+    Student	Student Object	Represents Regular or Scholarship type
+    Tuition Billing	Polymorphism	calculateFee() works differently by student type
+
+    ⚙️ Project Goals
+    Feature	Purpose
+    Login System	Role-based access control
+    Admin Menu	Manage users & students
+    Staff Menu	Manage students only
+    Student Types	RegularStudent / ScholarshipStudent
+    Billing	Fee calculation using polymorphism
+    Exception Handling	Validate input & prevent runtime errors
+
+    User Roles & Login System
+    Just like FitLife Gym, the EduTrack system has two user roles:
+
+    Role	Description	Permissions
+    Admin	Highest authority	Manage staff & students
+    Staff	Teachers/receptionists	Manage students only
+
+Chapter 2 – User Roles & Login System
+
+    Just like FitLife Gym, the EduTrack system has two user roles:
+
+    Role	Description	            Permissions
+    Admin	Highest authority	    Manage staff & students
+    Staff	Teachers/receptionists	Manage students only
+
+    User.java
+        Each system user (Admin or Staff) is represented as a User object.
+
+        Fields:
+
+        username
+
+        password
+
+        role (ADMIN or STAFF)
+
+        active (true/false)
+
+        Methods:
+
+        isAdmin()
+
+        equals() & hashCode()
+
+        displayInfo()
+
+    🏗 UserManager.java
+        Handles login, adding users, deactivation, and listing.
+
+        Method	Description
+        authenticate()	Validate login credentials
+        addUser()	Add new staff (admin only)
+        deactivateUser()	Disable staff
+        listUsers()	Display all users
+
+        Default Users
+            admin / 1234 (ADMIN)
+            staff1 / pass (STAFF)
+
+       ===== EduTrack Login =====
+       Username: admin
+       Password: 1234
+       Welcome ADMIN: admin
