@@ -44,3 +44,98 @@ Use multiple catch blocks:
 catch (InputMismatchException e) { ... }
 catch (ArithmeticException e) { ... }
 catch (Exception e) { ... }
+
+----------------------------------------------------
+
+Problem 4: Array Out of Bounds
+🎯 Goal: Create an array of 5 integers.
+Ask the user for an index and print the number at that index.
+
+Handle when the user enters an index that doesn’t exist.
+
+Handle invalid input (like typing letters).
+
+💡 Hint:
+Catch both ArrayIndexOutOfBoundsException and InputMismatchException.
+
+🧱 Level: ⭐⭐ (Easy–Medium)
+--------------------------------------------------------
+--------------------------------------------------------
+LEVEL 3: Custom Rules and Manual Throwing
+🧩 Problem 5: Student Age Validator
+🎯 Goal: Take a student’s age.
+If the age is below 18 or above 35, throw an exception.
+
+Use throw new Exception("message").
+
+Handle the exception and print the message.
+
+💡 Hint:
+
+if (age < 18 || age > 35) {
+    throw new Exception("Age out of range.");
+}
+
+   Level: ⭐⭐⭐ (Medium)
+
+--------------------------------------------------------
+
+Problem 6: Password Strength Checker
+🎯 Goal: Ask the user to enter a password.
+Throw an exception if:
+
+Password length < 6
+
+Password doesn’t contain a digit
+
+💡 Hint:
+Use conditions and throw new Exception("message").
+
+Level: ⭐⭐⭐ (Medium)
+
+--------------------------------------------------------
+
+
+LEVEL 4: Using Finally and Resource Closing
+🧩 Problem 7: File Reader Simulation
+🎯 Goal: Pretend to read a file (no actual file needed).
+Use try-catch-finally to:
+
+Simulate opening and closing a file.
+
+Always print "File closed" inside finally.
+
+
+💡 Hint:
+
+try {
+    System.out.println("Opening file...");
+    throw new Exception("File not found!");
+} catch (Exception e) {
+    System.out.println(e.getMessage());
+} finally {
+    System.out.println("File closed.");
+}
+
+--------------------------------------------------------
+
+Problem 8: Safe ATM Withdrawal
+🎯 Goal: Ask the user for their balance and amount to withdraw.
+Throw an exception if withdrawal > balance.
+
+💡 Hint:
+Use throw new Exception("Insufficient funds!").
+
+
+🧱 Level: ⭐⭐⭐⭐ (Medium–Hard
+--------------------------------------------------------
+--------------------------------------------------------
+LEVEL 5: Custom Exception Class
+🧩 Problem 9: Create Your Own Exception
+🎯 Goal: Create a custom exception class named InvalidAgeException.
+
+It should extend Exception.
+
+Throw it if the age is below 18.
+
+💡 Hint:
