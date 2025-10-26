@@ -1,0 +1,25 @@
+LEVEL 1: Basic Exception Awareness
+🧩 Problem 1: Division by Zero
+🎯 Goal: Write a program that asks the user for two numbers
+ and divides them safely.
+
+Handle division by zero using ArithmeticException.
+
+Display a message like: "Cannot divide by zero!".
+
+💡 Hint:
+Wrap the division in a try-catch block.
+-------------------------------------------------------
+
+Problem 2: Wrong Input Type
+🎯 Goal: Ask the user for an integer, but handle the case when they
+type letters or symbols.
+
+Use InputMismatchException.
+
+Show "Please enter a number only."
+
+💡 Hint:
+Use Scanner and try-catch.
+
+🧱 Level: ⭐ (Easy)
