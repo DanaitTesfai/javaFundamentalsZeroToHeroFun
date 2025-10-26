@@ -139,3 +139,10 @@ It should extend Exception.
 Throw it if the age is below 18.
 
 💡 Hint:
+class InvalidAgeException extends Exception {
+    public InvalidAgeException(String message) {
+        super(message);
+    }
+}
+  Then use:
+throw new InvalidAgeException("Age must be 18 or older!");
