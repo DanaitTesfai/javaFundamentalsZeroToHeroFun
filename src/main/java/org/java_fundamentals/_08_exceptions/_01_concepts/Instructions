@@ -23,3 +23,24 @@ Show "Please enter a number only."
 Use Scanner and try-catch.
 
 🧱 Level: ⭐ (Easy)
+----------------------------------------------------------
+
+LEVEL 2: Combining Exceptions
+🧩 Problem 3: Safe Calculator
+🎯 Goal: Ask the user for two numbers and an operator (+, -, *, /)
+Perform the operation safely.
+
+Handle:
+
+Invalid operator
+
+Division by zero
+
+Wrong input type
+
+💡 Hint:
+Use multiple catch blocks:
+
+catch (InputMismatchException e) { ... }
+catch (ArithmeticException e) { ... }
+catch (Exception e) { ... }
