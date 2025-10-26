@@ -90,3 +90,44 @@ Chapter 2 – User Roles & Login System
        Username: admin
        Password: 1234
        Welcome ADMIN: admin
+
+Chapter 3 – Interfaces & Abstract Classes
+    ⚙️ Interface Layer
+      Displayable.java  & Billable.java
+
+    🧩 Abstract Class: Student
+    Defines common data and behaviors shared by all students.
+
+    Fields:
+
+    studentId
+
+    name
+
+    age
+
+    courseDuration
+
+    status (“Active” or “Completed”)
+
+    Abstract Method:
+
+    calculateFee() — defined differently for each student type
+
+    Implements:
+
+    Displayable, Billable
+
+    🧮 RegularStudent
+    Field	Description
+    Formula:   monthlyFee	Base course fee
+    Total Fee = monthlyFee × courseDuration
+
+    🎓 ScholarshipStudent
+    Field	Description
+    monthlyFee	Base course fee
+    discountPercent	Scholarship discount (0–100)
+    Formula:
+
+    Total Fee = (monthlyFee × courseDuration) × (1 - discountPercent / 100)
+
