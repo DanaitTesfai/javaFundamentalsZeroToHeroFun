@@ -24,6 +24,6 @@ public class BasicMember extends Member{
     @Override
     public void displayInfo() {
         System.out.println("Basic  |  Id: "+ getMemberId() + ", Name: " + getName() + ", Age: " + getAge() +
-                ", Months subscribed: " + getMonthsSubscribed() + ", Membership Status: " + getMembershipStatus() + ", Monthly Fee: +" + monthlyFee + ", Bill: " + calculateBill());
+                ", Months subscribed: " + getMonthsSubscribed() + ", Membership Status: " + getMembershipStatus() + ", Monthly Fee: $" + monthlyFee + ", Bill: $" + calculateBill());
     }
 }

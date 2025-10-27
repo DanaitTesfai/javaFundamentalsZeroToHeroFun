@@ -35,7 +35,7 @@ public class Menu {
                     "    1. User Management\n" +
                     "    2. Member Management\n" +
                     "    3. Exit");
-            System.out.print("Enter your choice.");
+            System.out.print("Enter your choice: ");
             int choice = sc.nextInt();
 
             switch (choice) {
@@ -55,7 +55,6 @@ public class Menu {
             }
         }
     }
-
 
     public void userManagement(Scanner sc, UserManager um) {
         while (true) {
@@ -89,12 +88,11 @@ public class Menu {
         }
     }
 
-
     public void registerStaff(Scanner sc, UserManager um) {
-        System.out.println("Enter username: ");
+        System.out.print("Enter username: ");
         String userN = sc.nextLine();
 
-        System.out.println("Enter password: ");
+        System.out.print("Enter password: ");
         String passW = sc.nextLine();
 
         if (userN.isBlank() || passW.isBlank()) {
@@ -106,11 +104,9 @@ public class Menu {
         System.out.println(ok ? "Staff user registered." : "Duplicate username, registration failed.");
     }
 
-
     public void viewUsers(UserManager um) {
         um.listUsers();
     }
-
 
     public void deactivateUser(Scanner sc, UserManager um) {
         System.out.print("Enter username to deactivate: ");
@@ -119,6 +115,7 @@ public class Menu {
         boolean ok = um.deactivateUser(userN);
         System.out.println(ok ? "User deactivated." : "User not found.");
     }
+
 
 
     public void memberManagement(Scanner sc, MemberManager mm) {
@@ -156,7 +153,7 @@ public class Menu {
     }
 
     public void registerMember(Scanner sc,MemberManager mm){
-        System.out.print("Select Member Type: 1. Basic  2. Premium---");
+        System.out.print("Select Member Type: 1. Basic  2. Premium: ");
         int memType = sc.nextInt();
         sc.nextLine();
 
@@ -176,18 +173,18 @@ public class Menu {
         String membershipStatus = "Active";
 
         if (memType == 1){
-            System.out.println("Enter monthly fee: ");
+            System.out.print("Enter monthly fee: ");
             double monthlyFee = sc.nextDouble();
 
             member = new BasicMember(memberId,name, age, monthsSubscribed, membershipStatus, monthlyFee);
         } else if (memType == 2) {
-            System.out.println("Enter monthly fee: ");
+            System.out.print("Enter monthly fee: ");
             double monthlyFee = sc.nextDouble();
 
-            System.out.println("Enter trainer fee: ");
+            System.out.print("Enter trainer fee: ");
             double trainerFee = sc.nextDouble();
 
-            System.out.println("Enter diet plan fee: ");
+            System.out.print("Enter diet plan fee: ");
             double dietFee = sc.nextDouble();
 
             member = new PremiumMember(memberId, name, age, monthsSubscribed, membershipStatus, monthlyFee, trainerFee, dietFee);
@@ -198,7 +195,6 @@ public class Menu {
         boolean ok = mm.addMember(member);
         System.out.println(ok ? "Member registered successfully!" : "Duplicate member Id.");
     }
-
 
     public void viewMembers(MemberManager mm){
         mm.listMembers();
@@ -228,8 +224,6 @@ public class Menu {
         }
 
     }
-
-
 
 
 

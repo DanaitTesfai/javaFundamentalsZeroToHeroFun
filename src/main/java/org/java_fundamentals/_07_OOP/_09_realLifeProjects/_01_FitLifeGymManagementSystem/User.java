@@ -65,6 +65,6 @@ public class User implements Displayable{
 
     @Override
     public void displayInfo() {
-        System.out.println("Username: " + username + ", Role: " + role + "Active status: " + active);
+        System.out.println("Username: " + username + ", Role: " + role + ", Active status: " + active);
     }
 }
