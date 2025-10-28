@@ -7,7 +7,6 @@ public class GuestManager {
 
     public boolean addGuest(Guest g){
         if (guests.contains(g)){
-            System.out.println("Guest already registered.");
             return false;
         }else {
             guests.add(g);
