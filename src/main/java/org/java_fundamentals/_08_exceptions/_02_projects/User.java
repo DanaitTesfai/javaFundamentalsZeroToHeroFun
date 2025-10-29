@@ -8,10 +8,10 @@ public class User {
     private String role;
     private boolean active;
 
-    public User(String username, String password, String role, boolean active) {
-        this.username = username;
-        this.password = password;
-        this.role = role;
+    public User(String username, String password, String role, boolean active) throws InvalidInputException{
+        setUsername(username);
+        setPassword(password);
+        setRole(role);
         this.active = active;
     }
 
@@ -19,24 +19,36 @@ public class User {
         return username;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUsername(String username) throws InvalidInputException {
+        if (username != null && !username.isBlank()){
+            this.username = username;
+        }else {
+            throw new InvalidInputException("Username cannot be blank.");
+        }
     }
 
     public String getPassword() {
         return password;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPassword(String password) throws InvalidInputException{
+        if (password != null && !password.isBlank()){
+            this.password = password;
+        }else {
+            throw new InvalidInputException("Password cannot be blank.");
+        }
     }
 
     public String getRole() {
         return role;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    public void setRole(String role) throws InvalidInputException {
+        if (role != null && !role.isBlank()){
+            this.role = role;
+        }else {
+            throw new InvalidInputException("Role cannot be blank.");
+        }
     }
 
     public boolean isActive() {
@@ -63,7 +75,7 @@ public class User {
         return Objects.hashCode(username);
     }
 
-    public void displayInfo(){
+    public void displayInfo() {
         System.out.println("Username: " + username + ", Role: " + role + ", Active status: " + active);
     }
 

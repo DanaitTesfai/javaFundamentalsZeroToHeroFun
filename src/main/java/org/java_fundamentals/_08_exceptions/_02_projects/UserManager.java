@@ -11,21 +11,21 @@ public class UserManager {
         try{
             users.add(new User("admin", "1234", "ADMIN", true));
             users.add(new User("staff1", "pass", "STAFF", true));
-        }catch (InputMismatchException e){
-            System.out.println("Invalid input.");
+        }catch (InvalidInputException e){
+            System.out.println("Seeding users failed: " + e.getMessage());
         }catch (Exception e){
             System.out.println("Unexpected error occurred.");
         }
     }
 
 
-    public User authenticate(String userName,String passWord){
+    public User authenticate(String userName,String passWord) throws UserNotFoundException{
         for (User u: users){
             if (u.getUsername().equalsIgnoreCase(userName) && u.getPassword().equals(passWord) && u.isActive()){
                 return u;
             }
         }
-        return null;
+        throw new UserNotFoundException("Invalid credentials or inactive account.");
     }
 
 

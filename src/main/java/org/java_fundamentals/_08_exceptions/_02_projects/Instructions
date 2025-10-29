@@ -131,3 +131,31 @@ Chapter 3 – Interfaces & Abstract Classes
 
     Total Fee = (monthlyFee × courseDuration) × (1 - discountPercent / 100)
 
+Chapter 4 – Exception Handling
+    EduTrack introduces custom exception handling for robust input validation and system safety.
+
+    🧱 Custom Exceptions
+        InvalidInputException.java
+        UserNotFoundException.java
+
+    🧰 Where Exceptions Are Used
+    Context	                    Exception Type	                Example
+    Invalid Age or Duration	    InvalidInputException	        Age < 0
+    Login Failure	            UserNotFoundException	        Wrong credentials
+    Null or Empty Input	        InvalidInputException	        Blank name or ID
+
+      🧩 Example Usage (Inside UserManager)
+    public User authenticate(String username, String password) throws UserNotFoundException {
+        for (User u : users) {
+            if (u.getUsername().equalsIgnoreCase(username) && u.getPassword().equals(password) && u.isActive()) {
+                return u;
+            }
+        }
+        throw new UserNotFoundException("Invalid credentials or inactive account.");
+    }
+
+    public void setAge(int age) throws InvalidInputException {
+        if (age <= 0) throw new InvalidInputException("Age must be positive.");
+        this.age = age;
+    }
+
