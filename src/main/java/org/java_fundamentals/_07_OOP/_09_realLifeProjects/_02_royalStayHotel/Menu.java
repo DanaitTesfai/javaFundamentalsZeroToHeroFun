@@ -40,6 +40,7 @@ public class Menu {
                 "3. Exit");
         System.out.print("Enter choice: ");
         int choice = sc.nextInt();
+        sc.nextLine();
 
         switch (choice){
             case 1:
@@ -65,6 +66,7 @@ public class Menu {
                 "3. Deactivate User ");
         System.out.print("Enter choice: ");
         int choice = sc.nextInt();
+        sc.nextLine();
 
         switch (choice){
             case 1:
@@ -129,6 +131,7 @@ public class Menu {
                 "4. Check-Out Guest (Bill) ");
         System.out.print("Enter choice: ");
         int choice = sc.nextInt();
+        sc.nextLine();
 
         switch (choice){
             case 1:
@@ -151,6 +154,7 @@ public class Menu {
     public void registerGuest(Scanner sc, GuestManager gm){
         System.out.print("Select Guest Type: 1. Regular  2. VIP ");
         int guestType = sc.nextInt();
+        sc.nextLine();
 
         System.out.print("Enter Guest Id: ");
         String guestId = sc.nextLine();
@@ -168,6 +172,7 @@ public class Menu {
         if (guestType == 1){
             System.out.print("Enter Room No: ");
             int roomNo = sc.nextInt();
+            sc.nextLine();
 
             System.out.print("Enter Status: ");
             String reservationStatus = sc.nextLine();
@@ -176,6 +181,7 @@ public class Menu {
         } else if (guestType == 2) {
             System.out.print("Enter Room No: ");
             int roomNo = sc.nextInt();
+            sc.nextLine();
 
             System.out.print("Enter Status: ");
             String reservationStatus = sc.nextLine();
@@ -242,6 +248,7 @@ public class Menu {
                 "5. Exit ");
         System.out.print("Enter choice: ");
         int choice = sc.nextInt();
+        sc.nextLine();
 
         switch (choice){
             case 1:
