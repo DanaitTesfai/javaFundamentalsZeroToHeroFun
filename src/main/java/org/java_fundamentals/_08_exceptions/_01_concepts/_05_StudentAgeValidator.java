@@ -18,8 +18,6 @@ public class _05_StudentAgeValidator {
 
         }catch (Exception e){
             System.out.println(e.getMessage());
-        }catch (InputMismatchException e){
-            System.out.println("Invalid input.");
         }
 
     }

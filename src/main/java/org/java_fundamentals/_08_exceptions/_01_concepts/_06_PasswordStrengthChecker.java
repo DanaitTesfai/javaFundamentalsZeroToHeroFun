@@ -10,9 +10,11 @@ public class _06_PasswordStrengthChecker {
             System.out.print("Enter password: ");
             String password = input.nextLine();
 
-            if (password.length() < 6 || !password.matches("[A-Za-z0-9]+") ){
-                throw new Exception("Password must contain letters and numebers.");
+            if (password.length() < 6 || password.matches("[0-9]+") ){
+                throw new Exception("Password must not contain numbers.");
             }
+            System.out.println("The password is " + password);
+
         }catch (Exception e){
             System.out.println(e.getMessage());
         }

@@ -8,8 +8,9 @@ public class _08_SafeATMWithdrawal {
         Scanner sc = new Scanner(System.in);
 
         try{
+            double balance = 0;
             System.out.print("Enter you balance: ");
-            double balance = sc.nextDouble();
+            balance = sc.nextDouble();
 
             System.out.print("Enter the amount to be withdrawn: ");
             double withdrawal  = sc.nextDouble();
@@ -17,10 +18,12 @@ public class _08_SafeATMWithdrawal {
             if (withdrawal > balance){
                 throw new Exception("Insufficient funds!");
             }
+
+            balance =- withdrawal;
+            System.out.println("Your balance is " + balance);
+
         }catch (Exception e){
             System.out.println(e.getMessage());
-        }catch (InputMismatchException e){
-            System.out.println("Invalid input.");
         }
     }
 }

@@ -4,7 +4,7 @@ public class ScholarshipStudent extends Student{
     private double monthlyFee;
     private int discountPercentage;
 
-    public ScholarshipStudent(String studentId, String name, int age, int courseDuration, String status, double monthlyFee, int discountPercentage) {
+    public ScholarshipStudent(String studentId, String name, int age, int courseDuration, String status, double monthlyFee, int discountPercentage) throws InvalidInputException{
         super(studentId, name, age, courseDuration, status);
         this.monthlyFee = monthlyFee;
         this.discountPercentage = discountPercentage;

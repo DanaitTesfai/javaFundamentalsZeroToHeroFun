@@ -35,9 +35,9 @@ public class Menu {
 
     public void adminMenu(Scanner sc, UserManager um, GuestManager gm){
         System.out.println("=== ADMIN MAIN MENU === \n" +
-                "1. User Management \n" +
-                "2. Guest Management \n" +
-                "3. Exit");
+                "   1. User Management \n" +
+                "   2. Guest Management \n" +
+                "   3. Exit");
         System.out.print("Enter choice: ");
         int choice = sc.nextInt();
         sc.nextLine();
@@ -61,9 +61,9 @@ public class Menu {
 
     public void userManagement(Scanner sc, UserManager um){
         System.out.println("1. User Management ");
-        System.out.println("1. Register New Staff User \n" +
-                "2. View All Users \n" +
-                "3. Deactivate User ");
+        System.out.println("    1. Register New Staff User \n" +
+                "   2. View All Users \n" +
+                "   3. Deactivate User ");
         System.out.print("Enter choice: ");
         int choice = sc.nextInt();
         sc.nextLine();
@@ -125,10 +125,10 @@ public class Menu {
 
     public void guestManagement(Scanner sc, GuestManager gm){
         System.out.println("2. Guest Management ");
-        System.out.println("1. Register New Guest (Reservation) \n" +
-                "2. View All Guests \n" +
-                "3. Search Guest by ID \n" +
-                "4. Check-Out Guest (Bill) ");
+        System.out.println("    1. Register New Guest (Reservation) \n" +
+                "   2. View All Guests \n" +
+                "   3. Search Guest by ID \n" +
+                "   4. Check-Out Guest (Bill) ");
         System.out.print("Enter choice: ");
         int choice = sc.nextInt();
         sc.nextLine();
@@ -241,11 +241,11 @@ public class Menu {
     public void staffMenu(Scanner sc, GuestManager gm){
         System.out.println("STAFF (USER) MENU \n" +
                 "=== STAFF MAIN MENU === \n" +
-                "1. Register Guest / Create Reservation \n" +
-                "2. View Guest List \n" +
-                "3. Search Guest by ID \n" +
-                "4. Check-Out Guest (Generate Bill) \n" +
-                "5. Exit ");
+                "   1. Register Guest / Create Reservation \n" +
+                "   2. View Guest List \n" +
+                "   3. Search Guest by ID \n" +
+                "   4. Check-Out Guest (Generate Bill) \n" +
+                "   5. Exit ");
         System.out.print("Enter choice: ");
         int choice = sc.nextInt();
         sc.nextLine();
