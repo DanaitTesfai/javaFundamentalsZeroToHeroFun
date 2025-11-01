@@ -45,15 +45,15 @@ public class GuestManager {
             return false;
         }
 
-        if (g.getReservationStatus().equalsIgnoreCase("Reserved")){
+        if (g.getReservationStatus().equalsIgnoreCase("Reserved") || g.getReservationStatus().equalsIgnoreCase("Checked-in")){
             double bill = g.calculateBill();
-            g.setReservationStatus("Checked-In");
+            g.setReservationStatus("Checked-out");
             System.out.println("Your bill is $" + bill + ", " + g.getName());
-            System.out.println("You are checked in.");
+            System.out.println("You are checked out.");
             return true;
         }
 
-        System.out.println("You are checked in already.");
+        System.out.println("You are checked out already.");
         return true;
     }
 

@@ -34,53 +34,63 @@ public class Menu {
 
 
     public void adminMenu(Scanner sc, UserManager um, GuestManager gm){
-        System.out.println("=== ADMIN MAIN MENU === \n" +
-                "   1. User Management \n" +
-                "   2. Guest Management \n" +
-                "   3. Exit");
-        System.out.print("Enter choice: ");
-        int choice = sc.nextInt();
-        sc.nextLine();
+        while (true){
+            System.out.println("=== ADMIN MAIN MENU === \n" +
+                    "   1. User Management \n" +
+                    "   2. Guest Management \n" +
+                    "   3. Exit");
+            System.out.print("Enter choice: ");
+            int choice = sc.nextInt();
+            sc.nextLine();
 
-        switch (choice){
-            case 1:
-                userManagement(sc,um);
-                break;
-            case 2:
-                guestManagement(sc,gm);
-                break;
-            case 3:
-                System.out.println("Exit.");
-                return;
-            default:
-                System.out.println("Invalid input.");
+            switch (choice){
+                case 1:
+                    userManagement(sc,um);
+                    break;
+                case 2:
+                    guestManagement(sc,gm);
+                    break;
+                case 3:
+                    System.out.println("Exit.");
+                    return;
+                default:
+                    System.out.println("Invalid input.");
+            }
         }
+
 
     }
 
 
     public void userManagement(Scanner sc, UserManager um){
-        System.out.println("1. User Management ");
-        System.out.println("   1. Register New Staff User \n" +
-                "   2. View All Users \n" +
-                "   3. Deactivate User ");
-        System.out.print("Enter choice: ");
-        int choice = sc.nextInt();
-        sc.nextLine();
+        while (true){
+            System.out.println("User Management ");
+            System.out.println("   1. Register New Staff User \n" +
+                    "   2. View All Users \n" +
+                    "   3. Deactivate User \n" +
+                    "   4. Back");
+            System.out.print("Enter choice: ");
+            int choice = sc.nextInt();
+            sc.nextLine();
 
-        switch (choice){
-            case 1:
-                registerStaff(sc, um);
-                break;
-            case 2:
-                viewUsers(um);
-                break;
-            case 3:
-                deactivateUser(sc,um);
-                break;
-            default:
-                System.out.println("Invalid input.");
+            switch (choice){
+                case 1:
+                    registerStaff(sc, um);
+                    break;
+                case 2:
+                    viewUsers(um);
+                    break;
+                case 3:
+                    deactivateUser(sc,um);
+                    break;
+                case 4:
+                    System.out.println("Back to admin menu.");
+                    return;
+                default:
+                    System.out.println("Invalid input.");
+            }
         }
+
     }
 
     public void registerStaff(Scanner sc, UserManager um){
@@ -124,31 +134,39 @@ public class Menu {
 
 
     public void guestManagement(Scanner sc, GuestManager gm){
-        System.out.println("2. Guest Management ");
-        System.out.println("    1. Register New Guest (Reservation) \n" +
-                "   2. View All Guests \n" +
-                "   3. Search Guest by ID \n" +
-                "   4. Check-Out Guest (Bill) ");
-        System.out.print("Enter choice: ");
-        int choice = sc.nextInt();
-        sc.nextLine();
+        while (true){
+            System.out.println("Guest Management ");
+            System.out.println("    1. Register New Guest (Reservation) \n" +
+                    "   2. View All Guests \n" +
+                    "   3. Search Guest by ID \n" +
+                    "   4. Check-Out Guest (Bill) \n" +
+                    "   5. Back");
+            System.out.print("Enter choice: ");
+            int choice = sc.nextInt();
+            sc.nextLine();
 
-        switch (choice){
-            case 1:
-                registerGuest(sc,gm);
-                break;
-            case 2:
-                viewGuests(gm);
-                break;
-            case 3:
-                searchGuest(sc,gm);
-                break;
-            case 4:
-                checkOutGuest(sc,gm);
-                break;
-            default:
-                System.out.println("Invalid input.");
+            switch (choice){
+                case 1:
+                    registerGuest(sc,gm);
+                    break;
+                case 2:
+                    viewGuests(gm);
+                    break;
+                case 3:
+                    searchGuest(sc,gm);
+                    break;
+                case 4:
+                    checkOutGuest(sc,gm);
+                    break;
+                case 5:
+                    System.out.println("Back to admin menu.");
+                    return;
+                default:
+                    System.out.println("Invalid input.");
+            }
+
         }
+
     }
 
     public void registerGuest(Scanner sc, GuestManager gm){
@@ -226,7 +244,7 @@ public class Menu {
     }
 
     public void checkOutGuest(Scanner sc, GuestManager gm){
-        System.out.println("Enter Guest Id: ");
+        System.out.print("Enter Guest Id: ");
         String guestId = sc.nextLine();
 
         boolean ok = gm.checkout(guestId);
@@ -239,36 +257,39 @@ public class Menu {
 
 
     public void staffMenu(Scanner sc, GuestManager gm){
-        System.out.println("STAFF (USER) MENU \n" +
-                "=== STAFF MAIN MENU === \n" +
-                "   1. Register Guest / Create Reservation \n" +
-                "   2. View Guest List \n" +
-                "   3. Search Guest by ID \n" +
-                "   4. Check-Out Guest (Generate Bill) \n" +
-                "   5. Exit ");
-        System.out.print("Enter choice: ");
-        int choice = sc.nextInt();
-        sc.nextLine();
+        while (true){
+            System.out.println("STAFF (USER) MENU \n" +
+                    "=== STAFF MAIN MENU === \n" +
+                    "   1. Register Guest / Create Reservation \n" +
+                    "   2. View Guest List \n" +
+                    "   3. Search Guest by ID \n" +
+                    "   4. Check-Out Guest (Generate Bill) \n" +
+                    "   5. Exit");
+            System.out.print("Enter choice: ");
+            int choice = sc.nextInt();
+            sc.nextLine();
 
-        switch (choice){
-            case 1:
-                registerGuest(sc,gm);
-                break;
-            case 2:
-                viewGuests(gm);
-                break;
-            case 3:
-                searchGuest(sc,gm);
-                break;
-            case 4:
-                checkOutGuest(sc,gm);
-                break;
-            case 5:
-                System.out.println("Exit.");
-                return;
-            default:
-                System.out.println("Invalid input.");
+            switch (choice){
+                case 1:
+                    registerGuest(sc,gm);
+                    break;
+                case 2:
+                    viewGuests(gm);
+                    break;
+                case 3:
+                    searchGuest(sc,gm);
+                    break;
+                case 4:
+                    checkOutGuest(sc,gm);
+                    break;
+                case 5:
+                    System.out.println("Exit.");
+                    return;
+                default:
+                    System.out.println("Invalid input.");
+            }
         }
+
 
     }
 
