@@ -23,6 +23,5 @@ public class _04_ArrayOutOfBound {
             System.out.println("Unexpected error occurred.");
         }
 
-        System.out.println("Hello");
     }
 }

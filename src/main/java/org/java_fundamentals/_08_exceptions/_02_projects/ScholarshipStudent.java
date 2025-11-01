@@ -2,28 +2,37 @@ package org.java_fundamentals._08_exceptions._02_projects;
 
 public class ScholarshipStudent extends Student{
     private double monthlyFee;
-    private int discountPercentage;
+    private double discountPercentage;
 
-    public ScholarshipStudent(String studentId, String name, int age, int courseDuration, String status, double monthlyFee, int discountPercentage) throws InvalidInputException{
+    public ScholarshipStudent(String studentId, String name, int age, int courseDuration, String status, double monthlyFee, double discountPercentage) throws InvalidInputException{
         super(studentId, name, age, courseDuration, status);
-        this.monthlyFee = monthlyFee;
-        this.discountPercentage = discountPercentage;
+        setMonthlyFee(monthlyFee);
+        setDiscountPercentage(discountPercentage);
     }
 
     public double getMonthlyFee() {
         return monthlyFee;
     }
 
-    public void setMonthlyFee(double monthlyFee) {
-        this.monthlyFee = monthlyFee;
+    public void setMonthlyFee(double monthlyFee) throws InvalidInputException{
+        if (monthlyFee > 0){
+            this.monthlyFee = monthlyFee;
+        }else {
+            throw new InvalidInputException("Monthly Fee must be greater than 0.");
+        }
     }
 
-    public int getDiscountPercentage() {
+    public double getDiscountPercentage() {
         return discountPercentage;
     }
 
-    public void setDiscountPercentage(int discountPercentage) {
-        this.discountPercentage = discountPercentage;
+    public void setDiscountPercentage(double discountPercentage) throws InvalidInputException{
+        if (discountPercentage > 0 && discountPercentage < 100) {
+            this.discountPercentage = discountPercentage;
+        }else {
+            throw new InvalidInputException("Discount percentage must be greater than 0.");
+        }
+
     }
 
     @Override

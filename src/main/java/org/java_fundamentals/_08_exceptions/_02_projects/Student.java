@@ -49,7 +49,7 @@ abstract public class Student implements Displayable, Billable {
         if (age >= 18){
             this.age = age;
         }else {
-            throw new InvalidInputException("Age must be positive.");
+            throw new InvalidInputException("Age must be greater than 18.");
         }
     }
 

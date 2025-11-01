@@ -61,7 +61,7 @@ public class Menu {
 
     public void userManagement(Scanner sc, UserManager um){
         System.out.println("1. User Management ");
-        System.out.println("    1. Register New Staff User \n" +
+        System.out.println("   1. Register New Staff User \n" +
                 "   2. View All Users \n" +
                 "   3. Deactivate User ");
         System.out.print("Enter choice: ");

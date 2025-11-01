@@ -11,9 +11,9 @@ public class _06_PasswordStrengthChecker {
             String password = input.nextLine();
 
             if (password.length() < 6 || password.matches("[0-9]+") ){
-                throw new Exception("Password must not contain numbers.");
+                throw new Exception("Password must not be less than six characters or contain numbers.");
             }
-            System.out.println("The password is " + password);
+            System.out.println("Your password is " + password);
 
         }catch (Exception e){
             System.out.println(e.getMessage());

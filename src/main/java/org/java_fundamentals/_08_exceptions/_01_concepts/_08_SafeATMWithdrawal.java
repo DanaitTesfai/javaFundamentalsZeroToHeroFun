@@ -8,7 +8,7 @@ public class _08_SafeATMWithdrawal {
         Scanner sc = new Scanner(System.in);
 
         try{
-            double balance = 0;
+            double balance = 0.0;
             System.out.print("Enter you balance: ");
             balance = sc.nextDouble();
 
