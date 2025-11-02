@@ -19,7 +19,7 @@ public class _08_SafeATMWithdrawal {
                 throw new Exception("Insufficient funds!");
             }
 
-            balance =- withdrawal;
+            balance -= withdrawal;
             System.out.println("Your balance is " + balance);
 
         }catch (Exception e){

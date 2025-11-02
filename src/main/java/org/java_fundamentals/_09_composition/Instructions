@@ -1,0 +1,11 @@
+Exercise 1: Person and Address
+🎯 Goal:
+Create:
+
+Address class → holds city + country
+
+Person class → HAS-A Address
+
+Print: "Ali lives in London, UK"
+
+💡 Hint: Pass Address into Person constructor.
