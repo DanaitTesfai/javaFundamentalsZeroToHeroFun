@@ -9,3 +9,18 @@ Person class → HAS-A Address
 Print: "Ali lives in London, UK"
 
 💡 Hint: Pass Address into Person constructor.
+-----------------------------------------------------
+
+Exercise-2 Phone HAS-A Battery / Camera
+🎯 Goal:
+Create classes:
+
+Battery → method: displayBatteryLevel()
+
+Camera → method: takePicture()
+
+Phone → HAS-A Battery and Camera
+
+
+Battery level: 90%
+Picture captured!
