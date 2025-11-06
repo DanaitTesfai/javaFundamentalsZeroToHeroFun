@@ -1,4 +1,4 @@
-package org.java_fundamentals._09_composition._02_BatteryAndCamera;
+package org.java_fundamentals._09_composition._02_batteryAndCamera;
 
 public class Main {
     public static void main(String[] args) {

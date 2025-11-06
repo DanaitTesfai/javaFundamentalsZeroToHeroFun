@@ -24,3 +24,398 @@ Phone → HAS-A Battery and Camera
 
 Battery level: 90%
 Picture captured!
+---------------------------------------------------
+
+3. House HAS Rooms
+🎯 Goal:
+
+Room class → type (e.g., Bedroom, Kitchen)
+
+House class → list/ArrayList of Rooms
+
+Add rooms to a house and print them.
+
+💡 Introduces composition with collections
+
+
+
+Example Output:
+
+House has:
+- Bedroom
+- Kitchen
+- Bathroom
+
+___________________________________________________________________________________________
+
+4. Playlist and Songs
+🎯 Goal:
+Create a playlist that contains multiple songs.
+This shows Composition → A Playlist HAS Songs.
+
+🪜 Steps / Instructions:
+Create a class named Song.
+
+It should have two instance variables: title and artist.
+
+Create a constructor to initialize these values.
+
+Create a method play() that prints something like:
+
+Playing: <title> by <artist>
+Create another class named Playlist.
+
+It should have:
+
+A playlist name
+
+An ArrayList of Song
+
+Create a method addSong(Song song) to add songs.
+
+Create a method showPlaylist() to display all songs.
+
+In the main method:
+
+Create a Playlist object.
+
+Add at least 3 songs.
+
+Show the playlist.
+
+✅ Expected Output:
+Playlist: My Favorites
+Playing: Shape of You by Ed Sheeran
+Playing: Blinding Lights by The Weeknd
+Playing: Believer by Imagine Dragons
+
+____________________________________________________
+
+5. Library and Books
+🎯 Goal:
+Create a simple library system that stores books.
+This demonstrates Composition → A Library HAS Books.
+
+🪜 Steps / Instructions:
+Create a class named Book.
+
+It should have: title and author
+
+Provide a constructor to set both.
+
+Create a class named Library.
+
+It should have an ArrayList of Book.
+
+Add a method addBook(Book b) to add books.
+
+Add a method showBooks() to list all books.
+
+In the main method:
+
+Create a Library object.
+
+Add at least 3 books to the library.
+
+Call showBooks().
+
+✅ Expected Output:
+Library contains:
+- The Alchemist by Paulo Coelho
+- Clean Code by Robert C. Martin
+- The Hobbit by J.R.R. Tolkien
+___________________________________________________________________________________________
+
+6. Computer and Components
+🎯 Goal:
+Show that a Computer is made of multiple parts.
+This demonstrates strong composition (Computer cannot work without parts).
+
+🪜 Steps / Instructions:
+Create classes:
+
+CPU
+
+RAM
+
+GraphicsCard
+
+Each class should have a method like:
+
+public void showInfo()
+Create the Computer class.
+
+It should have:
+
+CPU
+
+RAM
+
+GraphicsCard
+as instance variables
+
+Create a method displaySpecs() that calls showInfo() of each component.
+
+In the main method:
+
+Create a Computer object.
+
+Call displaySpecs().
+
+✅ Expected Output:
+Computer Specifications:
+CPU: Intel Core i7
+RAM: 16GB DDR4
+Graphics Card: NVIDIA GTX 1650
+___________________________________________________________________________________________
+
+7. Shopping Cart and Products
+🎯 Goal:
+Create a shopping cart that contains multiple products.
+
+🪜 Instructions:
+Create a Product class
+
+Fields: name, price
+
+Constructor to set values
+
+Create ShoppingCart class
+
+HAS ArrayList<Product>
+
+Method addProduct(Product p)
+
+Method showCart() to list products and total price
+
+In main, add at least 3 products and print the cart
+
+🛒 Sample Output:
+Shopping Cart:
+- Milk ($2.49)
+- Bread ($1.89)
+- Eggs ($3.59)
+Total Price: $7.97
+___________________________________________________________________________________________
+
+🚌 8. School and Students
+🎯 Goal:
+Show that a School HAS Students.
+
+🪜 Instructions:
+Make Student class → name + grade.
+
+Make School class → ArrayList<Student>.
+
+Add and display students.
+
+🏫 Sample Output:
+School Students:
+Ahmed - Grade 8
+Sara - Grade 9
+Musa - Grade 10
+___________________________________________________________________________________________
+9. Game Character HAS Weapons (Composition + Behavior Changing)
+🎯 Goal:
+Show how composition allows behavior to change at runtime (switching weapons).
+
+A Character HAS a Weapon.
+
+🪜 Detailed Step-by-Step Instructions:
+Create a Weapon class
+
+Instance variables:
+
+name (String)
+
+damage (int)
+
+Constructor to set these.
+
+Method:
+
+public void use() {
+    System.out.println("Attacking with " + name + " (Damage: " + damage + ")");
+}
+Create a Character class
+
+Instance variables:
+
+name
+
+Weapon weapon (This is Composition)
+
+Constructor sets both.
+
+Create method:
+
+public void attack() {
+    System.out.println(name + " is attacking!");
+    weapon.use();
+}
+In main()
+
+Create a Character with a Sword weapon.
+
+Call attack().
+
+Change the weapon to a Bow.
+
+Call attack() again.
+
+✅ Expected Output:
+Knight is attacking!
+Attacking with Sword (Damage: 50)
+Knight is attacking!
+Attacking with Bow (Damage: 30)
+
+
+
+___________________________________________________________________________________________
+
+10. 🏦 SafeBank Account Management System (with Composition)
+🎯 Goal
+A small bank called SafeBank wants to create a simple console-based banking system that allows:
+
+
+Users to register themselves
+
+Users to log in using a secure credential check
+
+Customers to manage their bank account (deposit, withdraw, transfer, check balance)
+
+Admins to approve new accounts, deactivate users, and view user lists
+
+The system will store users and accounts in memory using ArrayList and provide menu navigation using loops and switch statements.
+
+
+
+🧠 Concepts Covered
+This project reinforces all previously learned Java OOP concepts, plus composition:
+
+
+Concept	Description
+Classes & Objects	Used to model real-world entities like Customer, Account, Admin
+Inheritance	Admin and Customer both inherit from the User class
+Polymorphism	Shared behaviors are accessed through the common User type
+Encapsulation	Fields are private and accessed through getters/setters
+Constructors	Used to initialize user and account data when objects are created
+ArrayList	Stores all system users dynamically
+Switch + Loops	Used for menu navigation and repeated interaction
+Exception Handling	Prevents crashes due to invalid input or operations
+Composition ★	A Customer has-a Account — strong ownership relationship
+
+
+⭐ Key Focus: Composition
+In this system:
+
+Customer  has-a  Account
+The Customer class contains an Account object.
+
+This means:
+
+Without a Customer, the Account should not exist independentl
+
+The Customer owns and controls the Account object
+
+This models reality: a bank account belongs to one customer
+
+This is different from inheritance (is-a relationship).
+
+Here we use a has-a relationship (composition).
+
+
+
+🧩 System Design Overview
+
+Class	Responsibility
+User (abstract)	Base class storing username, password, role, approval state
+Admin (extends User)	Approves & manages customers
+Customer (extends User)	Performs deposits, withdrawals, transfers
+Account	Stores balance and handles account transactions
+UserManager	Registers users, authenticates login, searches & lists users
+Menu	Controls program flow and menus
+InvalidInputException	Ensures safe and meaningful user input handling
+
+
+🏗 Step-by-Step Build Guide (Same Structure, With Composition Highlighted)
+
+Step 1 — Create an abstract User class
+Contains shared attributes and behaviors.
+
+Step 2 — Create Admin and Customer subclasses
+✔ Both inherit from User
+
+✔ Enforce role-based behavior
+
+Step 3 — Create the Account class
+✔ Stores balance
+
+✔ Provides deposit, withdraw, transfer methods
+
+✔ Will be composed inside Customer
+
+Step 4 — Add composition inside Customer
+private Account account = new Account();
+This ensures every customer owns exactly one account.
+
+Step 5 — Implement UserManager
+Handles registration, login, approval, lookup operations.
+
+Step 6 — Implement Menu navigation with switch and loops
+Separate menus for:
+
+Guest (Register / Login)
+
+Admin
+
+Customer
+
+Step 7 — Add Exception Handling
+Invalid login → show message, do not crash
+
+Negative deposit/withdraw → prevent the operation
+
+Overdraft → block withdrawal or transfer
+
+
+
+🧪 Example Console Flow (Same Logic)
+
+===== SAFE BANK SYSTEM =====
+1. Register (Create Account)
+2. Login
+3. Exit
+Choice: 1
+Enter Username: john
+Enter Password: 1234
+✅ Registered successfully. Please wait for admin approval.
+
+===== SAFE BANK SYSTEM =====
+Choice: 2
+Enter Username: admin
+Enter Password: 1234
+
+=== ADMIN MENU ===
+1. Approve Customers
+2. View Users
+3. Logout
+Choice: 1
+
+Enter Username to Approve: john
+✅ User approved.
+
+===== SAFE BANK SYSTEM =====
+Choice: 2
+Enter Username: john
+Enter Password: 1234
+
+=== CUSTOMER MENU ===
+1. Deposit
+2. Withdraw
+3. Transfer
+4. Check Balance
+5. Logout
+Choice: 1
+Enter Amount: 200
+✅ Deposited. New Balance: $200.00

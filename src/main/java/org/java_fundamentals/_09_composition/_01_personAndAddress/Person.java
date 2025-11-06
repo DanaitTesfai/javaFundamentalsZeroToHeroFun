@@ -1,6 +1,4 @@
-package org.java_fundamentals._09_composition._01_PersonAndAddress;
-
-import javax.xml.transform.Source;
+package org.java_fundamentals._09_composition._01_personAndAddress;
 
 public class Person {
     String name;

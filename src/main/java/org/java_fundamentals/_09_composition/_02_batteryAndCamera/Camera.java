@@ -1,4 +1,4 @@
-package org.java_fundamentals._09_composition._02_BatteryAndCamera;
+package org.java_fundamentals._09_composition._02_batteryAndCamera;
 
 public class Camera {
     public void takePicture(){

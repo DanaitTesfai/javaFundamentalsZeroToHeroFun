@@ -1,4 +1,4 @@
-package org.java_fundamentals._09_composition._01_PersonAndAddress;
+package org.java_fundamentals._09_composition._01_personAndAddress;
 
 public class Address {
     private String city;
