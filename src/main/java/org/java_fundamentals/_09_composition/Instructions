@@ -274,148 +274,158 @@ Attacking with Bow (Damage: 30)
 ___________________________________________________________________________________________
 
 10. 🏦 SafeBank Account Management System (with Composition)
-🎯 Goal
-A small bank called SafeBank wants to create a simple console-based banking system that allows:
+    🎯 Goal
+    A small bank called SafeBank wants to create a simple console-based banking system that allows:
 
 
-Users to register themselves
+    Users to register themselves
 
-Users to log in using a secure credential check
+    Users to log in using a secure credential check
 
-Customers to manage their bank account (deposit, withdraw, transfer, check balance)
+    Customers to manage their bank account (deposit, withdraw, transfer, check balance)
 
-Admins to approve new accounts, deactivate users, and view user lists
+    Admins to approve new accounts, deactivate users, and view user lists
 
-The system will store users and accounts in memory using ArrayList and provide menu navigation using loops and switch statements.
-
-
-
-🧠 Concepts Covered
-This project reinforces all previously learned Java OOP concepts, plus composition:
-
-
-Concept	Description
-Classes & Objects	Used to model real-world entities like Customer, Account, Admin
-Inheritance	Admin and Customer both inherit from the User class
-Polymorphism	Shared behaviors are accessed through the common User type
-Encapsulation	Fields are private and accessed through getters/setters
-Constructors	Used to initialize user and account data when objects are created
-ArrayList	Stores all system users dynamically
-Switch + Loops	Used for menu navigation and repeated interaction
-Exception Handling	Prevents crashes due to invalid input or operations
-Composition ★	A Customer has-a Account — strong ownership relationship
-
-
-⭐ Key Focus: Composition
-In this system:
-
-Customer  has-a  Account
-The Customer class contains an Account object.
-
-This means:
-
-Without a Customer, the Account should not exist independentl
-
-The Customer owns and controls the Account object
-
-This models reality: a bank account belongs to one customer
-
-This is different from inheritance (is-a relationship).
-
-Here we use a has-a relationship (composition).
+    The system will store users and accounts in memory using ArrayList and provide menu navigation
+    using loops and switch statements.
 
 
 
-🧩 System Design Overview
-
-Class	Responsibility
-User (abstract)	Base class storing username, password, role, approval state
-Admin (extends User)	Approves & manages customers
-Customer (extends User)	Performs deposits, withdrawals, transfers
-Account	Stores balance and handles account transactions
-UserManager	Registers users, authenticates login, searches & lists users
-Menu	Controls program flow and menus
-InvalidInputException	Ensures safe and meaningful user input handling
+    🧠 Concepts Covered
+    This project reinforces all previously learned Java OOP concepts, plus composition:
 
 
-🏗 Step-by-Step Build Guide (Same Structure, With Composition Highlighted)
+    Concept             	Description
+    Classes & Objects	    Used to model real-world entities like Customer, Account, Admin
+    Inheritance	            Admin and Customer both inherit from the User class
+    Polymorphism	        Shared behaviors are accessed through the common User type
+    Encapsulation	        Fields are private and accessed through getters/setters
+    Constructors	        Used to initialize user and account data when objects are created
+    ArrayList	            Stores all system users dynamically
+    Switch + Loops	        Used for menu navigation and repeated interaction
+    Exception Handling	    Prevents crashes due to invalid input or operations
+    Composition ★	        A Customer has-a Account — strong ownership relationship
 
-Step 1 — Create an abstract User class
-Contains shared attributes and behaviors.
 
-Step 2 — Create Admin and Customer subclasses
-✔ Both inherit from User
+    ⭐ Key Focus: Composition
+    In this system:
 
-✔ Enforce role-based behavior
+    Customer  has-a  Account
+    The Customer class contains an Account object.
 
-Step 3 — Create the Account class
-✔ Stores balance
+    This means:
 
-✔ Provides deposit, withdraw, transfer methods
+    Without a Customer, the Account should not exist independently
 
-✔ Will be composed inside Customer
+    The Customer owns and controls the Account object
 
-Step 4 — Add composition inside Customer
-private Account account = new Account();
-This ensures every customer owns exactly one account.
+    This models reality: a bank account belongs to one customer
 
-Step 5 — Implement UserManager
-Handles registration, login, approval, lookup operations.
+    This is different from inheritance (is-a relationship).
 
-Step 6 — Implement Menu navigation with switch and loops
-Separate menus for:
-
-Guest (Register / Login)
-
-Admin
-
-Customer
-
-Step 7 — Add Exception Handling
-Invalid login → show message, do not crash
-
-Negative deposit/withdraw → prevent the operation
-
-Overdraft → block withdrawal or transfer
+    Here we use a has-a relationship (composition).
 
 
 
-🧪 Example Console Flow (Same Logic)
+    🧩 System Design Overview
 
-===== SAFE BANK SYSTEM =====
-1. Register (Create Account)
-2. Login
-3. Exit
-Choice: 1
-Enter Username: john
-Enter Password: 1234
-✅ Registered successfully. Please wait for admin approval.
+    Class                        	Responsibility
+    User (abstract)     	        Base class storing username, password, role, approval state
+    Admin (extends User)	        Approves & manages customers
+    Customer (extends User)	        Performs deposits, withdrawals, transfers
+    Account                      	Stores balance and handles account transactions
+    UserManager	                    Registers users, authenticates login, searches & lists users
+    Menu	                        Controls program flow and menus
+    InvalidInputException	        Ensures safe and meaningful user input handling
 
-===== SAFE BANK SYSTEM =====
-Choice: 2
-Enter Username: admin
-Enter Password: 1234
 
-=== ADMIN MENU ===
-1. Approve Customers
-2. View Users
-3. Logout
-Choice: 1
+    🏗 Step-by-Step Build Guide (Same Structure, With Composition Highlighted)
 
-Enter Username to Approve: john
-✅ User approved.
+    Step 1 — Create an abstract User class
+        Contains shared attributes and behaviors.
 
-===== SAFE BANK SYSTEM =====
-Choice: 2
-Enter Username: john
-Enter Password: 1234
+    Step 2 — Create Admin and Customer subclasses
+        ✔ Both inherit from User
 
-=== CUSTOMER MENU ===
-1. Deposit
-2. Withdraw
-3. Transfer
-4. Check Balance
-5. Logout
-Choice: 1
-Enter Amount: 200
-✅ Deposited. New Balance: $200.00
+        ✔ Enforce role-based behavior
+
+    Step 3 — Create the Account class
+        ✔ Stores balance
+
+        ✔ Provides deposit, withdraw, transfer methods
+
+        ✔ Will be composed inside Customer
+
+    Step 4 — Add composition inside Customer
+        private Account account = new Account();
+        This ensures every customer owns exactly one account.
+
+    Step 5 — Implement UserManager
+        Handles registration, login/authenticate, approval, lookup operations.
+
+    Step 6 — Implement Menu navigation with switch and loops
+        Separate menus for:
+
+        Guest (Register / Login)
+
+        Admin
+
+        Customer
+
+    Step 7 — Add Exception Handling
+        Invalid login → show message, do not crash
+
+        Negative deposit/withdraw → prevent the operation
+
+        Overdraft → block withdrawal or transfer
+
+        Hint: use this exception,
+        public class InvalidInputException extends Exception {
+            public InvalidInputException(String message) {
+                super(message);
+            }
+        }
+
+
+
+    🧪 Example Console Flow (Same Logic)
+
+        ===== SAFE BANK SYSTEM =====
+        1. Register (Create Account)
+        2. Login
+        3. Exit
+        Choice: 1
+        Enter Username: john
+        Enter Password: 1234
+        ✅ Registered successfully. Please wait for admin approval.
+
+        ===== SAFE BANK SYSTEM =====
+        Choice: 2
+        Enter Username: admin
+        Enter Password: 1234
+
+        === ADMIN MENU ===
+        1. Approve Customers
+        2. View User
+        3. View Users
+        4. View Pending Users
+        5. Logout
+        Choice: 1
+
+        Enter Username to Approve: john
+        ✅ User approved.
+
+        ===== SAFE BANK SYSTEM =====
+        Choice: 2
+        Enter Username: john
+        Enter Password: 1234
+
+        === CUSTOMER MENU ===
+        1. Deposit
+        2. Withdraw
+        3. Transfer
+        4. Check Balance
+        5. Logout
+        Choice: 1
+        Enter Amount: 200
+        ✅ Deposited. New Balance: $200.00

@@ -4,13 +4,12 @@ import java.util.ArrayList;
 
 public class Playlist {
     private String name;
-    Song song;
 
     ArrayList<Song> songs = new ArrayList<>();
 
-    public Playlist(String name, Song song) {
+    public Playlist(String name) {
         this.name = name;
-        this.song = song;
+
     }
 
     public String getName() {
