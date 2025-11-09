@@ -12,6 +12,8 @@ import static java.time.LocalTime.now;
 
 public class CreateAndWriteFile {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
         try {
             File file = new File("student.txt");
             if (file.createNewFile()){
@@ -42,8 +44,26 @@ public class CreateAndWriteFile {
                 System.out.println(line);
                 i++;
             }
+            reader.close();
             System.out.println("This file has " + i + " line.");
 
+
+            System.out.print("Do you want to delete the file? (yes/no)");
+            String choice = sc.nextLine();
+
+            if (choice.equalsIgnoreCase("yes")){
+                if (file.delete()){
+                    System.out.println("File deleted successfully.");
+                }else {
+                    System.out.println("File not deleted.");
+                }
+
+
+            } else if (choice.equalsIgnoreCase("no")) {
+                System.out.println("Exiting...");
+            }else {
+                System.out.println("Invalid input.");
+            }
 
 
         } catch (IOException e) {
