@@ -15,9 +15,15 @@ public class CreateAndWriteFile {
             }
 
             FileWriter fileWriter = new FileWriter("student.txt");
-            fileWriter.write("My name is Danait.\n" + "My favorite subject is physics.");
+            fileWriter.write("My name is Danait.\n" + "My favorite subject is physics.\n");
             System.out.println("File written successfully.");
             fileWriter.close();
+
+            fileWriter = new FileWriter("student.txt", true);
+            fileWriter.write("Current date and time is 11/09/2025 , 09:06 am.");
+            System.out.println("Date and time updated successfully");
+            fileWriter.close();
+
 
         } catch (IOException e) {
             System.out.println("Error: " + e.getMessage());

@@ -6,3 +6,14 @@ Creates a file named student.txt
 Writes your name and your favorite subject into it.
 
 Goal: Practice file creation and writing.
+------------------------------------------------------
+
+Exercise 2: Append Data
+Modify the previous program to append the current date and time into the file.
+
+Hint:
+
+Use:
+
+
+new FileWriter("student.txt", true)
