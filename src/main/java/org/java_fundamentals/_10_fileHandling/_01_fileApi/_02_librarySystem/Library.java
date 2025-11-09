@@ -71,4 +71,18 @@ public class Library {
     }
 
 
+    public void deleteBook(String title){
+        for (Book b:  books){
+            if (b.getTitle().equalsIgnoreCase(title)){
+                books.remove(b);
+                saveToFile();
+                System.out.println("Book removed successfully.");
+                return;
+            }
+        }
+        System.out.println("Book not found.");
+
+    }
+
+
 }

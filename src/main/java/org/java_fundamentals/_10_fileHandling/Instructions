@@ -179,3 +179,40 @@ How to read/write files using Java I/O
 How to build interactive console menus
 
 How to save data permanently
+-----------------------------------------------------------------
+
+Continuation of B
+
+📌 System Update
+Scenario 1 — Delete a Book from the Library
+🎭 Real-Life Story
+Over time, some books in the library become damaged, lost, or outdated.
+The librarian wants the ability to remove these books from the system so that the library record stays accurate.
+
+🎯 New Requirement
+Add a feature that allows the librarian to delete a book by title.
+
+🧩 Expected Behavior
+Librarian selects: Delete Book
+
+System asks:
+"Enter the title of the book to remove:"
+
+If book found → remove it from:
+
+The ArrayList
+
+The library.txt file
+
+Display: "Book removed successfully."
+
+If book not found → display: "Book not found."
+
+💡 Learning Outcome
+Students practice:
+
+Searching inside ArrayList
+
+Removing objects
+
+Saving updated data to file

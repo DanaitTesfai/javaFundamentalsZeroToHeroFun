@@ -14,7 +14,8 @@ public class Main {
             System.out.println("===== Mini Library Menu =====\n" +
                     "1. Add Book\n" +
                     "2. View All Books\n" +
-                    "3. Save & Exit");
+                    "3. Delete Book\n" +
+                    "4. Save & Exit");
             System.out.print("Enter choice: ");
             int choice = sc.nextInt();
             sc.nextLine();
@@ -36,6 +37,12 @@ public class Main {
 
                     break;
                 case 3:
+                    System.out.print("Enter the title of the book to remove: ");
+                    String delTitle = sc.nextLine();
+
+                    library.deleteBook(delTitle);
+                    break;
+                case 4:
                     System.out.println("Saved and exiting...");
                     return;
                 default:
