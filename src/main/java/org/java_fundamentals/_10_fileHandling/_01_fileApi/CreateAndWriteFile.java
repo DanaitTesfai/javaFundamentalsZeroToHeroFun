@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
 
 import static java.time.LocalTime.now;
 
@@ -33,6 +34,13 @@ public class CreateAndWriteFile {
             fileWriter.write("Current date and time is "+ currentDate +", "+ formattedTime);
             System.out.println("Date and time updated successfully");
             fileWriter.close();
+
+            Scanner reader = new Scanner(file);
+            while (reader.hasNextLine()){
+                String line = reader.nextLine();
+                System.out.println(line);
+            }
+
 
 
         } catch (IOException e) {
