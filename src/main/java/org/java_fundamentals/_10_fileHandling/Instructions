@@ -1,3 +1,4 @@
+A. Basic Concepts
 Exercise 1: Create and Write
 Create a Java program that:
 
@@ -34,4 +35,147 @@ Ask the user:
 Do you want to delete the file? (yes/no)
 If yes → delete the file.
 If no → exit safely.
+-----------------------------------------------------------------
 
+B. Scenario based
+Scenario: Mini Library Management System
+🎭 Real-Life Background Story
+Your community has a small public library that keeps track of its books using pen and paper.
+ The librarian often struggles to:
+
+Remember which books are in the library
+
+Record new books when donated
+
+Show the current list of books to visitors
+
+To make the librarian's job easier, you have been asked to create a simple computer program
+that manages books in the library.
+
+🧱 What the System Should Do
+The program must allow the librarian to:
+
+✅ 1. Add Books
+Each book has:
+
+Title (Example: The Hobbit)
+
+Author (Example: J.R.R. Tolkien)
+
+When a book is added, it should be stored immediately so that the data is not lost even if the program closes.
+
+✅ 2. View All Books
+The librarian can request the list of all books currently in the library.
+
+The books should be displayed neatly, one per line.
+
+✅ 3. Save Data Permanently
+All book information must be stored in a text file named:
+
+library.txt
+This ensures that even if the computer is turned off, the data remains.
+
+✅ 4. Load Data When the Program Starts
+When the program starts, it should check if library.txt exists:
+
+If yes → load all books from it into memory
+
+If not → create a new empty file
+
+This allows the system to continue from previous sessions.
+
+🛠 Concepts the Student Must Use
+Concept	                  Requirement                           	Reason
+Classes & Objects	      Create Book and Library classes	        To follow OOP principles
+Composition	              Library contains a List of Book objects	To represent a real-world library
+ArrayList	              Store books in memory                  	Dynamic storage
+FileWriter / File	      Save books permanently	                File handling
+Scanner	                  Read user input and read from file	    Console interaction & file reading
+Menu + Switch	          Show options repeatedly	                User-friendly navigation
+
+Step-by-Step Instructions for Students
+1. Create a Book class
+
+    Fields: title, author
+
+    Constructor + toString() override for printing
+
+2. Create a Library class
+
+    It should have an ArrayList<Book>
+
+    Methods:
+
+    addBook(Book book)
+
+    showBooks()
+
+    saveToFile()
+
+    loadFromFile()
+
+3. Create a Main class
+
+    Load books from file when the program starts.
+
+    Provide a menu with choices:
+
+    Add Book
+
+    View Books
+
+    Save & Exit
+
+4. When a new book is added, also:
+
+    Add it to ArrayList
+
+Save to the file
+🧩 Program Structure
+1. Book Class
+Represents a single book.
+
+2. Library Class
+Manages a list of books:
+
+Add a book
+
+Show all books
+
+Save to file
+
+Load from file
+
+3. Main Class
+Displays the menu and interacts with the user.
+
+🖥 Sample User Interaction
+===== Mini Library Menu =====
+1. Add Book
+2. View All Books
+3. Save & Exit
+Enter choice: 1
+Enter Book Title: The Hobbit
+Enter Book Author: J.R.R. Tolkien
+Book added successfully!
+
+===== Mini Library Menu =====
+1. Add Book
+2. View All Books
+3. Save & Exit
+Enter choice: 2
+
+📚 Books in Library:
+- The Hobbit by J.R.R. Tolkien
+🎯 Student Learning Outcomes
+After completing this program, the student will understand:
+
+How to store multiple objects using ArrayList
+
+How to use Composition (Library HAS Books)
+
+How to read/write files using Java I/O
+
+How to build interactive console menus
+
+How to save data permanently
