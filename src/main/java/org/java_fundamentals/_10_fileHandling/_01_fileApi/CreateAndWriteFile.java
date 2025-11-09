@@ -36,10 +36,13 @@ public class CreateAndWriteFile {
             fileWriter.close();
 
             Scanner reader = new Scanner(file);
+            int i = 0;
             while (reader.hasNextLine()){
                 String line = reader.nextLine();
                 System.out.println(line);
+                i++;
             }
+            System.out.println("This file has " + i + " line.");
 
 
 

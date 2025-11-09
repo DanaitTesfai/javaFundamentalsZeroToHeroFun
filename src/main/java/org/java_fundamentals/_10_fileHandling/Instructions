@@ -22,3 +22,8 @@ new FileWriter("student.txt", true)
 Exercise 3: Read File
 
 Write a program to read the contents of student.txt and print them to the console.
+----------------------------------------------------------------------------------
+
+Exercise 4: Count Lines
+Read the file and print how many lines the file contains.
+
