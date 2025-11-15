@@ -14,7 +14,7 @@ public class CreateAndWriteFile {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        try {
+        try { //Creating a file.
             File file = new File("student.txt");
             if (file.createNewFile()){
                 System.out.println("File created.");
@@ -22,11 +22,19 @@ public class CreateAndWriteFile {
                 System.out.println("File already exists.");
             }
 
+
+
+
+            //writing a file.
             FileWriter fileWriter = new FileWriter("student.txt");
             fileWriter.write("My name is Danait.\n" + "My favorite subject is physics.\n");
             System.out.println("File written successfully.");
             fileWriter.close();
 
+
+
+
+            //appending a file.
             fileWriter = new FileWriter("student.txt", true);
             LocalDate currentDate = LocalDate.now();
             LocalTime currentTime = LocalTime.now();
@@ -37,6 +45,9 @@ public class CreateAndWriteFile {
             System.out.println("Date and time updated successfully");
             fileWriter.close();
 
+
+
+            //reading a file
             Scanner reader = new Scanner(file);
             int i = 0;
             while (reader.hasNextLine()){
@@ -45,9 +56,13 @@ public class CreateAndWriteFile {
                 i++;
             }
             reader.close();
-            System.out.println("This file has " + i + " line.");
+            System.out.println("This file has " + i + " lines.");
 
 
+
+
+
+            //deleting a file
             System.out.print("Do you want to delete the file? (yes/no)");
             String choice = sc.nextLine();
 

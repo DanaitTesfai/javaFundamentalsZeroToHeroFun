@@ -1,0 +1,14 @@
+Exercise 1 — Write Multiple Lines to a File
+📘 Scenario
+A student wants to take daily notes and store them in a text file called notes.txt.
+
+🎯 Task
+Ask the user to enter 5 lines of text.
+
+Save each line using BufferedWriter.
+
+Each line must be written on a new line.
+
+💡 Knowledge Goal
+Use BufferedWriter.write() and newLine().
+
