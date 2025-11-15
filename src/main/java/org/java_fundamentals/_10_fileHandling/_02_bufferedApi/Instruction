@@ -34,4 +34,27 @@ The Hobbit by J.R.R. Tolkien
 To Kill a Mockingbird by Harper Lee
 The Great Gatsby by F. Scott Fitzgerald
 The Catcher in the Rye by J.D. Salinger
+---------------------------------------------------------
+
+Exercise 3 — Count Number of Lines
+📘 Scenario
+A teacher has a list of student names in students.txt and wants to know how many students are in the file.
+
+🎯 Task
+Use BufferedReader to count the number of lines in the file.
+
+Print: "Total students: X"
+
+💡 Knowledge Goal
+Counting file lines using buffered reading.
+
+
+
+students.txt
+
+John Doe
+Sarah Adams
+Michael Brown
+Emma Wilson
+David Clark
 
