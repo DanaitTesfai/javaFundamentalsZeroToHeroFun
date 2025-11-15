@@ -124,4 +124,32 @@ Process text with .split("\\s+").
 Java is one of the most powerful programming languages.
 It is widely used for building enterprise applications.
 Developers love Java because of its portability and strong ecosystem.
+-----------------------------------------------------------------------
+
+Exercise 7 — Remove Empty Lines
+📘 Scenario
+A text file contains blank lines because of copy-paste mistakes.
+The librarian wants a cleaned-up version without empty lines.
+
+🎯 Task
+Read raw_text.txt
+
+Write only non-empty lines to clean_text.txt
+
+💡 Knowledge Goal
+Filtering lines while using buffered streams.
+
+
+
+  raw_text.txt
+
+  This is a line.
+
+
+This is another line.
+
+
+Here is more text.
+
+End of file.
 
