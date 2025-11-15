@@ -11,4 +11,27 @@ Each line must be written on a new line.
 
 💡 Knowledge Goal
 Use BufferedWriter.write() and newLine().
+-------------------------------------------------------------
+
+Exercise 2 — Read a File Line-by-Line
+📘 Scenario
+The librarian wants to display all books stored in books.txt, each book on a new line.
+
+🎯 Task
+Read the entire file using BufferedReader.
+
+Print each line to the console until EOF (null).
+
+💡 Knowledge Goal
+Practice the loop:
+
+String line;
+while ((line = reader.readLine()) != null)
+
+books.txt
+The Hobbit by J.R.R. Tolkien
+1984 by George Orwell
+To Kill a Mockingbird by Harper Lee
+The Great Gatsby by F. Scott Fitzgerald
+The Catcher in the Rye by J.D. Salinger
 
