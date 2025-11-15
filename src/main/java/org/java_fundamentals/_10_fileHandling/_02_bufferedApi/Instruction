@@ -217,4 +217,29 @@ Java is a programming language.
 
 Java is used to develop websites, apps, and games.
 Learning Java is fun and opens many opportunities.
+----------------------------------------------------------
+
+Exercise 10 — Reverse File Content (Advanced)
+📘 Scenario
+A poem is written in verse.txt.
+The librarian wants the lines printed from bottom to top.
+
+🎯 Task
+Read all lines with BufferedReader
+
+Store in a list
+
+Reverse order
+
+Write to verse_reversed.txt
+
+💡 Knowledge Goal
+Combining BufferedReader, ArrayList, Collections.reverse().
+
+ verse.txt
+
+Quietly the river flows,
+Reflecting the moon’s soft glow.
+Stars whisper from above,
+Singing ancient songs of love.
 
