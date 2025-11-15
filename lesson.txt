@@ -1,0 +1,4 @@
+Java is a programming language.
+
+Java is used to develop websites, apps, and games.
+Learning Java is fun and opens many opportunities.

@@ -193,5 +193,28 @@ Chapter 2: The Call
 Later that day, a mysterious traveler arrived.
 He carried with him a message that would shake the town.
 A message that only the bravest could answer.
+-----------------------------------------------------------------
 
+Exercise 9 — Find and Replace Text (Basic Editor)
+📘 Scenario
+A teacher wants to replace all occurrences of "Java" with "JAVA" inside lesson.txt.
+
+🎯 Task
+Ask user for the word to find
+
+Ask for the replacement word
+
+Replace in every line
+
+Write result to edited_lesson.txt
+
+💡 Knowledge Goal
+String replacement + rewriting file.
+
+lesson.txt
+
+Java is a programming language.
+
+Java is used to develop websites, apps, and games.
+Learning Java is fun and opens many opportunities.
 
