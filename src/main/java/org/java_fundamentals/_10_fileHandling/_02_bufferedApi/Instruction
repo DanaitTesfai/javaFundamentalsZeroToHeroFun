@@ -99,4 +99,29 @@ story.txt
 There lived a young boy who dreamed of adventure.
 He would spend his days exploring forests and fields,
 Imagining worlds far beyond his own.
+----------------------------------------------------------------
+
+Exercise 6 — Count Words in a File (Using BufferedReader Only)
+📘 Scenario
+A writer wants to know how many total words are in article.txt.
+
+🎯 Task
+Read each line
+
+Split into words
+
+Count the total number of words
+
+Print the total
+
+💡 Knowledge Goal
+Process text with .split("\\s+").
+
+
+
+   article.txt
+
+Java is one of the most powerful programming languages.
+It is widely used for building enterprise applications.
+Developers love Java because of its portability and strong ecosystem.
 
