@@ -152,4 +152,46 @@ This is another line.
 Here is more text.
 
 End of file.
+-----------------------------------------------------
+
+Exercise 8 — Merge Two Files into One
+📘 Scenario
+You have two chapters of a book:
+
+chapter1.txt
+
+chapter2.txt
+
+You want a new file:
+
+full_book.txt
+
+🎯 Task
+Read each file line-by-line
+
+Write everything into full_book.txt using BufferedWriter
+
+💡 Knowledge Goal
+Sequential reading of multiple files.
+
+
+
+chapter1.txt
+
+Chapter 1: Beginnings
+
+
+
+It was a calm morning in the town of Alera.
+People walked through the streets as the sun started to rise.
+Little did they know, everything was about to change.
+
+chapter2.txt
+
+Chapter 2: The Call
+
+Later that day, a mysterious traveler arrived.
+He carried with him a message that would shake the town.
+A message that only the bravest could answer.
+
 
