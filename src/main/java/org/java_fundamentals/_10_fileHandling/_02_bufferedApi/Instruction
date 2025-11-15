@@ -77,4 +77,26 @@ The sun sets low across the sky,
 Painting clouds in gentle light.
 The evening breeze begins to sigh,
 Welcoming the quiet night.
+---------------------------------------------------------------
+
+Exercise 5 — Convert Lowercase to Uppercase
+📘 Scenario
+Your teacher wants a program that reads text from story.txt and
+converts it all to uppercase in story_upper.txt.
+
+🎯 Task
+Read line by line
+
+Convert each line to uppercase
+
+Write to new file using BufferedWriter
+
+💡 Knowledge Goal
+Using String.toUpperCase() with buffered I/O.
+
+story.txt
+ Once upon a time in a small village,
+There lived a young boy who dreamed of adventure.
+He would spend his days exploring forests and fields,
+Imagining worlds far beyond his own.
 
