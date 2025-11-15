@@ -57,4 +57,24 @@ Sarah Adams
 Michael Brown
 Emma Wilson
 David Clark
+----------------------------------------------------------------
+
+Exercise 4 — Copy a File Using BufferedReader/Writer
+📘 Scenario
+You want to create a backup of a poem stored in poem.txt.
+
+🎯 Task
+Read poem.txt using BufferedReader
+
+Write everything to poem_backup.txt using BufferedWriter
+
+💡 Knowledge Goal
+Combine both buffered input and output streams.
+
+  poem.txt
+
+The sun sets low across the sky,
+Painting clouds in gentle light.
+The evening breeze begins to sigh,
+Welcoming the quiet night.
 
