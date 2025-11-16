@@ -1,0 +1,2 @@
+102,Honda CBR,Motorbike,30.0
+101,Toyota Corolla,Car,45.0

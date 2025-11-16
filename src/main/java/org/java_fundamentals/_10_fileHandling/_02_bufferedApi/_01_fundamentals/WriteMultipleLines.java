@@ -1,4 +1,4 @@
-package org.java_fundamentals._10_fileHandling._02_bufferedApi;
+package org.java_fundamentals._10_fileHandling._02_bufferedApi._01_fundamentals;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;

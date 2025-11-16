@@ -1,9 +1,8 @@
-package org.java_fundamentals._10_fileHandling._02_bufferedApi;
+package org.java_fundamentals._10_fileHandling._02_bufferedApi._01_fundamentals;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Arrays;
 
 public class CountingWords {
     public static void main(String[] args) {

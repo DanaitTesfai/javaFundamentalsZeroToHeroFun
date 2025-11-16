@@ -1,0 +1,331 @@
+1. 🚗 Scenario: Vehicle Rental Management System with User Management
+The ABC Rental Company wants you (the programmer) to build a Vehicle Rental System that supports:
+
+👤 User Management
+Users must be able to register
+
+Users must be able to log in
+
+User data must be saved to a file
+
+Each user has:
+
+username
+
+password
+
+list of rentals they have made (Composition)
+
+🚘 Main Business Requirement: Vehicle Rentals
+The system must also:
+
+Allow logged-in users to Rent Vehicles
+
+Allow users to View Their Rentals
+
+Admin role (special user) can:
+
+Add Vehicles
+
+Delete Vehicles
+
+View all vehicles
+
+Vehicles should be loaded from a file on start, and saved on exit.
+
+📦 Key Relationships (Composition)
+RentalSystem HAS Users
+
+RentalSystem HAS Vehicles
+
+User HAS Rentals
+
+Rental HAS a Vehicle + rental date
+
+Vehicle HAS details (type, model, price)
+
+🧱 What Students Must Build (Instructions)
+1️⃣ Create a User class
+    Fields:
+
+    username
+
+    password
+
+    ArrayList<Rental> rentals
+
+    Methods:
+
+    addRental(Rental r)
+
+    showRentals()
+
+2️⃣ Create a Vehicle class
+    Fields:
+
+    id
+
+    model
+
+    type (Car, Motorbike, Truck)
+
+    pricePerDay
+
+    Method to display vehicle info.
+
+3️⃣ Create a Rental class
+    Fields:
+
+    rentedVehicle (Vehicle object)
+
+    rentalDate (String)
+
+    Composition:
+    A Rental HAS a Vehicle.
+
+4️⃣ Create a RentalSystem class
+    This class should manage:
+
+    ArrayList<User> users
+
+    ArrayList<Vehicle> vehicles
+
+    Methods:
+
+    registerUser()
+
+    loginUser()
+
+    addVehicle()
+
+    deleteVehicle()
+
+    showVehicles()
+
+    rentVehicle()
+
+    saveUsersToFile()
+
+    loadUsersFromFile()
+
+    saveVehiclesToFile()
+
+    loadVehiclesFromFile()
+
+  Create Main class (menu system)
+1. Register
+2. Login
+3. Exit
+
+  If logged in as normal user:
+1. Rent Vehicle
+2. View My Rentals
+3. Logout
+
+  If logged in as admin:
+1. Add Vehicle
+2. Delete Vehicle
+3. List Vehicles
+4. Logout
+
+
+SCENARIO 1 — New User Registers and Logs In
+==== RENTAL SYSTEM ====
+1. Register
+2. Login
+3. Exit
+Choice: 1
+
+Enter username: john
+Enter password: 1234
+Registration successful!
+
+==== RENTAL SYSTEM ====
+1. Register
+2. Login
+3. Exit
+Choice: 2
+
+Username: john
+Password: 1234
+
+==== USER MENU ====
+1. Rent Vehicle
+2. View My Rentals
+3. Logout
+Choice: 3
+
+(Back to main menu)
+🧪 SCENARIO 2 — Admin Adds Vehicles
+==== RENTAL SYSTEM ====
+1. Register
+2. Login
+3. Exit
+Choice: 2
+
+Username: admin
+Password: admin123
+
+==== ADMIN MENU ====
+1. Add Vehicle
+2. Delete Vehicle
+3. List Vehicles
+4. Logout
+Choice: 1
+
+Vehicle ID: 101
+Model: Toyota Corolla
+Type: Car
+Price per day: 45
+Vehicle added successfully!
+
+==== ADMIN MENU ====
+Choice: 1
+Vehicle ID: 102
+Model: Honda CBR
+Type: Motorbike
+Price per day: 30
+Vehicle added successfully!
+
+==== ADMIN MENU ====
+Choice: 3
+Available Vehicles:
+101 - Toyota Corolla (Car) - $45.0/day
+102 - Honda CBR (Motorbike) - $30.0/day
+
+==== ADMIN MENU ====
+Choice: 4
+🧪 SCENARIO 3 — User Rents a Vehicle
+==== RENTAL SYSTEM ====
+1. Register
+2. Login
+3. Exit
+Choice: 2
+
+Username: john
+Password: 1234
+
+==== USER MENU ====
+1. Rent Vehicle
+2. View My Rentals
+3. Logout
+Choice: 1
+
+Available Vehicles:
+101 - Toyota Corolla (Car) - $45.0/day
+102 - Honda CBR (Motorbike) - $30.0/day
+
+Enter Vehicle ID: 101
+Enter date (YYYY-MM-DD): 2025-02-10
+Vehicle rented successfully!
+
+==== USER MENU ====
+1. Rent Vehicle
+2. View My Rentals
+3. Logout
+Choice: 2
+
+Your Rentals:
+- Toyota Corolla rented on 2025-02-10
+🧪 SCENARIO 4 — Admin Deletes a Vehicle
+==== RENTAL SYSTEM ====
+1. Register
+2. Login
+3. Exit
+Choice: 2
+
+Username: admin
+Password: admin123
+
+==== ADMIN MENU ====
+1. Add Vehicle
+2. Delete Vehicle
+3. List Vehicles
+4. Logout
+Choice: 3
+
+Available Vehicles:
+101 - Toyota Corolla (Car) - $45.0/day
+102 - Honda CBR (Motorbike) - $30.0/day
+
+==== ADMIN MENU ====
+Choice: 2
+Enter ID to delete: 102
+Vehicle deleted successfully!
+
+==== ADMIN MENU ====
+Choice: 3
+Available Vehicles:
+101 - Toyota Corolla (Car) - $45.0/day
+🧪 SCENARIO 5 — Multiple Users, Rentals Saved & Loaded from File
+When the system RESTARTS, previously saved users and vehicles are automatically loaded.
+
+📂 Vehicles loaded from file.
+📂 Users loaded from file.
+
+==== RENTAL SYSTEM ====
+1. Register
+2. Login
+3. Exit
+Choice: 2
+
+Username: john
+Password: 1234
+
+==== USER MENU ====
+1. Rent Vehicle
+2. View My Rentals
+3. Logout
+Choice: 2
+
+Your Rentals:
+- Toyota Corolla rented on 2025-02-10
+
+==== USER MENU ====
+Choice: 3
+(Logout)
+
+==== RENTAL SYSTEM ====
+1. Register
+2. Login
+3. Exit
+Choice: 2
+
+Username: sara
+Password: sara123
+
+==== USER MENU ====
+1. Rent Vehicle
+2. View My Rentals
+3. Logout
+Choice: 1
+
+Available Vehicles:
+101 - Toyota Corolla (Car) - $45.0/day
+
+Enter Vehicle ID: 101
+Enter date (YYYY-MM-DD): 2025-02-11
+Vehicle rented successfully!
+
+==== USER MENU ====
+Choice: 3
+Saved and returned to main menu.
+🔥 Bonus Scenario — Wrong Credentials
+==== RENTAL SYSTEM ====
+1. Register
+2. Login
+3. Exit
+Choice: 2
+
+Username: john
+Password: wrongpass
+Invalid login!
+🟩 Bonus Scenario — Renting a Non-Existing Vehicle
+==== USER MENU ====
+Choice: 1
+
+Available Vehicles:
+101 - Toyota Corolla (Car) - $45.0/day
+
+Enter Vehicle ID: 999
+Vehicle not found.
