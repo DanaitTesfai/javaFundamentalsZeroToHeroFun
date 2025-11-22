@@ -61,7 +61,8 @@ public class Menu {
                     "1. Add Vehicle\n" +
                     "2. Delete Vehicle\n" +
                     "3. List Vehicles\n" +
-                    "4. Logout");
+                    "4. Search Vehicle\n" +
+                    "5. Logout");
             System.out.print("Enter choice: ");
             int choice = sc.nextInt();
             sc.nextLine();
@@ -94,6 +95,9 @@ public class Menu {
                     rs.showVehicles();
                     break;
                 case 4:
+                    searchVehicle(sc, rs);
+                    break;
+                case 5:
                     System.out.println("Logging out.");
                     return;
                 default:
@@ -103,13 +107,21 @@ public class Menu {
         }
     }
 
+    private static void searchVehicle(Scanner sc, RentalSystem rs) {
+        System.out.print("Enter keyword: ");
+        String keyword = sc.nextLine();
+
+        rs.searchVehicle(keyword);
+    }
+
 
     public void userMenu(Scanner sc, RentalSystem rs, User user){
         while (true){
             System.out.println("==== USER MENU ====\n" +
                     "1. Rent Vehicle\n" +
                     "2. View My Rentals\n" +
-                    "3. Logout");
+                    "3. Search vehicle\n" +
+                    "4. Logout");
             System.out.print("Enter choice: ");
             int choice = sc.nextInt();
             sc.nextLine();
@@ -130,8 +142,11 @@ public class Menu {
                 case 2:
                     user.showRentals();
                     break;
-
                 case 3:
+                    searchVehicle(sc, rs);
+                    break;
+
+                case 4:
                     System.out.println("Logging out.");
                     return;
                 default:

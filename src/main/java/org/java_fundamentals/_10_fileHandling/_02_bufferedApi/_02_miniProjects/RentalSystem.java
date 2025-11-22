@@ -7,15 +7,25 @@ public class RentalSystem {
     private final String USER_FILE = "users.txt";
     private final String VEHICLE_FILE = "vehicles.txt";
 
+    ArrayList<User> users = new ArrayList<>();
+    ArrayList<Vehicle> vehicles = new ArrayList<>();
+
+
     public RentalSystem() {
         User admin = new User("admin", "1234");
         User user1 = new User("user1", "12345");
-        registerUser(admin);
-        registerUser(user1);
+        loadVehiclesFromFile();
+        loadUsersFromFile();
+
+        if (!users.contains(admin)){
+            registerUser(admin);
+        }
+        if (!users.contains(user1)){
+            registerUser(user1);
+        }
+
     }
 
-    ArrayList<User> users = new ArrayList<>();
-    ArrayList<Vehicle> vehicles = new ArrayList<>();
 
     public User loginUser(String username, String password){
         for (User u: users){
@@ -66,6 +76,18 @@ public class RentalSystem {
 
     }
 
+    public void searchVehicle(String keyword){
+        System.out.println("\uD83D\uDD0D Search Results for: " + keyword);
+        for (Vehicle v: vehicles){
+            if (v.getModel().toLowerCase().contains(keyword.toLowerCase()) ||
+                    v.getType().toLowerCase().contains(keyword.toLowerCase())) {
+                v.displayInfo();
+                return;
+            }
+        }
+        System.out.println("No matching vehicles found.");
+    }
+
     public void rentVehicle(User u, String vid, String date){
         for (Vehicle v: vehicles){
             if (vid.equalsIgnoreCase(v.getId())){
@@ -110,13 +132,13 @@ public class RentalSystem {
                     Vehicle v = getVehicleById(vid);
                     if (v != null && currentUser != null){
                         currentUser.addRental(new Rental(v,date));
-                    } else if (line.equals("ENDUSER")) {
-                        currentUser = null;
-                    }else {
-                        String[] data = line.split(",");
-                        currentUser = new User(data[0], data[1]);
-                        users.add(currentUser);
                     }
+                }else if (line.equals("ENDUSER")) {
+                    currentUser = null;
+                }else {
+                    String[] data = line.split(",");
+                    currentUser = new User(data[0], data[1]);
+                    users.add(currentUser);
                 }
             }
 

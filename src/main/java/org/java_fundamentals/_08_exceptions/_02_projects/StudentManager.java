@@ -22,7 +22,7 @@ public class StudentManager {
                 return s;
             }
         }
-        throw new UserNotFoundException("User not found,");
+        throw new UserNotFoundException("User not found.");
     }
 
 

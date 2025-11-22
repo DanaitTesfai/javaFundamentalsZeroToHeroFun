@@ -329,3 +329,74 @@ Available Vehicles:
 
 Enter Vehicle ID: 999
 Vehicle not found.
+---------------------------------------------------------------
+1.1  NEW FEATURE REQUEST: Search Vehicles
+    (Question + Implementation)
+
+    📝 QUESTION FOR STUDENTS
+    Scenario-Based Task: Search Vehicles
+    Your Vehicle Rental System is already able to:
+
+    Add vehicles
+
+    Delete vehicles
+
+    List all vehicles
+
+    Rent vehicles
+
+    Save & load data from files
+
+    Manage users and admins
+
+    The rental company now wants to add a Search Vehicle feature.
+
+    🎯 Your Task
+    Add a menu option that allows a user (or admin) to search for a vehicle by keyword.
+
+    Search should work like this:
+
+    User enters a search term (example: "toyota" or "car" or "bike")
+
+    System should search inside:
+
+    vehicle model
+
+    AND vehicle type
+
+    Search must be case-insensitive
+
+    Display all matching vehicles
+
+    If nothing found, show:
+
+    No matching vehicles found.
+    📝 Requirements
+    Add a new menu option:
+
+    4. Search Vehicle
+    (for admin and/or user menu)
+
+    Implement a method inside RentalSystem:
+
+    public void searchVehicle(String keyword)
+    This method should loop through vehicles ArrayList and display matches.
+
+    Searching should not modify any data.
+
+    💡 HINTS FOR STUDENTS
+    Use .toLowerCase() for case-insensitive search
+
+    Check if model/type .contains(keyword)
+
+    Use a boolean flag to track if any result was found
+
+    Hint: if (v.model.toLowerCase().contains(keyword) ||
+        v.type.toLowerCase().contains(keyword)) {
+        // a match
+    }
+
+    Enter keyword: tesla
+
+    🔍 Search Results for: tesla
+    No matching vehicles found.
