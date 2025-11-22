@@ -1,11 +1,14 @@
 package org.java_fundamentals._10_fileHandling._02_bufferedApi._02_miniProjects;
 
 import java.io.*;
+import java.time.LocalTime;
 import java.util.ArrayList;
 
 public class RentalSystem {
     private final String USER_FILE = "users.txt";
     private final String VEHICLE_FILE = "vehicles.txt";
+
+    private int receiptNum = 1;
 
     ArrayList<User> users = new ArrayList<>();
     ArrayList<Vehicle> vehicles = new ArrayList<>();
@@ -114,13 +117,38 @@ public class RentalSystem {
                 }
                 u.addRental(new Rental(v, date));
                 v.setAvailable(false);
+                saveVehiclesToFile();
                 saveUsersToFile();
                 System.out.println("Vehicle rented successfully.");
+                generateReceipt(u, v, date);
                 return;
             }
         }
         System.out.println("Vehicle not available.");
 
+    }
+
+    public void generateReceipt(User u, Vehicle v, String date){
+        String fileName = "receipt_" + receiptNum + ".txt";
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))){
+            writer.write("====== VEHICLE RENTAL RECEIPT ======\n");
+            writer.write("Receipt No: " + receiptNum + "\n");
+            writer.write("Date Issued: "+ LocalTime.now() + "\n\n");
+            writer.write("Customer: \n");
+            writer.write("Vehicle Information: \n");
+            writer.write("Model: " + v.getId()+ " \n");
+            writer.write("Type: " + v.getType()+ " \n");
+            writer.write("Price per Day: $" + v.getPricePerDay()+ " \n");
+            writer.write("Rental Date: " + date + "\n\n");
+
+            writer.write("Thank you for renting with ABC Rentals!\n");
+            writer.write("====================================\n");
+
+            System.out.println("🧾 Receipt generated: " + fileName);
+            receiptNum++;
+        } catch (IOException e) {
+            System.out.println("Error generating receipt.");
+        }
     }
 
     public void showRentedVehicles(User u){

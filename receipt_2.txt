@@ -1,0 +1,13 @@
+====== VEHICLE RENTAL RECEIPT ======
+Receipt No: 2
+Date Issued: 13:49:14.310260300
+
+Customer: 
+Vehicle Information: 
+Model: 101 
+Type: Tesla series 
+Price per Day: $75.0 
+Rental Date: 2025-11-25
+
+Thank you for renting with ABC Rentals!
+====================================

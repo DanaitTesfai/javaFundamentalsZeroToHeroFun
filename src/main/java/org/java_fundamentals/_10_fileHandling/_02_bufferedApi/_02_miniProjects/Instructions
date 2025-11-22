@@ -645,4 +645,95 @@ Vehicle not found.
     📂 Users loaded from file:
     john: no active rentals
 ----------------------------------------------------------
-1.5
+1.5 Rental Receipt Generation
+    (A complete question + step-by-step instructions + full code + sample output)
+
+    This is a realistic and professional addition to the Rental System.
+    When a user rents a vehicle, the system will automatically generate a receipt, showing:
+
+    User name
+
+    Vehicle details
+
+    Rental date
+
+    Price per day
+
+    Total price (for this example: 1-day rental)
+
+    Receipt number
+
+    Timestamp
+
+    Later, you can expand it to calculate number of days and total cost — but we’ll start simple.
+
+    📝 QUESTION FOR STUDENTS (Assignment)
+    🚗 Add “Rental Receipt Generation” Feature
+    When a user rents a vehicle, the system should generate a text receipt automatically.
+
+    The receipt must contain:
+        Receipt number
+
+        User name
+
+        Vehicle details (model, type, price per day)
+
+        Rental date
+
+        Timestamp (real date/time system generated)
+
+        A "Thank You" message
+
+    The receipt must be saved into a file:
+    receipt_<receiptNumber>.txt
+    Example:
+    receipt_101.txt
+    receipt_102.txt
+    ...
+    Requirements:
+        Receipt numbers should auto-increment
+
+    The system should show:
+
+    Receipt generated: receipt_101.txt
+    The receipt must NOT overwrite previous receipts
+
+    💡 HINTS FOR STUDENTS
+    Use a static counter for receipt numbers, OR
+    read the number from a file
+
+    Use BufferedWriter or FileWriter
+
+    Use LocalDateTime.now()
+
+    Combine vehicle and user information
+
+    Always save receipt inside a /receipts folder (optional)
+
+
+    🧪 SAMPLE RECEIPT FILE OUTPUT (receipt_1.txt)
+    ====== VEHICLE RENTAL RECEIPT ======
+    Receipt No: 1
+    Date Issued: 2025-02-11T14:23:45.723
+
+    Customer: john
+
+    Vehicle Information:
+    Model: Toyota Corolla
+    Type: Car
+    Price per Day: $45.0
+
+    Rental Date: 2025-02-11
+
+    Thank you for renting with ABC Rentals!
+    ====================================
+    🧪 SAMPLE CONSOLE OUTPUT
+    When renting a vehicle:
+    Available Vehicles:
+    101 - Toyota Corolla (Car) - $45/day - AVAILABLE
+
+    Enter Vehicle ID: 101
+    Enter rental date (YYYY-MM-DD): 2025-02-11
+
+    🚗 Vehicle rented successfully!
+    🧾 Receipt generated: receipt_1.txt

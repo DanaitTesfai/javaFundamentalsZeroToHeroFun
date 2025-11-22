@@ -1,0 +1,13 @@
+====== VEHICLE RENTAL RECEIPT ======
+Receipt No: 1
+Date Issued: 13:48:23.567521800
+
+Customer: 
+Vehicle Information: 
+Model: 102 
+Type: Motorbike 
+Price per Day: $30.0 
+Rental Date: 2025-11-22
+
+Thank you for renting with ABC Rentals!
+====================================
