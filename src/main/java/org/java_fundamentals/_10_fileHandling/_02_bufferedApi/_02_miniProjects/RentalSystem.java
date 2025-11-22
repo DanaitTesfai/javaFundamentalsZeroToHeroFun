@@ -123,6 +123,32 @@ public class RentalSystem {
 
     }
 
+    public void showRentedVehicles(User u){
+        if (u.rentals.isEmpty()){
+            System.out.println("There are no rented vehicles");
+            return;
+        }
+        for (Rental r: u.rentals){
+            System.out.println(r.rentedVehicle);
+        }
+    }
+
+    public void returnVehicle(User u, String returnId){
+        for (int i = 0; i < u.rentals.size(); i++){
+            Rental r = u.rentals.get(i);
+            Vehicle v = r.getRentedVehicle();
+            if (v.getId().equalsIgnoreCase(returnId)){
+                v.setAvailable(true);
+                u.rentals.remove(i);
+                saveUsersToFile();
+                saveVehiclesToFile();
+                System.out.println("Vehicle returned successfully.");
+                return;
+            }
+        }
+        System.out.println("You did not rent this vehicle.");
+    }
+
     public void saveUsersToFile(){
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(USER_FILE))){
             for (User u: users){

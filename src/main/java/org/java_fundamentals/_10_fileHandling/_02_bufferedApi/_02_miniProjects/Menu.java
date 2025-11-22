@@ -139,7 +139,8 @@ public class Menu {
                     "1. Rent Vehicle\n" +
                     "2. View My Rentals\n" +
                     "3. Search vehicle\n" +
-                    "4. Logout");
+                    "4. Return Vehicle\n" +
+                    "5. Logout");
             System.out.print("Enter choice: ");
             int choice = sc.nextInt();
             sc.nextLine();
@@ -163,8 +164,15 @@ public class Menu {
                 case 3:
                     searchVehicle(sc, rs);
                     break;
-
                 case 4:
+                    rs.showRentedVehicles(user);
+                    System.out.print("Enter vehicle id to return: ");
+                    String retId = sc.nextLine();
+
+                    rs.returnVehicle(user, retId);
+                    break;
+
+                case 5:
                     System.out.println("Logging out.");
                     return;
                 default:

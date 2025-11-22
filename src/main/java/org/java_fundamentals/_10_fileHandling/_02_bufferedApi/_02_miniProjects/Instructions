@@ -553,3 +553,96 @@ Vehicle not found.
     📂 Vehicles loaded from file:
     101 - Toyota Corolla (Car) - $45/day - NOT AVAILABLE
     102 - Honda CBR (Motorbike) - $30/day - AVAILABLE
+----------------------------------------------------------------
+1.4 QUESTION FOR STUDENTS (Assignment)
+    🚗 Add “Return Vehicle” Feature
+    Your Vehicle Rental System already supports:
+
+    Adding vehicles
+
+    Updating vehicle details
+
+    Searching vehicles
+
+    Renting vehicles
+
+    User management
+
+    File handling
+
+    Availability tracking
+
+    Now the rental company wants the system to allow returning rented vehicles.
+
+    🎯 Requirements
+    Add a new menu option for users:
+
+    4. Return Vehicle
+    Show the user a list of their rented vehicles.
+
+    Ask the user which vehicle (by ID) they want to return.
+
+    Mark that vehicle’s availability as true again.
+
+    Save the updated availability to file.
+
+    Remove or mark the rental from the user’s rental list:
+
+    Toyota Corolla returned successfully.
+    💡 HINTS FOR STUDENTS
+    Loop through user.rentals
+
+    Compare rentedVehicle.id with the user’s input
+
+    If found:
+
+    Set vehicle available = true
+
+    Remove rental from the user’s rentals list
+
+    Save changes
+
+    Use a boolean variable to track whether a match was found
+
+
+    🧪 SAMPLE OUTPUTS
+    ⭐ Scenario 1 — User Has No Rentals
+    ==== USER MENU ====
+    1. Rent Vehicle
+    2. View My Rentals
+    3. Search Vehicle
+    4. Return Vehicle
+    5. Logout
+    Choice: 4
+
+    📭 You have no rented vehicles.
+    ⭐ Scenario 2 — User Returns a Vehicle
+    ==== USER MENU ====
+    Choice: 4
+
+    Your Rented Vehicles:
+    101 - Toyota Corolla (2025-02-11)
+
+    Enter Vehicle ID to return: 101
+
+    ✅ Vehicle returned successfully!
+    ⭐ Scenario 3 — Trying to Return Vehicle Not Rented
+    Enter Vehicle ID to return: 999
+
+    ❌ You did not rent this vehicle.
+    ⭐ Scenario 4 — After Returning, Vehicle Becomes Available Again
+    ==== ADMIN MENU ====
+    Choice: 3
+
+    Available Vehicles:
+    101 - Toyota Corolla (Car) - $45/day - AVAILABLE
+    ⭐ Scenario 5 — Data Loaded After Restart
+    Data persistence works:
+
+    📂 Vehicles loaded from file:
+    101 - Toyota Corolla (Car) - $45/day - AVAILABLE
+
+    📂 Users loaded from file:
+    john: no active rentals
+----------------------------------------------------------
+1.5

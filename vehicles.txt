@@ -1,2 +1,2 @@
 102,Honda CBR,Motorbike,30.0,true
-101,Tesla,Tesla series,75.0,false
+101,Tesla,Tesla series,75.0,true
