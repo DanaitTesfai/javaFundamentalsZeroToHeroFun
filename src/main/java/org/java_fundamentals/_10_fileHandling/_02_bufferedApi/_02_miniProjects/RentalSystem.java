@@ -108,7 +108,12 @@ public class RentalSystem {
     public void rentVehicle(User u, String vid, String date){
         for (Vehicle v: vehicles){
             if (vid.equalsIgnoreCase(v.getId())){
+                if (!v.isAvailable()){
+                    System.out.println("❌ Sorry, this vehicle is already rented.");
+                    return;
+                }
                 u.addRental(new Rental(v, date));
+                v.setAvailable(false);
                 saveUsersToFile();
                 System.out.println("Vehicle rented successfully.");
                 return;
@@ -179,7 +184,7 @@ public class RentalSystem {
     public void saveVehiclesToFile(){
         try(BufferedWriter writer = new BufferedWriter(new FileWriter(VEHICLE_FILE))){
             for (Vehicle v : vehicles){
-                writer.write(v.getId() + "," + v.getModel() + "," + v.getType() + "," + v.getPricePerDay());
+                writer.write(v.getId() + "," + v.getModel() + "," + v.getType() + "," + v.getPricePerDay() + "," + v.isAvailable());
                 writer.newLine();
             }
 
@@ -197,8 +202,10 @@ public class RentalSystem {
                 String model = parts[1];
                 String type = parts[2];
                 double pricePerDay = Double.parseDouble(parts[3]);
+                boolean available = Boolean.parseBoolean(parts[4]);
 
                 Vehicle v = new Vehicle(id,model, type, pricePerDay);
+                v.setAvailable(available);
                 vehicles.add(v);
 
             }

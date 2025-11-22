@@ -468,3 +468,88 @@ Vehicle not found.
     Enter new price per day: 50
 
     ✏️ Vehicle updated successfully!
+--------------------------------------------------
+
+1.3 QUESTION FOR STUDENTS (Assignment)
+    Scenario-Based Task: Manage Vehicle Availability
+    You are upgrading the Vehicle Rental System.
+    The rental company has asked you to add Vehicle Availability Management.
+
+    New Requirements
+    Every vehicle must have an availability flag:
+
+    true → Available
+
+    false → Rented
+
+    When a user rents a vehicle:
+
+    Mark that vehicle as not available
+
+    When listing vehicles:
+    Show:
+
+    101 - Toyota Corolla (Car) - $45/day - AVAILABLE
+    102 - Honda CBR (Motorbike) - $30/day - NOT AVAILABLE
+    When renting:
+
+    Only allow renting vehicles that are available
+
+    If the vehicle is not available, show:
+
+    Sorry, this vehicle is already rented.
+    Update file saving logic to include availability.
+
+    Update file loading logic to read availability back.
+
+    💡 HINTS FOR STUDENTS
+    Add a boolean field:
+
+    boolean available;
+    Set default availability to true when adding a vehicle
+
+    In rentVehicle():
+
+    Check if(v.available == false) → reject rental
+
+    Otherwise → v.available = false;
+
+    When writing to file:
+
+    id,model,type,price,available
+    When reading from file:
+
+    Use Boolean.parseBoolean(data[4])
+
+    SAMPLE CONSOLE OUTPUTS
+    ⭐ Scenario 1 — Admin Adds Two Vehicles
+    101 - Toyota Corolla (Car) - $45/day - AVAILABLE
+    102 - Honda CBR (Motorbike) - $30/day - AVAILABLE
+    ⭐ Scenario 2 — Renting an Available Vehicle
+    ==== USER MENU ====
+    1. Rent Vehicle
+    2. View My Rentals
+    3. Logout
+    Choice: 1
+
+    Available Vehicles:
+    101 - Toyota Corolla (Car) - $45.0/day - AVAILABLE
+    102 - Honda CBR (Motorbike) - $30.0/day - AVAILABLE
+
+    Enter Vehicle ID: 101
+    Enter date (YYYY-MM-DD): 2025-02-11
+    🚗 Vehicle rented successfully!
+    ⭐ Scenario 3 — Vehicle Becomes Unavailable
+    ==== ADMIN MENU ====
+    Choice: 3
+
+    Available Vehicles:
+    101 - Toyota Corolla (Car) - $45/day - NOT AVAILABLE
+    102 - Honda CBR (Motorbike) - $30/day - AVAILABLE
+    ⭐ Scenario 4 — User Attempts to Rent Rented Vehicle
+    Enter Vehicle ID: 101
+    ❌ Sorry, this vehicle is already rented.
+    ⭐ Scenario 5 — Restarting the Program (File Loaded)
+    📂 Vehicles loaded from file:
+    101 - Toyota Corolla (Car) - $45/day - NOT AVAILABLE
+    102 - Honda CBR (Motorbike) - $30/day - AVAILABLE

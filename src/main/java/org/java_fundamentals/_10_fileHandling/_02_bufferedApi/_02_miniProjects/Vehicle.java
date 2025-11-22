@@ -7,6 +7,7 @@ public class Vehicle {
     private String model;
     private String type;
     private double pricePerDay;
+    private boolean available;
 
 
     public Vehicle(String id, String model, String type, double pricePerDay) {
@@ -14,6 +15,7 @@ public class Vehicle {
         this.model = model;
         this.type = type;
         this.pricePerDay = pricePerDay;
+        this.available = true;
     }
 
     public String getId() {
@@ -48,6 +50,17 @@ public class Vehicle {
         this.pricePerDay = pricePerDay;
     }
 
+    public boolean isAvailable() {
+        return available;
+    }
+
+    public void setAvailable(boolean available) {
+        this.available = available;
+    }
+
+    public String availablityText(){
+        return available ? "AVAILABLE" : "NOT AVAILABLE";
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -67,6 +80,6 @@ public class Vehicle {
 
     @Override
     public String toString() {
-        return id + " - " + model + " (" + type + ") - $" + pricePerDay + "/day";
+        return id + " - " + model + " (" + type + ") - $" + pricePerDay + "/day - " + availablityText();
     }
 }
