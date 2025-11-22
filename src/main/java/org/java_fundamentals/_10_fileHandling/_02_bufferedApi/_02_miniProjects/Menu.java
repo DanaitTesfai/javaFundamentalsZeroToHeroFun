@@ -62,7 +62,8 @@ public class Menu {
                     "2. Delete Vehicle\n" +
                     "3. List Vehicles\n" +
                     "4. Search Vehicle\n" +
-                    "5. Logout");
+                    "5. Update Vehicle\n" +
+                    "6. Logout");
             System.out.print("Enter choice: ");
             int choice = sc.nextInt();
             sc.nextLine();
@@ -98,6 +99,23 @@ public class Menu {
                     searchVehicle(sc, rs);
                     break;
                 case 5:
+                    System.out.print("Enter vehicle ID to update: ");
+                    String newId = sc.nextLine(); sc.nextLine();
+
+                    System.out.print("Enter new model: ");
+                    String newModel = sc.nextLine();
+
+                    System.out.print("Enter new type: ");
+                    String newType = sc.nextLine();
+
+                    System.out.print("Enter new price per day: ");
+                    double newPrice = sc.nextDouble(); sc.nextLine();
+
+                    Vehicle updateVehicle = new Vehicle(newId,newModel, newType, newPrice);
+
+                    rs.updateVehicle(updateVehicle);
+                    break;
+                case 6:
                     System.out.println("Logging out.");
                     return;
                 default:

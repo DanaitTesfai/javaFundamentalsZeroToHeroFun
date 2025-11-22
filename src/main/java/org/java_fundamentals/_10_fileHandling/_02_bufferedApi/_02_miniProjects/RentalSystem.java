@@ -88,6 +88,23 @@ public class RentalSystem {
         System.out.println("No matching vehicles found.");
     }
 
+    public  void updateVehicle(Vehicle updateVeh){
+        if (!vehicles.contains(updateVeh)){
+            System.out.println("Vehicle not found.");
+            return;
+        }
+        for (Vehicle v: vehicles){
+            if (v.getId().equalsIgnoreCase(updateVeh.getId())){
+                v.setModel(updateVeh.getModel());
+                v.setType(updateVeh.getType());
+                v.setPricePerDay(updateVeh.getPricePerDay());
+                saveVehiclesToFile();
+                System.out.println("Vehicle updated successfully.");
+            }
+
+        }
+    }
+
     public void rentVehicle(User u, String vid, String date){
         for (Vehicle v: vehicles){
             if (vid.equalsIgnoreCase(v.getId())){

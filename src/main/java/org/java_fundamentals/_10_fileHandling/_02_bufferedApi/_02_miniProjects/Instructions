@@ -400,3 +400,71 @@ Vehicle not found.
 
     🔍 Search Results for: tesla
     No matching vehicles found.
+--------------------------------------------------------------
+1.2 QUESTION FOR STUDENTS: Update Vehicle Details
+    Scenario-Based Task
+    The rental company reports that sometimes vehicle information is incorrect or needs to be changed.
+    For example:
+
+    A vehicle's model name was typed incorrectly
+
+    Price per day needs adjustment
+
+    Type needs correction (Car → SUV)
+
+    They want to add a new feature:
+
+    🎯 Update Vehicle Details
+    Your task is to:
+
+    Add a menu option:
+
+    Update Vehicle
+    Ask the admin for:
+
+    Vehicle ID to update
+
+    New model
+
+    New type
+
+    New price
+
+    Update the vehicle in the vehicles ArrayList
+
+    Save the updated vehicles to the file
+
+    If the ID does not exist, display a message
+
+    Vehicle not found.
+    💡 Hints for Students
+    Use a loop to find the vehicle by ID (for(Vehicle v : vehicles))
+
+    Compare with: if(v.id == id)
+
+    If found, update fields:
+
+    v.model = newModel;
+    v.type = newType;
+    v.pricePerDay = newPrice;
+    Use a boolean to track if anything was found
+
+    Don’t forget to call saveVehiclesToFile()
+
+    🧪 SAMPLE OUTPUTS
+    Scenario A — Successful Update
+    ==== ADMIN MENU ====
+    1. Add Vehicle
+    2. Delete Vehicle
+    3. List Vehicles
+    4. Search Vehicle
+    5. Update Vehicle
+    6. Logout
+    Choice: 5
+
+    Enter vehicle ID to update: 101
+    Enter new model: Toyota Corolla X
+    Enter new type: Car
+    Enter new price per day: 50
+
+    ✏️ Vehicle updated successfully!
