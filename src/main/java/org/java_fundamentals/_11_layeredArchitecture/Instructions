@@ -1,0 +1,104 @@
+EXERCISE SET — MVC FILE-BASED ARCHITECTURE
+📘 Exercise 1 — School Course Registration System
+🏫 Scenario
+A school wants to manage its course offerings. Courses must have:
+
+    A unique ID
+
+    A course name
+
+    A number of credit hours
+
+The data is stored in:
+
+courses_db.txt
+🎯 Requirements
+Create layers: CourseRepository, CourseService, CourseController
+
+Features:
+
+    Add Course
+
+    Show all Courses
+
+    Update Course by ID
+
+    Delete Course by ID
+
+Business Rule:
+
+    Course name must be unique
+
+    Credit hours must be between 1 and 5
+
+💡 Skill Focus
+Service layer validation
+
+ID-based CRUD
+
+MVC flow
+
+===== COURSE MENU =====
+1. Add Course
+2. Show All Courses
+3. Update Course
+4. Delete Course
+5. Exit
+Choose: 1
+Enter course name: Java Programming
+Enter credit hours (1-5): 4
+Course added with ID: 1
+
+===== COURSE MENU =====
+1. Add Course
+2. Show All Courses
+3. Update Course
+4. Delete Course
+5. Exit
+Choose: 1
+Enter course name: Web Development
+Enter credit hours (1-5): 3
+Course added with ID: 2
+
+===== COURSE MENU =====
+1. Add Course
+2. Show All Courses
+3. Update Course
+4. Delete Course
+5. Exit
+Choose: 2
+
+--- COURSES ---
+1 - Java Programming (4 credits)
+2 - Web Development (3 credits)
+
+===== COURSE MENU =====
+1. Add Course
+2. Show All Courses
+3. Update Course
+4. Delete Course
+5. Exit
+Choose: 3
+Enter course ID to update: 2
+Enter new course name: Web Development Advanced
+Enter new credit hours (1-5): 4
+Course updated successfully.
+
+===== COURSE MENU =====
+1. Add Course
+2. Show All Courses
+3. Update Course
+4. Delete Course
+5. Exit
+Choose: 4
+Enter course ID to delete: 1
+Course deleted successfully.
+
+===== COURSE MENU =====
+1. Add Course
+2. Show All Courses
+3. Update Course
+4. Delete Course
+5. Exit
+Choose: 5
+Goodbye!
