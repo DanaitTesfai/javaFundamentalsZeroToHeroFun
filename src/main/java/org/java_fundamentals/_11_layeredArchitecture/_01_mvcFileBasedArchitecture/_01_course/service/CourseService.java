@@ -1,7 +1,7 @@
-package org.java_fundamentals._11_layeredArchitecture._01_mvcFileBasedArchitecture.service;
+package org.java_fundamentals._11_layeredArchitecture._01_mvcFileBasedArchitecture._01_course.service;
 
-import org.java_fundamentals._11_layeredArchitecture._01_mvcFileBasedArchitecture.model.Course;
-import org.java_fundamentals._11_layeredArchitecture._01_mvcFileBasedArchitecture.repository.CourseRepository;
+import org.java_fundamentals._11_layeredArchitecture._01_mvcFileBasedArchitecture._01_course.model.Course;
+import org.java_fundamentals._11_layeredArchitecture._01_mvcFileBasedArchitecture._01_course.repository.CourseRepository;
 
 import java.util.List;
 

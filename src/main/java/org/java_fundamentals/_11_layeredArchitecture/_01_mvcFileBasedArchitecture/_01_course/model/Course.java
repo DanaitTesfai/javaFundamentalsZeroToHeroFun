@@ -1,4 +1,4 @@
-package org.java_fundamentals._11_layeredArchitecture._01_mvcFileBasedArchitecture.model;
+package org.java_fundamentals._11_layeredArchitecture._01_mvcFileBasedArchitecture._01_course.model;
 
 import java.util.Objects;
 

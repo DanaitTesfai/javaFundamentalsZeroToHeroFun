@@ -1,6 +1,6 @@
-package org.java_fundamentals._11_layeredArchitecture._01_mvcFileBasedArchitecture.repository;
+package org.java_fundamentals._11_layeredArchitecture._01_mvcFileBasedArchitecture._01_course.repository;
 
-import org.java_fundamentals._11_layeredArchitecture._01_mvcFileBasedArchitecture.model.Course;
+import org.java_fundamentals._11_layeredArchitecture._01_mvcFileBasedArchitecture._01_course.model.Course;
 
 import java.io.*;
 import java.util.ArrayList;
