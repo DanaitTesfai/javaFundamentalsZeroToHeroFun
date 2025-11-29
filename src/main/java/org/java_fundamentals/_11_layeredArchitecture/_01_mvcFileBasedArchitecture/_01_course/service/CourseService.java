@@ -9,6 +9,8 @@ public class CourseService {
     CourseRepository courseRepository = new CourseRepository();
 
     public List<Course> getAllCourses() {
+
+        // return courseRepository.findAllCourses();
         List<Course> courses = courseRepository.findAllCourses();
         return courses;
     }

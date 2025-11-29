@@ -1,0 +1,108 @@
+Exercise 2 — Library Borrowing System
+📚 Scenario
+You are designing a system to manage book borrowing in a community library.
+
+A Borrow Record has:
+
+    Borrow ID
+
+    Student Name
+
+    Book Title
+
+    Borrow Date
+
+Stored in:
+
+borrows_db.txt
+🎯 Requirements
+    Add borrow record
+
+    View all borrow records
+
+    Delete a record by ID
+
+    Search by student name
+
+⚠ Business Rules
+    Each student can borrow maximum 3 books
+
+    Book title must not be empty
+
+    Borrow date must be in format YYYY-MM-DD
+
+💡 Skill Focus
+    Search operation in service layer
+
+    Data integrity
+
+    File update logic
+
+
+===== LIBRARY BORROW MENU =====
+1. Add Borrow Record
+2. View All Borrow Records
+3. Search Records by Student Name
+4. Delete Borrow Record by ID
+5. Exit
+Choose: 1
+Enter student name: John Doe
+Enter book title: The Hobbit
+Enter borrow date (YYYY-MM-DD): 2025-01-10
+Borrow record added with ID: 1
+
+===== LIBRARY BORROW MENU =====
+1. Add Borrow Record
+2. View All Borrow Records
+3. Search Records by Student Name
+4. Delete Borrow Record by ID
+5. Exit
+Choose: 1
+Enter student name: John Doe
+Enter book title: 1984
+Enter borrow date (YYYY-MM-DD): 2025-01-12
+Borrow record added with ID: 2
+
+===== LIBRARY BORROW MENU =====
+1. Add Borrow Record
+2. View All Borrow Records
+3. Search Records by Student Name
+4. Delete Borrow Record by ID
+5. Exit
+Choose: 2
+
+--- BORROW RECORDS ---
+1 - John Doe borrowed "The Hobbit" on 2025-01-10
+2 - John Doe borrowed "1984" on 2025-01-12
+
+===== LIBRARY BORROW MENU =====
+1. Add Borrow Record
+2. View All Borrow Records
+3. Search Records by Student Name
+4. Delete Borrow Record by ID
+5. Exit
+Choose: 3
+Enter student name to search: John Doe
+
+--- BORROW RECORDS FOR John Doe ---
+1 - John Doe borrowed "The Hobbit" on 2025-01-10
+2 - John Doe borrowed "1984" on 2025-01-12
+
+===== LIBRARY BORROW MENU =====
+1. Add Borrow Record
+2. View All Borrow Records
+3. Search Records by Student Name
+4. Delete Borrow Record by ID
+5. Exit
+Choose: 4
+Enter ID to delete: 1
+Borrow record deleted.
+
+===== LIBRARY BORROW MENU =====
+1. Add Borrow Record
+2. View All Borrow Records
+3. Search Records by Student Name
+4. Delete Borrow Record by ID
+5. Exit
+Choose: 5
+Goodbye!

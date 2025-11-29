@@ -250,7 +250,7 @@ public class Menu {
                 completeCourse(sc,sm);
                 break;
             case 5:
-                System.out.println("Back to main menu.");
+                System.out.println("Back to Main menu.");
                 return;
             default:
                 System.out.println("Invalid input. Please try again.");
