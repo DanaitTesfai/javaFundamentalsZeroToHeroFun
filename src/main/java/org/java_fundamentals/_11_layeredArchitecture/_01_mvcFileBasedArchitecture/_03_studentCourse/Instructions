@@ -1,0 +1,336 @@
+📘 Scenario-Based Problem
+🏫 Student–Course Enrollment Management System
+🎭 Real-World Story
+A small training institute wants to digitalize how it manages:
+
+Students
+
+Courses
+
+Which students are enrolled in which courses
+
+Currently, everything is written in notebooks. This causes problems such as:
+
+Duplicate enrollments
+
+Losing track of which student joined which course
+
+Difficulty updating or removing records
+
+You are asked to build a console-based application using an MVC-like layered architecture, where files act as the database.
+
+🧱 System Overview
+The system must manage two core entities (models):
+
+✅ Model 1: Student
+✅ Model 2: Course
+And a relationship between them:
+➡ Enrollment (Student ↔ Course)
+
+📦 Models (Data Objects)
+🧑 Student Model
+Each student has:
+
+studentId (unique, auto-generated)
+
+name
+
+Stored in file:
+
+students_db.txt
+Example:
+
+1,John Doe
+2,Emma White
+📚 Course Model
+Each course has:
+
+courseId (unique, auto-generated)
+
+courseName
+
+Stored in file:
+
+courses_db.txt
+Example:
+
+1,Java Programming
+2,Web Development
+🔗 Enrollment Model (Relationship File)
+Represents which student is enrolled in which course.
+
+Fields:
+
+enrollmentId
+
+studentId
+
+courseId
+
+Stored in:
+
+enrollments_db.txt
+Example:
+
+1,1,2   → (EnrollmentID 1: Student 1 enrolled in Course 2)
+2,2,1
+🗂 Architecture Layers (Very Important)
+Controller Layer
+        ↓
+Service Layer
+        ↓
+Repository Layer
+        ↓
+Text Files (DB)
+🧱 REQUIRED CLASSES (Conceptually)
+Layer	Classes
+Model	Student, Course, Enrollment
+Repository	StudentRepository, CourseRepository, EnrollmentRepository
+Service	StudentService, CourseService, EnrollmentService
+Controller	MainController (menu handling)
+🎯 Functional Requirements
+🔹 Student Management
+    Add student
+
+    View all students
+
+    Delete student (by ID)
+
+Business rules:
+
+    Student name cannot be empty
+
+    Duplicate student names not allowed
+
+🔹 Course Management
+    Add course
+
+    View all courses
+
+    Delete course (by ID)
+
+Business rules:
+
+    Course name must be unique
+
+    Course name cannot be empty
+
+🔹 Enrollment Management (Most Important Part)
+    Enroll a student in a course
+
+    View all enrollments
+
+    Remove enrollment
+
+Business rules (Service Layer rules):
+
+    Student must exist
+
+    Course must exist
+
+    A student cannot be enrolled in the same course twice
+
+    If a student is deleted → their enrollments must be deleted
+
+    If a course is deleted → related enrollments must be deleted
+
+🖥 Console Menu Example
+===== INSTITUTE MANAGEMENT =====
+1. Add Student
+2. Show Students
+3. Add Course
+4. Show Courses
+5. Enroll Student in Course
+6. Show Enrollments
+7. Delete Student
+8. Delete Course
+9. Exit
+Choose:
+🔁 Data Flow Example (Very Important for Understanding)
+Example: Enroll Student in Course
+User Input
+   ↓
+Controller (read IDs)
+   ↓
+EnrollmentService
+   ├─ check student exists → StudentRepository
+   ├─ check course exists → CourseRepository
+   ├─ check duplicate enrollment → EnrollmentRepository
+   ↓
+EnrollmentRepository saves to file
+   ↓
+Controller prints result
+🎓 Learning Outcomes for Students
+By completing this problem, a student will understand:
+
+✅ How multiple models interact
+✅ How multiple repositories work together
+✅ Why Service layer is essential
+✅ How to avoid duplicate records
+✅ How file-based persistence mimics a real database
+✅ How MVC ideas apply even in console apps
+
+
+
+
+
+GRAPHICAL FLOW DIAGRAM
+=========================
+User
+ │
+ ▼
+Controller (Menu)
+ │
+ ▼
+Service Layer
+ │   ├── validate Student
+ │   ├── validate Course
+ │   └── validate Enrollment
+ ▼
+Repository Layer
+ │   ├── StudentRepository → students_db.txt
+ │   ├── CourseRepository → courses_db.txt
+ │   └── EnrollmentRepository → enrollments_db.txt
+ ▼
+Files (DB)
+=========================
+✅ C) STEP-BY-STEP GUIDANCE
+=========================
+🪜 Step 1
+Create Model classes (POJOs only, no logic)
+
+✅ Student
+✅ Course
+✅ Enrollment
+
+🪜 Step 2
+Create Repository layer
+
+One repo = one file
+
+Only I/O logic
+
+No validation
+
+🪜 Step 3
+Create Service layer
+
+Business rules live here
+
+Cross-repo checks
+
+Prevent duplicates
+
+Validate existence
+
+🪜 Step 4
+Create Controller
+
+Menu
+
+Input/output
+
+Calls only Service/Repo methods
+
+🪜 Step 5
+Create Main
+
+
+Starts controller
+
+Nothing else
+
+
+🖥️ Sample Console Output
+▶️ Application Starts
+===== INSTITUTE SYSTEM =====
+1. Add Student
+2. Add Course
+3. Show Students
+4. Show Courses
+5. Enroll Student
+6. Show Enrollments
+7. Exit
+Choose:
+✅ Add Students
+Choose: 1
+Enter name: John Doe
+Student added successfully.
+
+===== INSTITUTE SYSTEM =====
+Choose: 1
+Enter name: Emma White
+Student added successfully.
+📄 students_db.txt
+
+1,John Doe
+2,Emma White
+✅ Add Courses
+Choose: 2
+Enter course name: Java Programming
+Course added successfully.
+
+===== INSTITUTE SYSTEM =====
+Choose: 2
+Enter course name: Web Development
+Course added successfully.
+📄 courses_db.txt
+
+1,Java Programming
+2,Web Development
+✅ Show Students
+Choose: 3
+
+--- STUDENTS ---
+1 - John Doe
+2 - Emma White
+✅ Show Courses
+Choose: 4
+
+--- COURSES ---
+1 - Java Programming
+2 - Web Development
+✅ Enroll Student in Course (Valid Case)
+Choose: 5
+Student ID: 1
+Course ID: 2
+Enrollment successful!
+📄 enrollments_db.txt
+
+1,1,2
+❌ Attempt Duplicate Enrollment (Validation)
+Choose: 5
+Student ID: 1
+Course ID: 2
+Student already enrolled in this course.
+❌ Invalid Enrollment (Non-existing Student)
+Choose: 5
+Student ID: 99
+Course ID: 1
+Student or Course does not exist.
+✅ Show Enrollments
+Choose: 6
+
+--- ENROLLMENTS ---
+Enrollment ID 1 | Student ID: 1 | Course ID: 2
+✅ Enroll Another Student
+Choose: 5
+Student ID: 2
+Course ID: 1
+Enrollment successful!
+📄 enrollments_db.txt
+
+1,1,2
+2,2,1
+✅ Show Enrollments Again
+Choose: 6
+
+--- ENROLLMENTS ---
+Enrollment ID 1 | Student ID: 1 | Course ID: 2
+Enrollment ID 2 | Student ID: 2 | Course ID: 1
+❌ Invalid Menu Choice
+Choose: 10
+Invalid choice.
+✅ Exit Application
+Choose: 7
+Goodbye!
