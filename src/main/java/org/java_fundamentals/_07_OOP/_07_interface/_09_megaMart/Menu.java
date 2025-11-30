@@ -9,7 +9,7 @@ public class Menu {
 
     public void displayMenu(Scanner sc) {
         while (true) {
-            System.out.println("=== Product Management Menu ===");
+            System.out.println("=== Product Management EnrollmentController ===");
             System.out.println("1. Add Product\n" +
                     "2. View Products\n" +
                     "3. Search Product by ID\n" +

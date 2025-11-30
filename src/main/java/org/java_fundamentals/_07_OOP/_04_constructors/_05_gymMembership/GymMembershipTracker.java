@@ -39,7 +39,7 @@ public class GymMembershipTracker {
         System.out.println();
 
         while (true){
-            System.out.println("=== Gym Menu ===\n" +
+            System.out.println("=== Gym EnrollmentController ===\n" +
                     "1. Register Member\n" +
                     "2. View Member\n" +
                     "3. Exit");

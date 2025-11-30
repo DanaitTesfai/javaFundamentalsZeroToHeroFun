@@ -10,10 +10,15 @@ import org.java_fundamentals._11_layeredArchitecture._01_mvcFileBasedArchitectur
 import java.util.List;
 
 public class EnrollmentService {
-    EnrollmentRepository enrollmentRepository = new EnrollmentRepository();
-    StudentService studentService = new StudentService();
-    CourseService courseService = new CourseService();
+    EnrollmentRepository enrollmentRepository ;
+    StudentService studentService ;
+    CourseService courseService ;
 
+    public EnrollmentService(EnrollmentRepository enrollmentRepository, StudentService studentService, CourseService courseService) {
+        this.enrollmentRepository = enrollmentRepository;
+        this.studentService = studentService;
+        this.courseService = courseService;
+    }
 
     public void enrollStudentInCourse(int studentId, int courseId) {
         if (!studentService.studentExists(studentId)) {
@@ -41,7 +46,7 @@ public class EnrollmentService {
     }
 
 
-    public List<Enrollment> viewAllEnrollments() {
+    public List<Enrollment> getAllEnrollments() {
         return enrollmentRepository.loadAllEnrollmentsFromFiles();
 
     }

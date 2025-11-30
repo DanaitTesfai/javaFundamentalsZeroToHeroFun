@@ -46,7 +46,7 @@ public class StudentApp {
 
         }
 
-        System.out.println("=== Student Management Menu ===");
+        System.out.println("=== Student Management EnrollmentController ===");
 
         boolean running = true;
         while (running){

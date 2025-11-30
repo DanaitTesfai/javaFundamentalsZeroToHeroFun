@@ -7,10 +7,13 @@ import org.java_fundamentals._11_layeredArchitecture._01_mvcFileBasedArchitectur
 import java.util.List;
 
 public class CourseService {
-    CourseRepository courseRepository = new CourseRepository();
-    EnrollmentService enrollmentService = new EnrollmentService();
+    CourseRepository courseRepository ;
+    EnrollmentService enrollmentService;
 
-
+    public CourseService(CourseRepository courseRepository, EnrollmentService enrollmentService) {
+        this.courseRepository = courseRepository;
+        this.enrollmentService = enrollmentService;
+    }
 
     public void addCourse(String courseName){
         if (courseName == null || courseName.trim().isEmpty()){

@@ -25,10 +25,11 @@ public class CourseRepository {
 
     public List<Course> loadAllCoursesFromFiles(){
         List<Course> courses = new ArrayList<>();
-        try(BufferedReader reader = new BufferedReader(new FileReader(courseFile))){
+        try{
             if (!courseFile.exists()){
                 courseFile.createNewFile();
             }
+            BufferedReader reader = new BufferedReader(new FileReader(courseFile));
 
             String line;
             while ((line = reader.readLine()) != null){
@@ -39,6 +40,7 @@ public class CourseRepository {
                 Course course = new Course(courseId, courseName);
                 courses.add(course);
             }
+            reader.close();
         }catch (IOException e){
             System.out.println("Error: " + e.getMessage());
         }

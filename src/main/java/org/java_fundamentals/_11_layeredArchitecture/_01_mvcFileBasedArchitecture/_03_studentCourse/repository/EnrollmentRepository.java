@@ -24,10 +24,11 @@ public class EnrollmentRepository {
 
     public List<Enrollment> loadAllEnrollmentsFromFiles(){
         List<Enrollment> enrollments = new ArrayList<>();
-        try(BufferedReader reader = new BufferedReader(new FileReader(enrollmentFile))){
+        try{
             if (!enrollmentFile.exists()){
                 enrollmentFile.createNewFile();
             }
+            BufferedReader reader = new BufferedReader(new FileReader(enrollmentFile));
 
             String line;
             while ((line = reader.readLine()) != null){
@@ -40,6 +41,7 @@ public class EnrollmentRepository {
                 enrollments.add(enrollment);
 
             }
+            reader.close();
 
         }catch (IOException e){
             System.out.println("Error: " + e.getMessage());

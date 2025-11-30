@@ -131,7 +131,7 @@ public class _02_CarRentalSystemWithAdminPanel {
                     System.out.println("Login Successful! Welcome, " + usernames[currentUserIndex] + ".");
                     while (true) {
                         System.out.println("==============================\n" +
-                                "     Car Rental Management Menu\n" +
+                                "     Car Rental Management EnrollmentController\n" +
                                 "==============================");
                         System.out.println("1. Rent a Car\n" +
                                 "2. Show Personal Summary\n" +

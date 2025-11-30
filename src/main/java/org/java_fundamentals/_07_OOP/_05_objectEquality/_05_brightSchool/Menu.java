@@ -10,7 +10,7 @@ public class Menu {
         boolean running = true;
 
         while (running) {
-            System.out.println("=== Student Management Menu ===\n" +
+            System.out.println("=== Student Management EnrollmentController ===\n" +
                     "    1. Register Student\n" +
                     "    2. View All Students\n" +
                     "    3. Search Student by ID\n" +

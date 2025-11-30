@@ -8,7 +8,7 @@ public class Menu {
 
     public void displayMenu(Scanner sc){
         while (true){
-            System.out.println("=== Car Rental Menu ===\n" +
+            System.out.println("=== Car Rental EnrollmentController ===\n" +
                     "1. Register Car\n" +
                     "2. View All Cars\n" +
                     "3. Search Car by ID\n" +

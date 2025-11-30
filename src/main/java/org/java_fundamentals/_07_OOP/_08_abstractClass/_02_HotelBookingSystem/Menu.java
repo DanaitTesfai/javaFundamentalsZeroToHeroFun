@@ -8,7 +8,7 @@ public class Menu {
 
     public void displayMenu(Scanner sc) {
         while (true) {
-            System.out.println("=== Guest Management Menu ===");
+            System.out.println("=== Guest Management EnrollmentController ===");
             System.out.println("1. Register Guest\n" +
                     "2. View All Guests\n" +
                     "3. Search Guest by ID\n" +

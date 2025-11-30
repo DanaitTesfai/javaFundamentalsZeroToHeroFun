@@ -15,7 +15,7 @@ public class _02_RestaurantOrderingMenu {
         double burgerPrice = 8 , pizzaPrice = 15 , pastaPrice = 12;
 
         while (true){
-            System.out.println("1. View Menu");
+            System.out.println("1. View EnrollmentController");
             System.out.println("2. Place an Order");
             System.out.println("3. Exit");
 
@@ -24,7 +24,7 @@ public class _02_RestaurantOrderingMenu {
             scanner.nextLine();
 
             if (choice == 1) {
-                System.out.println("--- Menu ---\n" +
+                System.out.println("--- EnrollmentController ---\n" +
                         "         Burger : $"+burgerPrice+"\n" +
                         "         Pizza  : $"+pizzaPrice+"\n" +
                         "         Pasta  : $"+pastaPrice);

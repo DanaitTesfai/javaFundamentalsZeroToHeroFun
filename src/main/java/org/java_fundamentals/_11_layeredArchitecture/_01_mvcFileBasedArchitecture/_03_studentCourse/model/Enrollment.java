@@ -37,6 +37,6 @@ public class Enrollment {
 
     @Override
     public String toString() {
-        return enrollmentId + ", " + studentId + ", " + courseId;
+        return "Enrollment " + enrollmentId + " | Student ID: " + studentId + " | Course ID: " + courseId;
     }
 }

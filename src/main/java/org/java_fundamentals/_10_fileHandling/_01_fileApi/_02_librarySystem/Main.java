@@ -11,7 +11,7 @@ public class Main {
 
 
         while (true){
-            System.out.println("===== Mini Library Menu =====\n" +
+            System.out.println("===== Mini Library EnrollmentController =====\n" +
                     "1. Add Book\n" +
                     "2. View All Books\n" +
                     "3. Delete Book\n" +

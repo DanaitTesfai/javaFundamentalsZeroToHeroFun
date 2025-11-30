@@ -47,7 +47,7 @@ public class ProductApp {
             }
         }
 
-        System.out.println("=== Online Store Menu ===");
+        System.out.println("=== Online Store EnrollmentController ===");
 
         boolean exit = false;
         while (!exit){

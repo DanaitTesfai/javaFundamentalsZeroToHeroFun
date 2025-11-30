@@ -135,17 +135,70 @@ Business rules (Service Layer rules):
     If a course is deleted → related enrollments must be deleted
 
 🖥 Console Menu Example
-===== INSTITUTE MANAGEMENT =====
+▶️ Application Start
+===== INSTITUTE MANAGEMENT SYSTEM =====
 1. Add Student
 2. Show Students
-3. Add Course
-4. Show Courses
-5. Enroll Student in Course
-6. Show Enrollments
-7. Delete Student
-8. Delete Course
+3. Delete Student
+4. Add Course
+5. Show Courses
+6. Delete Course
+7. Enroll Student to Course
+8. Show Enrollments
 9. Exit
-Choose:
+Enter choice:
+✅ Add Students
+Enter choice: 1
+Enter student name: John Doe
+Student added with ID: 1
+
+Enter choice: 1
+Enter student name: Emma White
+Student added with ID: 2
+✅ Add Courses
+Enter choice: 4
+Enter course name: Java Programming
+Course added with ID: 1
+
+Enter choice: 4
+Enter course name: Web Development
+Course added with ID: 2
+✅ Show Students
+Enter choice: 2
+
+--- STUDENTS ---
+1 - John Doe
+2 - Emma White
+✅ Show Courses
+Enter choice: 5
+
+--- COURSES ---
+1 - Java Programming
+2 - Web Development
+✅ Enroll Student
+Enter choice: 7
+Enter student ID: 1
+Enter course ID: 2
+Enrollment successful.
+❌ Duplicate Enrollment (Validation)
+Enter choice: 7
+Enter student ID: 1
+Enter course ID: 2
+Student already enrolled in this course.
+✅ Show Enrollments
+Enter choice: 8
+Enrollment 1 | Student ID: 1 | Course ID: 2
+✅ Delete Student (CASCADE DELETE)
+Enter choice: 3
+Enter student ID to delete: 1
+Related enrollments removed.
+Student deleted successfully.
+✅ Show Enrollments After Cascade
+Enter choice: 8
+(No output – all related enrollments deleted)
+✅ Exit Program
+Enter choice: 9
+Exiting application. Goodbye!
 🔁 Data Flow Example (Very Important for Understanding)
 Example: Enroll Student in Course
 User Input

@@ -8,7 +8,7 @@ public class Menu {
 
     public static void displayMenu(Scanner sc){
         while (true){
-            System.out.println("=== Gym Membership Menu ===\n" +
+            System.out.println("=== Gym Membership EnrollmentController ===\n" +
                     "1. Register Member\n" +
                     "2. View All Member\n" +
                     "3. Search Member by ID\n" +

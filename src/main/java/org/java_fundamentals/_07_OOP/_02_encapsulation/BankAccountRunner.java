@@ -12,7 +12,7 @@ public class BankAccountRunner {
         bankAccount.setAccountNumber(accountNumber);
 
         while (true) {
-            System.out.println("==== Bank Menu ====\n" +
+            System.out.println("==== Bank EnrollmentController ====\n" +
                     "1. Deposit\n" +
                     "2. Withdraw\n" +
                     "3. Check Balance\n" +

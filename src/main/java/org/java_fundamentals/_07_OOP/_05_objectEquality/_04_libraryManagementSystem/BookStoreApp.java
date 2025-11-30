@@ -34,7 +34,7 @@ public class BookStoreApp {
         }
 
 
-        System.out.println(" === Library Menu ===");
+        System.out.println(" === Library EnrollmentController ===");
 
         while (true) {
             System.out.println("1. Add Book\n" +

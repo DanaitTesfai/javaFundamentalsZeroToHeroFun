@@ -7,10 +7,13 @@ import javax.xml.transform.Source;
 import java.util.List;
 
 public class StudentService {
-    StudentRepository studentRepository = new StudentRepository();
-    EnrollmentService enrollmentService = new EnrollmentService();
+    StudentRepository studentRepository;
+    EnrollmentService enrollmentService ;
 
-
+    public StudentService(StudentRepository studentRepository, EnrollmentService enrollmentService) {
+        this.studentRepository = studentRepository;
+        this.enrollmentService = enrollmentService;
+    }
 
     public void addStudent(String studentName){
         if (studentName == null || studentName.trim().isEmpty()){
