@@ -11,3 +11,14 @@ Set Exercise 1: Unique Usernames
   alice
   bob
   john
+----------------------------------------------------
+
+ Set Exercise 2: Common Elements Between Sets
+ Program Description:
+ Write a Java program that finds and displays the common elements between two sets of integers.
+
+ Sample Output:
+
+ Common elements:
+ 3
+ 4
