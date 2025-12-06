@@ -65,3 +65,16 @@ Sample Output:
 
 Set after removing numbers greater than 50:
 10 20 30 40
+----------------------------------------------------------
+
+Set Exercise 7: Convert Set to List
+Program Description:
+Write a Java program that converts a set of colors into a list and prints the list.
+
+Sample Output:
+
+Colors List:
+Red
+Green
+Blue
+
