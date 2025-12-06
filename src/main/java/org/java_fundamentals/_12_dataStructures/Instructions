@@ -35,3 +35,14 @@ Java
 Python
 C++
 C#
+-------------------------------------------------------
+
+Set Exercise 4: Difference of Sets
+Program Description:
+Write a Java program that prints elements that exist in the first set but not in the second set.
+
+Sample Output:
+
+Elements only in Set A:
+Apple
+Mango
