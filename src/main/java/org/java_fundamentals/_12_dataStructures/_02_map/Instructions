@@ -45,6 +45,17 @@ Sample Output:
 Updated Grades:
 Alice = 85
 Bob = 90
+-------------------------------------------------------------------------------
+
+Map Exercise 4: Remove Entry from Map
+Program Description:
+Write a Java program that removes an entry from a map using a key.
+
+Sample Output:
+
+Map after removing key 102:
+101=Alice
+103=John
 
 
 
