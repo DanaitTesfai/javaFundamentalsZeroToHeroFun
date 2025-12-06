@@ -1,0 +1,13 @@
+Set Exercise 1: Unique Usernames
+  Program Description:
+  Write a Java program that stores a list of usernames in a set and ensures that no duplicate usernames are stored.
+
+  Sample Input (Usernames):
+
+  alice, bob, alice, john, bob
+  Sample Output:
+
+  Unique usernames:
+  alice
+  bob
+  john
