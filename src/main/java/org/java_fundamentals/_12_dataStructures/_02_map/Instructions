@@ -25,6 +25,16 @@ Entry<String, Integer> is a nested interface inside the Map interface that repre
             entry.getValue();--------> returns the value
             }
 
+-------------------------------------------------------------------------------
+
+ Map Exercise 2: Phone Directory
+Program Description:
+Write a Java program that stores contact names and phone numbers in a map and retrieves a phone number for a given name.
+
+Sample Output:
+
+Phone number for Emma: 9876543210
+
 
 
 
