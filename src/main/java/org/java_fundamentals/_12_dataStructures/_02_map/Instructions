@@ -34,7 +34,17 @@ Write a Java program that stores contact names and phone numbers in a map and re
 Sample Output:
 
 Phone number for Emma: 9876543210
+-----------------------------------------------------------------------------
 
+Map Exercise 3: Update Map Value
+Program Description:
+Write a Java program that updates a student’s grade in a map and prints the updated map.
+
+Sample Output:
+
+Updated Grades:
+Alice = 85
+Bob = 90
 
 
 
