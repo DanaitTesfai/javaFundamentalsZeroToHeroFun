@@ -80,6 +80,14 @@ Sample Output (Input: "banana"):
 b = 1
 a = 3
 n = 2
+-------------------------------------------------------------------------
+Map Exercise 7: Find Maximum Value
+Program Description:
+Write a Java program that finds and prints the key associated with the highest value in a map.
+
+Sample Output:
+
+Student with highest score: Mark
 
 
 
