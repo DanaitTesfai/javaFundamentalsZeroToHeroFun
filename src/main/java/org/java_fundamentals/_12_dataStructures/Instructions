@@ -46,3 +46,22 @@ Sample Output:
 Elements only in Set A:
 Apple
 Mango
+-------------------------------------------------------
+
+Set Exercise 5: Check Empty Set
+Program Description:
+Write a Java program that checks whether a set is empty and prints an appropriate message.
+
+Sample Output:
+
+The set is empty.
+---------------------------------------------------------
+
+Set Exercise 6: Remove Elements by Condition
+Program Description:
+Write a Java program that removes all numbers greater than 50 from a set.
+
+Sample Output:
+
+Set after removing numbers greater than 50:
+10 20 30 40
