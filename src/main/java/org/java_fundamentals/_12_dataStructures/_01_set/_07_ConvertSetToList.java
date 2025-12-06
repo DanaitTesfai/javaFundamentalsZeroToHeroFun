@@ -1,4 +1,4 @@
-package org.java_fundamentals._12_dataStructures;
+package org.java_fundamentals._12_dataStructures._01_set;
 
 import java.util.ArrayList;
 import java.util.HashSet;

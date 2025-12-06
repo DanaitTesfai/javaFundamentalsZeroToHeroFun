@@ -1,7 +1,6 @@
-package org.java_fundamentals._12_dataStructures;
+package org.java_fundamentals._12_dataStructures._01_set;
 
 import java.util.HashSet;
-import java.util.Scanner;
 import java.util.Set;
 
 public class _01_UniqueUsernames {

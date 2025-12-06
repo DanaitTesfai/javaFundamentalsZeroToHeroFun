@@ -1,0 +1,30 @@
+ap Exercise 1: Employee Directory
+Program Description:
+Write a Java program that stores employee IDs and employee names in a map and prints all employees.
+
+Sample Output:
+
+Employee Directory:
+101 - Alice
+102 - Bob
+103 - John
+
+NOTE:
+Entry<String, Integer> is a nested interface inside the Map interface that represents a key-value pair.
+            It has two main methods: getKey() and getValue().
+            It acts like a container to hold both the key and value together. And we can use it to iterate through the map easily.
+            It is similar to a type of object that holds both key and value.
+
+            for(Student s : students){
+            ...
+            }
+
+            Map<K, V> map = new HashMap<>();
+            for(Map.Entry<K,V> entry : map.entrySet()){
+            entry.getKey();--------> returns the key
+            entry.getValue();--------> returns the value
+            }
+
+
+
+
