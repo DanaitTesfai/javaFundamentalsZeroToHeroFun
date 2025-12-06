@@ -56,6 +56,30 @@ Sample Output:
 Map after removing key 102:
 101=Alice
 103=John
+---------------------------------------------------------------------------
+🔹 Map Exercise 5: Print Only Keys and Only Values
+Program Description:
+Write a Java program that prints only the keys first and then only the values from a map.
+
+Sample Output:
+
+Keys:
+1 2 3
+
+Values:
+Apple Banana Orange
+------------------------------------------------------------------------------
+
+
+🔹 Map Exercise 6: Count Character Occurrence
+Program Description:
+Write a Java program that counts the number of occurrences of each character in a string.
+
+Sample Output (Input: "banana"):
+
+b = 1
+a = 3
+n = 2
 
 
 
