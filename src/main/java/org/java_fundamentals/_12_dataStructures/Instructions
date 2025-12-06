@@ -22,3 +22,16 @@ Set Exercise 1: Unique Usernames
  Common elements:
  3
  4
+-----------------------------------------------------
+
+Set Exercise 3: Union of Sets
+Program Description:
+Write a Java program that combines two sets of strings into one set containing all unique elements.
+
+Sample Output:
+
+Union of sets:
+Java
+Python
+C++
+C#
