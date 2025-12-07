@@ -1,0 +1,187 @@
+📍 Background
+A private training institute conducts multiple short-term technology courses
+(e.g., Java, Spring, Database, Web Development).
+
+Until now, student records were stored manually in notebooks.
+This caused:
+
+Duplicate student IDs
+
+Lost records
+
+No easy way to search or display data
+
+The institute wants a simple Java console application that:
+
+Works offline
+
+Stores data permanently in a file
+
+Follows clean layered architecture (MVC)
+
+🎯 BUSINESS REQUIREMENTS
+The system must:
+
+Register students with unique student IDs
+
+Store student data persistently in a file
+
+Display all registered students
+
+Prevent duplicate student registrations
+
+Be easy to maintain and extend
+
+Use good OOP and design practices
+
+📘 FUNCTIONAL USE CASES
+Use Case	       Description
+Add Student	       Register a new student
+View Students	   Display all students
+Exit System	Safely terminate program
+🧩 CLASS-BY-CLASS INSTRUCTIONS (VERY IMPORTANT)
+✅ MODEL LAYER
+🔹 Person (ABSTRACT CLASS)
+Purpose:
+Represents a generic human entity in the system.
+
+Why abstract?
+Because a Person alone doesn’t make sense — only specific types like students.
+
+Fields (Protected):
+Field	    Type  	Description
+id	        int	    Unique identifier
+name    	String	Person’s full name
+Methods:
+Method	Description
+getRole()	Abstract → implemented by subclasses
+getId()	Returns ID
+getName()	Returns name
+public abstract String getRole();
+🔹 Student (CONCRETE CLASS)
+Purpose:
+Represents a student enrolled in the institute.
+
+Inheritance:
+Student extends Person
+
+Fields:
+Field	Type	Description
+course	String	Course enrolled (Java, Spring, etc.)
+Responsibilities:
+Hold student data
+
+Convert itself into a file-friendly format
+
+@Override
+public String toString() {
+    return id + "," + name + "," + course;
+}
+✅ OOP Concepts:
+Inheritance, overriding, encapsulation
+
+✅ REPOSITORY LAYER (FILE MANAGEMENT MOVED HERE ✅)
+🔹 StudentRepository (INTERFACE)
+Purpose:
+Defines WHAT operations are required
+(does not care HOW data is stored).
+
+Methods:
+Method	Description
+save(Student)	Persist student
+findAll()	Load all students
+void save(Student student) throws Exception;
+List<Student> findAll() throws Exception;
+🔹 FileStudentRepository (IMPLEMENTATION)
+Purpose:
+Handles ALL FILE OPERATIONS related to students.
+
+📌 File is stored as:
+
+students.txt
+📌 File format (CSV):
+
+101,Alice,Java
+102,Bob,Spring
+Responsibilities:
+Create file if missing
+
+Append new student records
+
+Read student data from file
+
+Convert text → Student objects
+
+✅ File I/O belongs HERE ONLY
+✅ Controller / Service should NOT know files exist
+
+
+
+student-management/
+│
+├── model/
+│   ├── Person.java
+│   └── Student.java
+│
+├── repository/
+│   ├── StudentRepository.java
+│   └── FileStudentRepository.java
+│
+├── service/
+│   └── StudentService.java
+│
+├── controller/
+│   └── StudentController.java
+│
+├── view/
+│   └── StudentView.java
+│
+└── Main.java
+
+
+
+===============================
+ STUDENT MANAGEMENT SYSTEM
+===============================
+1. Add Student
+2. View Students
+0. Exit
+Choose an option: 1
+
+Enter Student ID: 101
+Enter Student Name: Alice
+Enter Course: Java
+✅ Student added successfully!
+
+===============================
+ STUDENT MANAGEMENT SYSTEM
+===============================
+1. Add Student
+2. View Students
+0. Exit
+Choose an option: 1
+
+Enter Student ID: 101
+Enter Student Name: Bob
+Enter Course: Spring
+❌ Error: Student ID already exists!
+
+===============================
+ STUDENT MANAGEMENT SYSTEM
+===============================
+1. Add Student
+2. View Students
+0. Exit
+Choose an option: 2
+
+--- Registered Students ---
+ID: 101 | Name: Alice | Course: Java
+
+===============================
+ STUDENT MANAGEMENT SYSTEM
+===============================
+1. Add Student
+2. View Students
+0. Exit
+Choose an option: 0
+👋 Exiting system. Goodbye!

@@ -88,6 +88,38 @@ Write a Java program that finds and prints the key associated with the highest v
 Sample Output:
 
 Student with highest score: Mark
+------------------------------------------------------------------------
+🔹 Map Exercise 8: Check Map Empty
+Program Description:
+Write a Java program that checks if a map contains any elements and prints a message.
+
+Sample Output:
+
+The map is not empty.
+-------------------------------------------------------------------------
+✅ MIXED MAP + SET QUESTIONS
+🔹 Mixed Exercise 9: Unique Words
+Program Description:
+Write a Java program that stores words from a sentence in a set to display only unique words.
+
+Sample Output:
+
+Unique words:
+Java
+is
+fun
+---------------------------------------------------------------------------
+
+🔹 Mixed Exercise 10: Duplicate Count
+Program Description:
+Write a Java program that uses a map to count duplicated numbers from a list.
+
+Sample Output:
+
+Number Frequency:
+1 = 2
+2 = 3
+3 = 1
 
 
 
