@@ -72,16 +72,73 @@ public class StudentDAOImpl implements StudentDAO{
 
     @Override
     public Optional<Student> findById(int id) {
+        String sql = "SELECT * FROM students WHERE student_id = ?";
+        try(
+                Connection conn =  DBConnection.getConnection();
+                PreparedStatement stmt = conn.prepareStatement(sql)
+                ){
+            stmt.setInt(1, id);
+            try{
+                ResultSet rs = stmt.executeQuery();
+                if(rs.next()){
+                    Student student = new Student();
+                    student.setId(rs.getInt("student_id"));
+                    student.setName(rs.getString("name"));
+                    student.setEmail(rs.getString("email"));
+                    student.setPhoneNumber(rs.getString("phone_number"));
+
+                    Timestamp ts = rs.getTimestamp("created_at");
+                    if (ts != null){
+                        student.setCreatedAt(ts.toLocalDateTime());
+                    }
+                    return Optional.of(student);
+
+                }
+            }catch (SQLException e){
+                System.out.println("Database error reading students: " + e.getMessage());
+            }
+
+        }catch (SQLException | IOException e){
+            System.out.println("Database error reading students: " + e.getMessage());
+        }
         return Optional.empty();
     }
 
     @Override
     public boolean updateStudent(int id, String newName, String newEmail, String newPhone) {
+        String sql = "UPDATE students SET name = ?, email = ?, phone_number= ? WHERE student_id = ?";
+        try(
+              Connection conn = DBConnection.getConnection();
+              PreparedStatement stmt = conn.prepareStatement(sql);
+                ){
+            stmt.setString(1,newName);
+            stmt.setString(2,newEmail);
+            stmt.setString(3,newPhone);
+            stmt.setInt(4,id);
+
+            int rows = stmt.executeUpdate();
+            return rows == 1;
+
+        }catch (SQLException | IOException e){
+            System.out.println("Database error updating student: " + e.getMessage());
+        }
         return false;
     }
 
     @Override
     public boolean deleteStudentById(int id) {
+        String sql = "DELETE FROM students WHERE student_id = ?";
+        try(
+                Connection conn = DBConnection.getConnection();
+                PreparedStatement stmt = conn.prepareStatement(sql);
+                ){
+            stmt.setInt(1,id);
+
+            int rows = stmt.executeUpdate();
+            return rows == 1;
+        }catch (SQLException | IOException e){
+            System.out.println("Database error deleting a student: " + e.getMessage());
+        }
         return false;
     }
 }
