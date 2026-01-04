@@ -49,16 +49,7 @@ public class StudentDAOImpl implements StudentDAO{
         ){
             ResultSet rs = stmt.executeQuery();
             while(rs.next()){
-                Student student = new Student();
-                student.setId(rs.getInt("student_id"));
-                student.setName(rs.getString("name"));
-                student.setEmail(rs.getString("email"));
-                student.setPhoneNumber(rs.getString("phone_number"));
-
-                Timestamp ts = rs.getTimestamp("created_at");
-                if (ts != null){
-                    student.setCreatedAt(ts.toLocalDateTime());
-                }
+                Student student = mapRow(rs);
                 students.add(student);
 
             }
@@ -69,6 +60,7 @@ public class StudentDAOImpl implements StudentDAO{
 
         return students;
     }
+
 
     @Override
     public Optional<Student> findById(int id) {
@@ -81,16 +73,7 @@ public class StudentDAOImpl implements StudentDAO{
             try{
                 ResultSet rs = stmt.executeQuery();
                 if(rs.next()){
-                    Student student = new Student();
-                    student.setId(rs.getInt("student_id"));
-                    student.setName(rs.getString("name"));
-                    student.setEmail(rs.getString("email"));
-                    student.setPhoneNumber(rs.getString("phone_number"));
-
-                    Timestamp ts = rs.getTimestamp("created_at");
-                    if (ts != null){
-                        student.setCreatedAt(ts.toLocalDateTime());
-                    }
+                    Student student = mapRow(rs);
                     return Optional.of(student);
 
                 }
@@ -140,5 +123,22 @@ public class StudentDAOImpl implements StudentDAO{
             System.out.println("Database error deleting a student: " + e.getMessage());
         }
         return false;
+    }
+
+
+
+
+    private static Student mapRow(ResultSet rs) throws SQLException {
+        Student student = new Student();
+        student.setId(rs.getInt("student_id"));
+        student.setName(rs.getString("name"));
+        student.setEmail(rs.getString("email"));
+        student.setPhoneNumber(rs.getString("phone_number"));
+
+        Timestamp ts = rs.getTimestamp("created_at");
+        if (ts != null){
+            student.setCreatedAt(ts.toLocalDateTime());
+        }
+        return student;
     }
 }
