@@ -6,6 +6,7 @@ import java.util.Collections;
 
 public class ReverseFileContent {
     public static void main(String[] args) {
+        
         ArrayList<String> poemLines = new ArrayList<>();
         try (
                 BufferedReader reader = new BufferedReader(new FileReader("verse.txt"));

@@ -1,0 +1,131 @@
+Scenario : A.Student Register (One Table Only)
+Story
+A small training center wants a program to register students and manage their basic info:
+
+Everything is stored in one table: students.
+
+Part B — Console Program Requirements (One Table CRUD)
+  Main Menu (Console)
+  Add Student
+
+  View All Students
+
+  Find Student By ID
+
+  Update Student
+
+  Delete Student
+
+  Exit
+
+
+Part C — Required Layered Structure (MVC Style)
+Packages
+  Project structure
+  src/
+   └─ main/
+      └─ java/
+         └─ com/example/studentapp/
+            ├─ App.java
+            ├─ model/
+            │   └─ Student.java
+            ├─ view/
+            │   └─ MainMenu.java
+            ├─ controller/
+            │   └─ StudentController.java
+            ├─ service/
+            │   └─ StudentService.java
+            ├─ dao/
+            │   ├─ StudentDAO.java
+            │   └─ StudentDAOImpl.java
+            └─ util/
+                └─ DBConnection.java
+
+
+Responsibilities (Simple Rules)
+
+View: prints menu, reads input (Scanner), shows results
+
+Controller: receives user request, calls service
+
+Service: validation/business rules (ex: email not empty)
+
+DAO: JDBC code only (SQL + PreparedStatement)
+
+Util: DBConnection (DriverManager.getConnection)
+
+✅ Rule for student: SQL must appear only in DAO
+
+
+Part D — CRUD Actions (What student must implement)
+
+1) Add Student
+Input: name, email, phone
+SQL:
+
+INSERT INTO students(name, email, phone) VALUES (?, ?, ?);
+Validation ideas (Service layer):
+
+name not empty
+
+email contains @
+
+phone not empty
+
+2) View All Students
+SQL:
+
+SELECT * FROM students ORDER BY id;
+Output example:
+
+ID: 1 | Mario Rossi | mario@email.com | 333111222 | 2026-01-03 10:12:44
+3) Find Student By ID
+Input: id
+SQL:
+
+SELECT * FROM students WHERE id = ?;
+If not found:
+
+Student with ID 7 not found.
+4) Update Student
+Input: id + new email + new phone
+SQL:
+
+UPDATE students SET email = ?, phone = ? WHERE id = ?;
+If id doesn’t exist → show message.
+
+5) Delete Student
+Input: id
+SQL:
+
+DELETE FROM students WHERE id = ?;
+If id doesn’t exist → show message.
+
+Part E — JDBC Skills the Student Must Demonstrate
+✅ Must use:
+
+PreparedStatement (no Statement)
+
+try-with-resources
+
+executeUpdate() for insert/update/delete
+
+executeQuery() + ResultSet for select
+
+DBConnection.getConnection() method
+
+Part F — Suggested User Flow (Example Run)
+===== Student Register =====
+1. Add Student
+2. View All Students
+3. Find Student By ID
+4. Update Student
+5. Delete Student
+0. Exit
+Choose: 1
+
+Enter name: Sara
+Enter email: sara@email.com
+Enter phone: 333999000
+✅ Student added successfully!
+

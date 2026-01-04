@@ -58,7 +58,7 @@ public class Vehicle {
         this.available = available;
     }
 
-    public String availablityText(){
+    public String availabilityText(){
         return available ? "AVAILABLE" : "NOT AVAILABLE";
     }
 
@@ -80,6 +80,6 @@ public class Vehicle {
 
     @Override
     public String toString() {
-        return id + " - " + model + " (" + type + ") - $" + pricePerDay + "/day - " + availablityText();
+        return id + " - " + model + " (" + type + ") - $" + pricePerDay + "/day - " + availabilityText();
     }
 }

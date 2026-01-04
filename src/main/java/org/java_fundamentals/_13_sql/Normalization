@@ -1,0 +1,348 @@
+🧩 Exercise 1 – Student & Department (Classic Exam Type)
+🔴 Original Table (NOT in 1NF)
+student_id	    student_name	courses	        department  	dept_phone
+1	            Ali         	Math, Physics	CS          	1111
+2	            Sara        	Chemistry       Math        	2222
+📌 Tasks
+    Identify why the table is NOT in 1NF
+
+    Convert it to 1NF
+
+    student_id	    student_name	course_id    courses	        department  	dept_phone
+    1	            Ali         	1            Math             	CS          	1111
+    1	            Ali         	2            Physics	        CS          	1111
+    2	            Sara        	3            Chemistry          Math        	2222
+
+    Check if the 1NF table is in 2NF
+     partial dependency:
+        1 student_id	    student_name,   department  	dept_phone all depend on student_Id
+        2 courses depends on course (or course_id)
+
+    Convert to 2NF
+    Students table
+    student_id	    student_name	       department  	dept_phone
+        1	            Ali                CS          	1111
+        1	            Ali         	   CS          	1111
+        2	            Sara               Math        	2222
+
+        Course table
+        course_id	    	        courses
+            1	                   	Math
+            2	                  	Physics
+            3	                	Chemistry
+
+            Enrollment table
+                    student_id	    	    course_id
+                    1	                   	1
+                    1	                  	2
+                    2	                	3
+
+    Check for 3NF violation
+
+    Convert to 3NF
+
+     Students table
+     student_id	    student_name	        department_id
+         1	            Ali                  1
+         2	            Sara                 2
+
+         Course table
+         course_id	    	        courses
+             1	                   	Math
+             2	                  	Physics
+             3	                	Chemistry
+
+             Enrollment table
+                     student_id	    	    course_id
+                     1	                   	1
+                     1	                  	2
+                     2	                	3
+
+
+                     Department table
+
+                     department_id       department     dept_phone
+                     1                   CS             1111
+                     2                   Math           2222
+
+
+🧠 Hints for Students
+    Multi-valued column?
+
+    Composite primary key?
+
+    Does dept_phone depend on another non-key column?
+
+
+Alternative solution
+
+1NF
+
+student_id  	student_name	course	    department	dept_phone
+1	            Ali	            Math	    CS	        1111
+1	            Ali	            Physics 	CS	        1111
+2	            Sara        	Chemistry	Math	    2222
+
+
+2NF
+
+Problem (partial dependency):
+
+student_name, department, dept_phone depend on student_id only (part of key)
+
+course depends on course itself (or could be course_id)
+
+Split student data away from enrollment.
+
+STUDENT
+
+student_id (PK)	student_name	department
+1           	Ali	            CS
+2	            Sara	        Math
+ENROLLMENT
+
+student_id (PK/FK)	course (PK)
+1	                Math
+1	                Physics
+2	                Chemistry
+
+
+
+3NF
+
+DEPARTMENT
+
+department (PK) 	dept_phone
+CS	                1111
+Math            	2222
+
+STUDENT (updated)
+
+student_id (PK) 	student_name	department (FK)
+1	                Ali         	CS
+2	                Sara	        Math
+ENROLLMENT
+
+student_id (PK/FK)	course (PK)
+1	                Math
+1	                Physics
+2	                Chemistry
+
+
+----------------------------------------------------------------------------------------
+
+
+🧩 Exercise 2 – Orders & Customers
+🔴 Original Table (NOT in 1NF)
+order_id	customer_name	products	    customer_city
+101     	Ahmed	        Laptop, Mouse	Asmara
+102     	Sara	        Keyboard	    Keren
+📌 Tasks
+Why is this table NOT in 1NF?
+Problem: products has multiple values
+Convert to 1NF
+Split products
+order_id	customer_name	products	    customer_city
+101     	Ahmed	        Laptop      	Asmara
+101     	Ahmed	        Mouse	        Asmara
+102     	Sara	        Keyboard	    Keren
+
+Composite key: (order_id, product)
+
+Identify partial dependency
+Problem (partial dependency):
+
+customer_name, customer_city depend only on order_id, not on full key (order_id, product).
+
+Split order info from order items
+Convert to 2NF
+
+Order table
+order_id	customer_name		    customer_city
+101     	Ahmed	             	Asmara
+101     	Ahmed	       	        Asmara
+102     	Sara	        	    Keren
+
+Order Items(Order details or order lines)
+order_id(PK/FK)	  	products(PK)
+101     	        Laptop
+101     		    Mouse
+102     	        Keyboard
+
+
+
+Identify transitive dependency
+Problem (transitive dependency conceptually):
+Customer details depend on customer, not on order. (In real design, you don’t store customer name/city in ORDER repeatedly.)
+
+Create CUSTOMER table and reference it from ORDER.
+Convert to 3NF
+
+Order table
+order_id	customer_id
+101     	1
+101     	1
+102     	2
+
+Order Items(Order details or order lines)
+order_id(PK/FK)	  	products(PK)
+101     	        Laptop
+101     		    Mouse
+102     	        Keyboard
+
+Customer table
+customer_id	    customer_name		    customer_city
+1     	        Ahmed	             	Asmara
+2     	        Sara	        	    Keren
+
+
+🧠 Hints
+Products = repeating values
+
+Customer data repeated
+
+City depends on customer, not order
+
+
+------------------------------------------------------------------------------
+
+
+
+
+🧩 Exercise 3 – Employee, Project & Department (Very Common in Exams)
+🔴 Original Table (NOT in 1NF)
+emp_id	    emp_name	projects	dept_id	    dept_name
+1	        John	    P1, P2	    D1	        HR
+2	        Lina	    P2	        D2	        IT
+📌 Tasks
+Identify 1NF violations
+🔴 UNF (Not in 1NF)
+
+Problem: projects has multiple values.
+Convert to 1NF
+split projects
+
+emp_id	    emp_name	projects	dept_id	    dept_name
+1	        John	    P1  	    D1	        HR
+1	        John	    P2	        D1	        HR
+2	        Lina	    P2	        D2	        IT
+
+Identify composite primary key
+Composite key: (emp_id, project_id)
+
+
+Find partial dependencies (2NF violation)
+
+Employee table
+emp_id	    emp_name		    dept_id	    dept_name
+1	        John	    	    D1	        HR
+1	        John	            D1	        HR
+2	        Lina	   	        D2	        IT
+
+Employee-project table
+emp_id	    	projects
+1	       	    P1
+1	       	    P2
+2	      	    P2
+
+
+Find transitive dependency (3NF violation)
+Problem (transitive dependency):
+
+emp_id → dept_id
+
+dept_id → dept_name
+
+Split department out.
+
+Convert fully to 3NF
+
+
+
+Employee table
+emp_id	    emp_name		    dept_id
+1	        John	    	    D1
+2	        Lina	   	        D2
+
+
+Employee-project table
+emp_id	    	projects
+1	       	    P1
+1	       	    P2
+2	      	    P2
+
+
+Department table
+dept_id	    dept_name
+D1          HR
+D2          IT
+
+
+🧠 Hints
+projects is multi-valued
+
+emp_name depends on emp_id
+
+dept_name depends on dept_id
+
+
+---------------------------------------------------------------------------------------
+
+
+🧩 Exercise 4 – Hospital System (Harder Challenge for Students)
+🔴 Original Table (NOT in 1NF)
+patient_id	patient_name	doctors	        ward	ward_phone
+1	        Adam	        Dr. A, Dr. B	W1	    555
+2	        Sara	        Dr. C	        W2	    666
+📌 Tasks
+Normalize this table to 3NF
+
+🧠 What the Student Should Discover
+Doctors = multi-valued → 1NF
+Problem: doctors has multiple values.
+
+
+patient_id	patient_name	doctors	        ward	ward_phone
+1	        Adam	        Dr. A	        W1	    555
+1	        Adam	        Dr. B	        W1	    555
+2	        Sara	        Dr. C	        W2	    666
+
+Composite keys are patient_id and doctors
+Composite key after 1NF → 2NF issue
+✅ Step 2: Convert to 2NF
+
+Problem (partial dependency):
+
+patient_name, ward, ward_phone depend only on patient_id, not on (patient_id, doctor_name)
+
+Split patient data from patient-doctor relationship.
+✅ Step 3: Convert to 3NF
+
+Problem (transitive dependency):
+
+patient_id → ward
+
+ward → ward_phone
+
+Split ward out.
+Ward phone depends on ward → 3NF issue
+
+
+Patient table
+patient_id	patient_name	        ward
+1	        Adam	                W1
+1	        Adam	       	        W1
+2	        Sara	       	        W2
+
+Patient-doctor table
+patient_id		    doctors
+1	        	    Dr. A
+1	       	        Dr. B
+2	        	    Dr. C
+
+Ward table
+ward	ward_phone
+W1      555
+W2      666
+
+

@@ -19,7 +19,7 @@ public class WriteMultipleLines {
 
 
         } catch (IOException e) {
-            System.out.println("Error: " + e.getMessage());;
+            System.out.println("Error: " + e.getMessage());
         }
     }
 }
