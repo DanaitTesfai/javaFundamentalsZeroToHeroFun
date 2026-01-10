@@ -36,3 +36,12 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+src/main/resources/db.properties
+# (Maven may copy resources into target/classes)
+target/classes/db.properties
+
+src/main/resources/db.employees.properties
+# (Maven may copy resources into target/classes)
+target/classes/db.employees.properties
+
