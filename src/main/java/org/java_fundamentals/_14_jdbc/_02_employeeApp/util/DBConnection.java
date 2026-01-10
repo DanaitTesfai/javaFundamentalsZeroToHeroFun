@@ -1,4 +1,4 @@
-package org.java_fundamentals._14_jdbc._studentApp.util;
+package org.java_fundamentals._14_jdbc._02_employeeApp.util;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -12,7 +12,7 @@ public class DBConnection {
         // Implementation for establishing a database connection
         Properties props = new Properties();
         // Load properties from a file or other source
-        InputStream input = DBConnection.class.getClassLoader().getResourceAsStream("db.properties");
+        InputStream input = org.java_fundamentals._14_jdbc._01_studentApp.util.DBConnection.class.getClassLoader().getResourceAsStream("db.employees.properties");
         props.load(input);
 
         String url = props.getProperty("db.url");

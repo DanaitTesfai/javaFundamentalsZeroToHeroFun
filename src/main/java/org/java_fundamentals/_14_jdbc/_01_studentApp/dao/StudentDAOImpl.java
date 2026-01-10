@@ -1,7 +1,7 @@
-package org.java_fundamentals._14_jdbc._studentApp.dao;
+package org.java_fundamentals._14_jdbc._01_studentApp.dao;
 
-import org.java_fundamentals._14_jdbc._studentApp.model.Student;
-import org.java_fundamentals._14_jdbc._studentApp.util.DBConnection;
+import org.java_fundamentals._14_jdbc._01_studentApp.model.Student;
+import org.java_fundamentals._14_jdbc._01_studentApp.util.DBConnection;
 
 import java.io.IOException;
 import java.sql.*;

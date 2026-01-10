@@ -1,8 +1,9 @@
-package org.java_fundamentals._14_jdbc._studentApp.service;
+package org.java_fundamentals._14_jdbc._01_studentApp.service.impl;
 
-import org.java_fundamentals._14_jdbc._studentApp.dao.StudentDAO;
-import org.java_fundamentals._14_jdbc._studentApp.dao.StudentDAOImpl;
-import org.java_fundamentals._14_jdbc._studentApp.model.Student;
+import org.java_fundamentals._14_jdbc._01_studentApp.dao.StudentDAO;
+import org.java_fundamentals._14_jdbc._01_studentApp.dao.StudentDAOImpl;
+import org.java_fundamentals._14_jdbc._01_studentApp.model.Student;
+import org.java_fundamentals._14_jdbc._01_studentApp.service.StudentService;
 
 import java.util.List;
 import java.util.Optional;

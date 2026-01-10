@@ -1,6 +1,6 @@
-package org.java_fundamentals._14_jdbc._studentApp.service;
+package org.java_fundamentals._14_jdbc._01_studentApp.service;
 
-import org.java_fundamentals._14_jdbc._studentApp.model.Student;
+import org.java_fundamentals._14_jdbc._01_studentApp.model.Student;
 
 import java.util.List;
 import java.util.Optional;

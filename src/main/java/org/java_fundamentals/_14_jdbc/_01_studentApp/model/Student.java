@@ -1,4 +1,4 @@
-package org.java_fundamentals._14_jdbc._studentApp.model;
+package org.java_fundamentals._14_jdbc._01_studentApp.model;
 
 import java.time.LocalDateTime;
 

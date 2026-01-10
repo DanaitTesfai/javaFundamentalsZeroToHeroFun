@@ -1,0 +1,233 @@
+Scenario: Department & Employee Manager (1 → Many)
+Story
+A company has many departments.
+Each Department can have many Employees, but each Employee belongs to one Department.
+
+✅ Relationship: Department (1) → Employee (Many)
+
+One department can have many employees
+
+One employee can belong to only one department
+
+Part A — Database + Tables (SQL)
+1) Create Database
+CREATE DATABASE company_db;
+USE company_db;
+2) Create Table: departments (Parent)
+CREATE TABLE departments (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(50) NOT NULL UNIQUE,
+    location VARCHAR(50) NOT NULL
+);
+3) Create Table: employees (Child)
+CREATE TABLE employees (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    full_name VARCHAR(80) NOT NULL,
+    email VARCHAR(80) NOT NULL UNIQUE,
+    salary DECIMAL(10,2) NOT NULL,
+    department_id INT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+    CONSTRAINT fk_employee_department
+        FOREIGN KEY (department_id)
+        REFERENCES departments(id)
+        ON DELETE RESTRICT
+        ON UPDATE CASCADE
+);
+Why ON DELETE RESTRICT?
+It prevents deleting a department if employees still belong to it.
+(Students learn why relational rules matter.)
+
+Part B — Console Program Requirements
+Main Menu
+Department Management
+
+Employee Management
+
+Reports (JOIN)
+
+Exit
+
+1) Department Management
+Add Department (name, location)
+
+View All Departments
+
+Find Department by ID
+
+Update Department location
+
+Delete Department
+
+Must fail if department has employees (because of FK restriction)
+
+2) Employee Management
+Add Employee (full_name, email, salary, department_id)
+
+View All Employees
+
+Find Employee by ID
+
+Update Employee salary
+
+Transfer Employee to another Department (change department_id)
+
+Delete Employee
+
+✅ This forces the student to work with foreign keys in JDBC.
+
+3) Reports (JOIN required)
+Report A: List Employees with Department Name
+Output columns:
+
+employee id
+
+full name
+
+email
+
+salary
+
+department name
+
+department location
+
+SQL idea (for DAO report method):
+
+SELECT e.id, e.full_name, e.email, e.salary, d.name AS dept_name, d.location
+FROM employees e
+JOIN departments d ON e.department_id = d.id
+ORDER BY d.name, e.full_name;
+Report B: Show All Employees in One Department
+Input: department id
+SQL:
+
+SELECT id, full_name, email, salary
+FROM employees
+WHERE department_id = ?
+ORDER BY full_name;
+Report C: Department Summary (Count Employees)
+SQL:
+
+SELECT d.id, d.name, COUNT(e.id) AS employee_count
+FROM departments d
+LEFT JOIN employees e ON e.department_id = d.id
+GROUP BY d.id, d.name
+ORDER BY employee_count DESC;
+Part C — Project Architecture (Same layered structure)
+com/example/companyapp/
+  App.java
+  model/
+    Department.java
+    Employee.java
+    EmployeeWithDepartment.java
+    DepartmentSummary.java
+  util/
+    DBConnection.java
+  dao/
+    DepartmentDAO.java
+    EmployeeDAO.java
+    ReportDAO.java
+    impl/
+      DepartmentDAOImpl.java
+      EmployeeDAOImpl.java
+      ReportDAOImpl.java
+  service/
+    DepartmentService.java
+    EmployeeService.java
+    ReportService.java
+  controller/
+    DepartmentController.java
+    EmployeeController.java
+    ReportController.java
+  view/
+    MainMenu.java
+✅ Rule:
+
+All JDBC code is in DAO
+
+Service handles validation/business rules
+
+View only prints and reads input
+
+Part D — Learning Objectives (What this scenario teaches)
+JDBC skills
+CRUD for 2 tables
+
+PreparedStatement with parameters
+
+ResultSet mapping to objects
+
+Handling SQL errors (like FK constraint violation)
+
+Database design skills
+Primary keys
+
+Foreign keys
+
+One-to-many relationship
+
+JOIN queries for reports
+
+Architecture skills
+MVC-style layers
+
+DAO pattern
+
+Clean separation of concerns
+
+Part E — Sample Console Flow (Example)
+Add Department
+Enter department name: IT
+Enter location: Rome
+✅ Department added (ID: 1)
+Add Employee
+Enter full name: Sara Ali
+Enter email: sara@company.com
+Enter salary: 1500
+Enter department id: 1
+✅ Employee added
+Try deleting department with employees
+Delete department ID 1
+❌ Cannot delete: department has employees (FK restriction)
+Report: Employees with department names
+1 | Sara Ali | sara@company.com | 1500.00 | IT | Rome
+
+-----------------------------------------------------------------------
+
+(B) Maven Dependency (MySQL Driver)
+<dependency>
+  <groupId>com.mysql</groupId>
+  <artifactId>mysql-connector-j</artifactId>
+  <version>9.0.0</version>
+</dependency>
+
+
+(C) Project Structure
+com/example/companyapp/
+  App.java
+  model/
+    Department.java
+    Employee.java
+    EmployeeWithDepartment.java
+    DepartmentSummary.java
+  util/
+    DBConnection.java
+  dao/
+    DepartmentDAO.java
+    EmployeeDAO.java
+    ReportDAO.java
+    impl/
+      DepartmentDAOImpl.java
+      EmployeeDAOImpl.java
+      ReportDAOImpl.java
+  service/
+    DepartmentService.java
+    EmployeeService.java
+    ReportService.java
+  controller/
+    DepartmentController.java
+    EmployeeController.java
+    ReportController.java
+  view/
+    MainMenu.java

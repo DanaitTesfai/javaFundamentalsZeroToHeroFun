@@ -1,7 +1,7 @@
-package org.java_fundamentals._14_jdbc._studentApp.view;
+package org.java_fundamentals._14_jdbc._01_studentApp.view;
 
-import org.java_fundamentals._14_jdbc._studentApp.controller.StudentController;
-import org.java_fundamentals._14_jdbc._studentApp.model.Student;
+import org.java_fundamentals._14_jdbc._01_studentApp.controller.StudentController;
+import org.java_fundamentals._14_jdbc._01_studentApp.model.Student;
 
 import java.sql.Timestamp;
 import java.util.List;
@@ -34,7 +34,7 @@ public class MainMenu {
     }
 
     private void deleteUI() {
-        System.out.println("Id: ");
+        System.out.print("Id: ");
         int id = sc.nextInt();
         sc.nextLine();
 
@@ -43,7 +43,7 @@ public class MainMenu {
     }
 
     private void updateUI() {
-        System.out.println("Id: ");
+        System.out.print("Id: ");
         int id = sc.nextInt();
         sc.nextLine();
 
@@ -61,7 +61,7 @@ public class MainMenu {
     }
 
     private void findByIdUI() {
-        System.out.println("Id: ");
+        System.out.print("Id: ");
         int id = sc.nextInt();
         sc.nextLine();
         Optional<Student> student = studentController.findStudentById(id);
