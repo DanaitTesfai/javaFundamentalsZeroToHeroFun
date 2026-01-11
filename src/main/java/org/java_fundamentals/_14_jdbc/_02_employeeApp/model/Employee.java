@@ -1,5 +1,6 @@
 package org.java_fundamentals._14_jdbc._02_employeeApp.model;
 
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
 
 public class Employee {
@@ -7,12 +8,12 @@ public class Employee {
     private String fullName;
     private String email;
     private int departmentId;
-    private LocalDateTime createdAt;
+    private Timestamp createdAt;
 
     public Employee() {
     }
 
-    public Employee(int id, String fullName, String email, int departmentId, LocalDateTime createdAt) {
+    public Employee(int id, String fullName, String email, int departmentId, Timestamp createdAt) {
         this.id = id;
         this.fullName = fullName;
         this.email = email;
@@ -20,7 +21,7 @@ public class Employee {
         this.createdAt = createdAt;
     }
 
-    public Employee(String fullName, String email, int departmentId, LocalDateTime createdAt) {
+    public Employee(String fullName, String email, int departmentId, Timestamp createdAt) {
         this.fullName = fullName;
         this.email = email;
         this.departmentId = departmentId;
@@ -59,11 +60,11 @@ public class Employee {
         this.departmentId = departmentId;
     }
 
-    public LocalDateTime getCreatedAt() {
+    public Timestamp getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(LocalDateTime createdAt) {
+    public void setCreatedAt(Timestamp createdAt) {
         this.createdAt = createdAt;
     }
 
